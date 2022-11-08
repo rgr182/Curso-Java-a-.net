@@ -16,9 +16,18 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public string Get()
+        public int Get()
         {
-            return "ola k ase";
+            var num1 = 12;
+            var num2 = 19;
+            int res = num1 + num2;
+            return res;
         }
+
+        //[HttpPost(Name ="GetWeatherForecast")]
+        //public string Post()
+        //{
+        //    return "El principio del exito siempre empieza por un fracaso"+" Despues que empiezas a entender tus fracasos empiezas a progresar";
+        //}
     }
 }
