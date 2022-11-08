@@ -16,9 +16,16 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public string Get()
+        public String Get(String nombre)
         {
-            return "ola k ase";
+           
+            return "ola papu eres el " + nombre;
+
+
+            
+
+
         }
+        
     }
 }
