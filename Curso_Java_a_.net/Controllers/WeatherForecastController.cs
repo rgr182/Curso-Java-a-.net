@@ -14,11 +14,16 @@ namespace Curso_Java_a_.net.Controllers
         {
             _logger = logger;
         }
+        private string saludar(string name)
+        {
+            return "Hola " + name;
+        }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public string Get()
+        public string Get(string name)
         {
-            return "ola k ase";
+            string saludo = saludar(name);
+            return saludo;
         }
     }
 }
