@@ -23,7 +23,7 @@ namespace Curso_Java_a_.net.Controllers
             int num1=20, num2=400, nice;
            
            nice = num1 + num2;
-            Console.WriteLine("hola mundo jsjs digo  = " + nice);
+            Console.WriteLine("hola mundo jsjs digo nice = " + nice);
 
 
 
