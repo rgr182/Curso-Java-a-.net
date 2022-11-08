@@ -18,10 +18,7 @@ namespace Curso_Java_a_.net.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public int Get()
         {
-            var num1 = 12;
-            var num2 = 19;
-            int res = num1 + num2;
-            return res;
+            return 123;
         }
 
         //[HttpPost(Name ="GetWeatherForecast")]
