@@ -1,30 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Raul Galvan\\source\\repos\\PasantiasBootCamp\\Curso_Java_a_.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {}
+    "C:\\Programas\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Raul Galvan\\source\\repos\\PasantiasBootCamp\\Curso_Java_a_.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {
+    "C:\\Programas\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Raul Galvan\\source\\repos\\PasantiasBootCamp\\Curso_Java_a_.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+        "projectUniqueName": "C:\\Programas\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
         "projectName": "Curso_Java_a_.net",
-        "projectPath": "C:\\Users\\Raul Galvan\\source\\repos\\PasantiasBootCamp\\Curso_Java_a_.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
-        "packagesPath": "C:\\Users\\Raul Galvan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Raul Galvan\\source\\repos\\PasantiasBootCamp\\Curso_Java_a_.net\\Curso_Java_a_.net\\obj\\",
+        "projectPath": "C:\\Programas\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+        "packagesPath": "C:\\Users\\salva\\.nuget\\packages\\",
+        "outputPath": "C:\\Programas\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Raul Galvan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\salva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +41,7 @@
           "dependencies": {
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -67,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

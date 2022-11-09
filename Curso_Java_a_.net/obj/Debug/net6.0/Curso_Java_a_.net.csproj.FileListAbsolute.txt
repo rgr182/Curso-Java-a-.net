@@ -25,3 +25,35 @@ C:\Users\Raul Galvan\source\repos\PasantiasBootCamp\Curso_Java_a_.net\Curso_Java
 C:\Users\Raul Galvan\source\repos\PasantiasBootCamp\Curso_Java_a_.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.pdb
 C:\Users\Raul Galvan\source\repos\PasantiasBootCamp\Curso_Java_a_.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.genruntimeconfig.cache
 C:\Users\Raul Galvan\source\repos\PasantiasBootCamp\Curso_Java_a_.net\Curso_Java_a_.net\obj\Debug\net6.0\ref\Curso_Java_a_.net.dll
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.dll
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\refint\Curso_Java_a_.net.dll
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.pdb
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\appsettings.Development.json
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\appsettings.json
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Curso_Java_a_.net.exe
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Curso_Java_a_.net.deps.json
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Curso_Java_a_.net.runtimeconfig.json
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Curso_Java_a_.net.dll
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Curso_Java_a_.net.pdb
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.csproj.AssemblyReference.cache
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.AssemblyInfoInputs.cache
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.AssemblyInfo.cs
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.csproj.CoreCompileInputs.cache
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.MvcApplicationPartsAssemblyInfo.cs
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.MvcApplicationPartsAssemblyInfo.cache
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\staticwebassets\msbuild.Curso_Java_a_.net.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\staticwebassets\msbuild.build.Curso_Java_a_.net.props
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Curso_Java_a_.net.props
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Curso_Java_a_.net.props
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\staticwebassets.build.json
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\staticwebassets.development.json
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\scopedcss\bundle\Curso_Java_a_.net.styles.css
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.csproj.CopyComplete
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.genruntimeconfig.cache
+C:\Programas\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\ref\Curso_Java_a_.net.dll
