@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Curso_Java_a_.Classes;
 
 namespace Curso_Java_a_.net.Controllers
 {
@@ -8,17 +9,22 @@ namespace Curso_Java_a_.net.Controllers
     {
 
         public readonly ILogger<WeatherForecastController> _logger;
+        public readonly IOperaciones _op;
 
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IOperaciones op)
         {
             _logger = logger;
+            _op = op;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public int Get()
+        public double Get()
         {
-            return 123;
+            double s;
+
+            s = _op.Suma(2, 3);
+            return _op.Resta(100, s);
         }
 
         //[HttpPost(Name ="GetWeatherForecast")]
