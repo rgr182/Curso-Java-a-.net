@@ -9,7 +9,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IOperaciones, OperacionesAritmeticas>();
+//builder.Services.AddScoped<IOperaciones, OperacionesAritmeticas>();
+builder.Services.AddScoped<IConsulta, Consulta>();
 
 var app = builder.Build();
 
