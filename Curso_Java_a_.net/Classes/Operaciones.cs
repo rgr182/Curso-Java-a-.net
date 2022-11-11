@@ -15,7 +15,8 @@ namespace Curso_Java_a_.Classes
         public double Mult(double o1, double o2) { return o1 * o2; }
         public double Div(double o1, double o2)
         {
-            if (o2 == 0) throw new DivideByZeroException();
+            if (o2 == 0)
+                throw new DivideByZeroException();
             return o1 / o2;
         }
     }

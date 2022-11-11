@@ -18,19 +18,18 @@ namespace Curso_Java_a_.net.Controllers
             _op = op;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public double Get()
+        [HttpGet(Name = "GetGreater")]
+        public double GetCalc(double a, char sign, double b)
         {
-            double s;
-
-            s = _op.Suma(2, 3);
-            return _op.Resta(100, s);
+            switch(sign)
+            {
+                case '+': return _op.Suma(a, b);
+                case '-': return _op.Resta(a, b);
+                case '*': return _op.Mult(a, b);
+                case '/': return _op.Div(a, b);
+                default: throw new ArgumentException();
+            }
+            return 0;
         }
-
-        //[HttpPost(Name ="GetWeatherForecast")]
-        //public string Post()
-        //{
-        //    return "El principio del exito siempre empieza por un fracaso"+" Despues que empiezas a entender tus fracasos empiezas a progresar";
-        //}
     }
 }
