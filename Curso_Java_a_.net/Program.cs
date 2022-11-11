@@ -1,3 +1,6 @@
+using Curso_Java_a_.net.DataAccess;
+using Curso_Java_a_.net.Classes;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +10,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Dependencias Inyeccion
+builder.Services.AddScoped<IOperacionesMatematicas, OperacionesMatematicas>();
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -25,3 +25,30 @@ C:\Users\Raul Galvan\source\repos\PasantiasBootCamp\Curso_Java_a_.net\Curso_Java
 C:\Users\Raul Galvan\source\repos\PasantiasBootCamp\Curso_Java_a_.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.pdb
 C:\Users\Raul Galvan\source\repos\PasantiasBootCamp\Curso_Java_a_.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.genruntimeconfig.cache
 C:\Users\Raul Galvan\source\repos\PasantiasBootCamp\Curso_Java_a_.net\Curso_Java_a_.net\obj\Debug\net6.0\ref\Curso_Java_a_.net.dll
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\appsettings.json
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Curso_Java_a_.net.exe
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Curso_Java_a_.net.deps.json
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Curso_Java_a_.net.runtimeconfig.json
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Curso_Java_a_.net.dll
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Curso_Java_a_.net.pdb
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.csproj.AssemblyReference.cache
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.AssemblyInfoInputs.cache
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.AssemblyInfo.cs
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.csproj.CoreCompileInputs.cache
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\scopedcss\bundle\Curso_Java_a_.net.styles.css
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.csproj.CopyComplete
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.dll
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\refint\Curso_Java_a_.net.dll
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.pdb
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.genruntimeconfig.cache
+C:\Users\lajs5\Desktop\Cursos\Bootcamp\Curso-Java-a-.net\Curso_Java_a_.net\obj\Debug\net6.0\ref\Curso_Java_a_.net.dll
