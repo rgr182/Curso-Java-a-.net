@@ -1,4 +1,6 @@
 using Curso_Java_a_.net.DataAccess;
+using Curso_Java_a_.net.DataAccess.DAL;
+using Curso_Java_a_.net.DataAccess.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Curso_Java_a_.net.Controllers
@@ -20,6 +22,11 @@ namespace Curso_Java_a_.net.Controllers
         [HttpGet]
         public string Get()
         {
+            using (var db = new EscuelaContext())
+            {
+                var Estudiantes = db.Estudiantes
+                    .ToList();
+            }
             return "Hola";
         }
         [HttpGet]
