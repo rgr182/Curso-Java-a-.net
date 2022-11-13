@@ -7,24 +7,19 @@ namespace Curso_Java_a_.net.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class CalculadoraController : ControllerBase
     {
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<CalculadoraController> _logger;
         public IOperacionesMatematicas _operaciones;
         private EscuelaContext _escuelaContext;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger,
-            IOperacionesMatematicas operaciones,
-            EscuelaContext escuelaContext)
+        public CalculadoraController(ILogger<CalculadoraController> logger,
+            IOperacionesMatematicas operaciones)
         {
             _logger = logger;
             _operaciones = operaciones;
-            _escuelaContext = escuelaContext;
         }
-        [HttpGet]
-        public IEnumerable<usuarios> Get() => _escuelaContext.usuarios.ToList();
-
 
         [HttpGet]
         [Route("/GetSuma")]
