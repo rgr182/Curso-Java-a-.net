@@ -12,23 +12,20 @@ namespace Curso_Java_a_.net.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
         public IOperacionesMatematicas _operaciones;
+        private EscuelaContext _escuelaContext;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger,
-            IOperacionesMatematicas operaciones)
+            IOperacionesMatematicas operaciones,
+            EscuelaContext escuelaContext)
         {
             _logger = logger;
             _operaciones = operaciones;
+            _escuelaContext = escuelaContext;
         }
         [HttpGet]
-        public string Get()
-        {
-            using (var db = new EscuelaContext())
-            {
-                var Estudiantes = db.Estudiantes
-                    .ToList();
-            }
-            return "Hola";
-        }
+        public IEnumerable<usuarios> Get() => _escuelaContext.usuarios.ToList();
+
+
         [HttpGet]
         [Route("/GetSuma")]
         public string GetSuma(int a, int b)

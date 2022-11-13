@@ -7,14 +7,18 @@ namespace Curso_Java_a_.net.DataAccess.DAL
 {
     public class EscuelaContext : DbContext
     {
-        public DbSet<usuarios> Estudiantes { get; set; }
-        public DbSet<materiasusuarios> MateriasEstudiantes { get; set; }
-        public DbSet<materias> Materias { get; set; }
-
+        public EscuelaContext(DbContextOptions<EscuelaContext> options) : base(options)
+        {
+            
+        }
+        public DbSet<usuarios> usuarios { get; set; }
+        public DbSet<materiasusuarios> materiasusuarios { get; set; }
+        public DbSet<materias> materias { get; set; }
+        /*
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                @"Server=(localdb)\mssqllocaldb;Database=Escuela;Trusted_Connection=True");
-        }
+                @"Server=Drakko5257\\SQLEXPRESS;Database=Escuela;Trusted_Connection=True;MultipleActiveResultSets=true");
+        }*/
     }
 }
