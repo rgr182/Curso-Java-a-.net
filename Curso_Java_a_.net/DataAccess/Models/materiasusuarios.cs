@@ -7,7 +7,7 @@ namespace Curso_Java_a_.net.DataAccess.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int idmateriasusarios { get; set; }
+        public int idmateriausuario { get; set; }
         public int calificacion { get; set; }
         public int idmateria { get; set; }
         public int idusuario { get; set; }
