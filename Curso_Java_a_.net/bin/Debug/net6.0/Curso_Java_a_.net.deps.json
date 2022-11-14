@@ -8,10 +8,13 @@
     ".NETCoreApp,Version=v6.0": {
       "Curso_Java_a_.net/1.0.0": {
         "dependencies": {
+          "Dapper": "2.0.123",
           "EntityFramework": "6.4.4",
+          "Microsoft.Data.SqlClient": "5.0.1",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0",
-          "Swashbuckle.AspNetCore": "6.2.3"
+          "Swashbuckle.AspNetCore": "6.2.3",
+          "System.Data.SqlClient": "4.8.5"
         },
         "runtime": {
           "Curso_Java_a_.net.dll": {}
@@ -51,13 +54,21 @@
           }
         }
       },
+      "Dapper/2.0.123": {
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.123.33578"
+          }
+        }
+      },
       "EntityFramework/6.4.4": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
           "System.CodeDom": "4.7.0",
           "System.ComponentModel.Annotations": "4.7.0",
           "System.Configuration.ConfigurationManager": "5.0.0",
-          "System.Data.SqlClient": "4.8.1"
+          "System.Data.SqlClient": "4.8.5"
         },
         "runtime": {
           "lib/netstandard2.1/EntityFramework.SqlServer.dll": {
@@ -521,7 +532,7 @@
           }
         }
       },
-      "System.Data.SqlClient/4.8.1": {
+      "System.Data.SqlClient/4.8.5": {
         "dependencies": {
           "Microsoft.Win32.Registry": "5.0.0",
           "System.Security.Principal.Windows": "5.0.0",
@@ -529,22 +540,22 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/System.Data.SqlClient.dll": {
-            "assemblyVersion": "4.6.1.1",
-            "fileVersion": "4.700.20.6702"
+            "assemblyVersion": "4.6.1.5",
+            "fileVersion": "4.700.22.51706"
           }
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
             "rid": "unix",
             "assetType": "runtime",
-            "assemblyVersion": "4.6.1.1",
-            "fileVersion": "4.700.20.6702"
+            "assemblyVersion": "4.6.1.5",
+            "fileVersion": "4.700.22.51706"
           },
           "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
             "rid": "win",
             "assetType": "runtime",
-            "assemblyVersion": "4.6.1.1",
-            "fileVersion": "4.700.20.6702"
+            "assemblyVersion": "4.6.1.5",
+            "fileVersion": "4.700.22.51706"
           }
         }
       },
@@ -770,6 +781,13 @@
       "sha512": "sha512-EycyMsb6rD2PK9P0SyibFfEhvWWttdrYhyPF4f41uzdB/44yQlV+2Wehxyg489Rj6gbPvSPgbKq0xsHJBhipZA==",
       "path": "azure.identity/1.6.0",
       "hashPath": "azure.identity.1.6.0.nupkg.sha512"
+    },
+    "Dapper/2.0.123": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RDFF4rBLLmbpi6pwkY7q/M6UXHRJEOerplDGE5jwEkP/JGJnBauAClYavNKJPW1yOTWRPIyfj4is3EaJxQXILQ==",
+      "path": "dapper/2.0.123",
+      "hashPath": "dapper.2.0.123.nupkg.sha512"
     },
     "EntityFramework/6.4.4": {
       "type": "package",
@@ -1093,12 +1111,12 @@
       "path": "system.configuration.configurationmanager/5.0.0",
       "hashPath": "system.configuration.configurationmanager.5.0.0.nupkg.sha512"
     },
-    "System.Data.SqlClient/4.8.1": {
+    "System.Data.SqlClient/4.8.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HKLykcv6eZLbLnSMnlQ6Os4+UAmFE+AgYm92CTvJYeTOBtOYusX3qu8OoGhFrnKZax91UcLcDo5vPrqvJUTSNQ==",
-      "path": "system.data.sqlclient/4.8.1",
-      "hashPath": "system.data.sqlclient.4.8.1.nupkg.sha512"
+      "sha512": "sha512-fRqxut4lrndPHrXD+ht1XRmCL3obuKldm4XjCRYS9p5f7FSR7shBxAwTkDrpFMsHC9BhNgjjmUtiIjvehn5zkg==",
+      "path": "system.data.sqlclient/4.8.5",
+      "hashPath": "system.data.sqlclient.4.8.5.nupkg.sha512"
     },
     "System.Diagnostics.DiagnosticSource/5.0.0": {
       "type": "package",
