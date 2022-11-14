@@ -6,7 +6,7 @@ namespace Curso_Java_a_.Classes
 {
     public class Usuarios
     {
-        private int IdUsuario { set; get; }
+        public int IdUsuario { set; get; }
         private string Nombre { set; get; }
         private string Correo { set; get; }
         private int Edad { set; get; }
@@ -25,6 +25,8 @@ namespace Curso_Java_a_.Classes
 
     public class Consulta : IConsulta
     {
+        Usuarios usuario = new Usuarios();
+        usuario.
         private string connstring;
         private string sql;
         private List<Usuarios> ListaUsuarios;

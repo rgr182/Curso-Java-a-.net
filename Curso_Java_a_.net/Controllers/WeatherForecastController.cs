@@ -19,10 +19,15 @@ namespace Curso_Java_a_.net.Controllers
             _query = query;
         }
 
+
+        [HttpGet(Name = "GetWeatherForecast")]
+       
+
         [HttpGet(Name = "GetGreater")]
         public int Get()
         {
             return _query.showUsuarios();
+
         }
 
         //[HttpGet(Name = "GetGreater")]
