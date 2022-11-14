@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "B:\\Documentos\\Bootcamp\\1111 Bootcamp Arkus Nexus 1111\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {}
+    "D:\\Documentos\\1111 Bootcamp Arkus Nexus 1111\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {}
   },
   "projects": {
-    "B:\\Documentos\\Bootcamp\\1111 Bootcamp Arkus Nexus 1111\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {
+    "D:\\Documentos\\1111 Bootcamp Arkus Nexus 1111\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "B:\\Documentos\\Bootcamp\\1111 Bootcamp Arkus Nexus 1111\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+        "projectUniqueName": "D:\\Documentos\\1111 Bootcamp Arkus Nexus 1111\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
         "projectName": "Curso_Java_a_.net",
-        "projectPath": "B:\\Documentos\\Bootcamp\\1111 Bootcamp Arkus Nexus 1111\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+        "projectPath": "D:\\Documentos\\1111 Bootcamp Arkus Nexus 1111\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
         "packagesPath": "C:\\Users\\gripl\\.nuget\\packages\\",
-        "outputPath": "B:\\Documentos\\Bootcamp\\1111 Bootcamp Arkus Nexus 1111\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
+        "outputPath": "D:\\Documentos\\1111 Bootcamp Arkus Nexus 1111\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
