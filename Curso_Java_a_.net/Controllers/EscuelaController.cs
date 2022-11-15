@@ -1,5 +1,9 @@
 ﻿using Curso_Java_a_.net.DataAccess.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Storage.Internal;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 using Curso_Java_a_.net.Context.DAL;
 
 namespace Curso_Java_a_.net.Controllers

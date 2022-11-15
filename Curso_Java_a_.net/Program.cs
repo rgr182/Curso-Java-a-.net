@@ -18,11 +18,11 @@ builder.Services.AddScoped<IOperacionesMatematicas, OperacionesMatematicas>();
 builder.Services.AddScoped<IOperaciones, Operaciones>();
 // Add inyeccion de dependencias de la base de datos
 
+var connectionString = builder.Configuration.GetConnectionString("EscuelaMysqlConnection");
 builder.Services.AddDbContext<EscuelaContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("EscuelaConnection"));
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });
-    
 
 var app = builder.Build();
 /*
