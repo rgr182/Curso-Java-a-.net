@@ -3012,23 +3012,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Raul Galvan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\rakzo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Raul Galvan\\source\\repos\\PasantiasBootCamp\\Curso_Java_a_.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+      "projectUniqueName": "C:\\Users\\rakzo\\OneDrive\\Documents\\GitHub\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
       "projectName": "Curso_Java_a_.net",
-      "projectPath": "C:\\Users\\Raul Galvan\\source\\repos\\PasantiasBootCamp\\Curso_Java_a_.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
-      "packagesPath": "C:\\Users\\Raul Galvan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Raul Galvan\\source\\repos\\PasantiasBootCamp\\Curso_Java_a_.net\\Curso_Java_a_.net\\obj\\",
+      "projectPath": "C:\\Users\\rakzo\\OneDrive\\Documents\\GitHub\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+      "packagesPath": "C:\\Users\\rakzo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rakzo\\OneDrive\\Documents\\GitHub\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Raul Galvan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rakzo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3036,6 +3037,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
