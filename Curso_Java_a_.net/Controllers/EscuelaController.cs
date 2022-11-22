@@ -29,26 +29,6 @@ namespace Curso_Java_a_.net.Controllers
         [Route("/MateriasUsuarios")]
         public string GetMateriasUsuarios()
         {
-            //return (from materiasusuarios in _escuelaContext.materiasusuarios join usuarios in _escuelaContext.usuarios on materiasusuarios.idusuario equals usuarios.idusuario join materias in _escuelaContext.materias on materiasusuarios.idmateria equals materias.idmateria select materiasusuarios);
-            // Linq Query
-            /*var result = from mu in _escuelaContext.materiasusuarios
-                         join m in _escuelaContext.materias
-                             on mu.idmateria equals m.idmateria
-                         join u in _escuelaContext.usuarios
-                             on mu.idusuario equals u.idusuario
-                         select new
-                         {
-                             id = mu.idmateriausuario,
-                             name = u.nombre,
-                             edad = u.edad,
-                             correo = u.correo,
-                             materia = m.nombre,
-                             maestro = m.maestro,
-                             horario = m.horario,
-                             calificacion = mu.calificacion
-                         };
-            */
-            // Lambda expresion
             var result = _escuelaContext.materiasusuarios
                             .Join(_escuelaContext.materias,
                                 m => m.idmateria,
@@ -100,7 +80,6 @@ namespace Curso_Java_a_.net.Controllers
             var res = "";
             try
             {
-
                 usuarios usuario = new usuarios();
                 usuario.nombre = nombre;
                 usuario.genero = genero;
@@ -110,7 +89,6 @@ namespace Curso_Java_a_.net.Controllers
                 _escuelaContext.usuarios.Add(usuario);
                 _escuelaContext.SaveChanges();
                 return "Usuario agregado";
-
             }
             catch (Exception ex)
             {
@@ -134,7 +112,6 @@ namespace Curso_Java_a_.net.Controllers
                 _escuelaContext.usuarios.Update(usuario);
                 _escuelaContext.SaveChanges();
                 return "Usuario actualizado";
-
             }
             catch (Exception ex)
             {
@@ -170,7 +147,6 @@ namespace Curso_Java_a_.net.Controllers
             var res = "";
             try
             {
-
                 materias materia = new materias();
                 materia.nombre = nombre;
                 materia.horario = horario;
@@ -178,7 +154,6 @@ namespace Curso_Java_a_.net.Controllers
                 _escuelaContext.materias.Add(materia);
                 _escuelaContext.SaveChanges();
                 return "Materia agregada";
-
             }
             catch (Exception ex)
             {
@@ -200,7 +175,6 @@ namespace Curso_Java_a_.net.Controllers
                 _escuelaContext.materias.Update(materia);
                 _escuelaContext.SaveChanges();
                 return "Materia actualizada";
-
             }
             catch (Exception ex)
             {
@@ -236,14 +210,12 @@ namespace Curso_Java_a_.net.Controllers
             var res = "";
             try
             {
-
                 materiasusuarios materiausuario = new materiasusuarios();
                 materiausuario.idmateria = idmateria;
                 materiausuario.idusuario = idusuario;
                 _escuelaContext.materiasusuarios.Add(materiausuario);
                 _escuelaContext.SaveChanges();
                 return "MateriaUsuario agregada";
-
             }
             catch (Exception ex)
             {
@@ -264,7 +236,6 @@ namespace Curso_Java_a_.net.Controllers
                 _escuelaContext.materiasusuarios.Update(materiausuario);
                 _escuelaContext.SaveChanges();
                 return "MateriaUsuario actualizada";
-
             }
             catch (Exception ex)
             {
@@ -283,7 +254,6 @@ namespace Curso_Java_a_.net.Controllers
                 _escuelaContext.materiasusuarios.Remove(materiausuario);
                 _escuelaContext.SaveChanges();
                 return "MateriaUsuario eliminada";
-
             }
             catch (Exception ex)
             {
