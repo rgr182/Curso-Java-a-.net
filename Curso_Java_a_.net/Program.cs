@@ -9,14 +9,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
 
-// configuramos el CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: MyAllowSpecificOrigins,
+    options.AddPolicy(name: myAllowSpecificOrigins,
                       builder =>
                       {
                           builder.WithOrigins("http://localhost:8080", "http://localhost:3000", "http://127.0.0.1:5500");
@@ -30,10 +29,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Dependencias Inyeccion
 builder.Services.AddScoped<IOperacionesMatematicas, OperacionesMatematicas>();
 builder.Services.AddScoped<IConsulta, Consulta>();
-// Add inyeccion de dependencias de la base de datos
 
 var connectionString = builder.Configuration.GetConnectionString("EscuelaMysqlConnection");
 builder.Services.AddDbContext<EscuelaContext>(options =>
@@ -42,12 +39,6 @@ builder.Services.AddDbContext<EscuelaContext>(options =>
 });
 
 var app = builder.Build();
-/*
-using (var scope = app.Services.CreateScope())
-{
-    var context = scope.ServiceProvider.GetRequiredService<EscuelaContext>();
-    context.Database.Migrate();
-}*/
 
 
 // Configure the HTTP request pipeline.
@@ -59,7 +50,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors(MyAllowSpecificOrigins);
+app.UseCors(myAllowSpecificOrigins);
 
 app.UseAuthorization();
 
