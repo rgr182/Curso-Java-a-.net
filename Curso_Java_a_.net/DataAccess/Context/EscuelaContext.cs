@@ -11,8 +11,8 @@ namespace Curso_Java_a_.net.Context.DAL
         {
             
         }
-        public DbSet<usuarios> usuarios { get; set; }
-        public DbSet<materiasusuarios> materiasusuarios { get; set; }
-        public DbSet<materias> materias { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
+        public DbSet<MateriasUsuarios> MateriasUsuarios { get; set; }
+        public DbSet<Materias> Materias { get; set; }
     }
 }

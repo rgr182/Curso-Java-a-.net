@@ -1,21 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Curso_Java_a_.net.DataAccess.Models
 {
-    public class materiasusuarios
+    public class MateriasUsuarios
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int idmateriausuario { get; set; }
-        public int calificacion { get; set; }
-        public int idmateria { get; set; }
-        public int idusuario { get; set; }
+        public int IdMateriaUsuario { get; set; }
+        public int Calificacion { get; set; }
+        public int IdMateria { get; set; }
+        public int IdUsuario { get; set; }
         
-        [ForeignKey("idmateria")]
-        public virtual materias materia { get; set; }
+        [ForeignKey("IdMateria")]
+        public virtual Materias Materia { get; set; }
         
-        [ForeignKey("idusuario")]
-        public virtual usuarios usuarios { get; set; }
+        [ForeignKey("IdUsuario")]
+        public virtual Usuarios Usuarios { get; set; }
     }
 }

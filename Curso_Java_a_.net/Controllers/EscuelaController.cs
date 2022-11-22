@@ -21,72 +21,72 @@ namespace Curso_Java_a_.net.Controllers
         #region GetsTodo
         [HttpGet]
         [Route("/Materias")]
-        public IEnumerable<materias> GetMaterias()
+        public IEnumerable<Materias> GetMaterias()
         {
-            return _escuelaContext.materias.ToList();
+            return _escuelaContext.Materias.ToList();
         }
         [HttpGet]
         [Route("/MateriasUsuarios")]
         public string GetMateriasUsuarios()
         {
-            var result = _escuelaContext.materiasusuarios
-                            .Join(_escuelaContext.materias,
-                                m => m.idmateria,
-                                mu => mu.idmateria,
+            var result = _escuelaContext.MateriasUsuarios
+                            .Join(_escuelaContext.Materias,
+                                m => m.IdMateria,
+                                mu => mu.IdMateria,
                                 (mu, m) => new {
-                                    id=mu.idmateriausuario,
-                                    mu.idusuario,
-                                    materia = m.nombre,
-                                    m.horario,
-                                    mu.calificacion,
-                                    m.maestro
+                                    id=mu.IdMateriaUsuario,
+                                    mu.IdUsuario,
+                                    Materia = m.Nombre,
+                                    m.Horario,
+                                    mu.Calificacion,
+                                    m.Maestro
                                 })
 
-                            .Join(_escuelaContext.usuarios,
-                                mu => mu.idusuario,
-                                u => u.idusuario,
+                            .Join(_escuelaContext.Usuarios,
+                                mu => mu.IdUsuario,
+                                u => u.IdUsuario,
                                 (mu, u) => new {
                                     mu.id,
-                                    mu.idusuario,
-                                    mu.materia,
-                                    mu.horario,
-                                    mu.calificacion,
-                                    mu.maestro,
-                                    name=u.nombre,
-                                    u.edad,
-                                    u.correo
+                                    mu.IdUsuario,
+                                    mu.Materia,
+                                    mu.Horario,
+                                    mu.Calificacion,
+                                    mu.Maestro,
+                                    Name=u.Nombre,
+                                    u.Edad,
+                                    u.Correo
                                 });
 
             var final ="";
             foreach (var r in result)
             {
-                final += ("id: " + r.id + " nombre: " + r.name + " edad: " + r.edad + " correo: " + r.correo + " materia: " + r.materia + " maestro: " + r.maestro + " horario: " + r.horario + " calificacion: " + r.calificacion + "\n");
+                final += ("id: " + r.id + " Nombre: " + r.Name + " Edad: " + r.Edad + " Correo: " + r.Correo + " materia: " + r.Materia + " Maestro: " + r.Maestro + " Horario: " + r.Horario + " calificacion: " + r.Calificacion + "\n");
             }
             return final;
         }
         [HttpGet]
         [Route("/Usuarios")]
-        public IEnumerable<usuarios> GetUsuarios()
+        public IEnumerable<Usuarios> GetUsuarios()
         {
-            return _escuelaContext.usuarios.ToList();
+            return _escuelaContext.Usuarios.ToList();
         }
         #endregion
 
-        #region usuarios
+        #region Usuarios
         [HttpPost]
         [Route("/PostUsuario")]
-        public string InsertUsuario(string nombre, string genero, DateTime fechaNacimiento, string correo,int edad)
+        public string InsertUsuario(string Nombre, string Genero, DateTime FechaNacimiento, string Correo,int Edad)
         {
             var res = "";
             try
             {
-                usuarios usuario = new usuarios();
-                usuario.nombre = nombre;
-                usuario.genero = genero;
-                usuario.correo = correo;
-                usuario.edad = edad;
-                usuario.fechanacimiento = fechaNacimiento;
-                _escuelaContext.usuarios.Add(usuario);
+                Usuarios usuario = new Usuarios();
+                usuario.Nombre = Nombre;
+                usuario.Genero = Genero;
+                usuario.Correo = Correo;
+                usuario.Edad = Edad;
+                usuario.FechaNacimiento = FechaNacimiento;
+                _escuelaContext.Usuarios.Add(usuario);
                 _escuelaContext.SaveChanges();
                 return "Usuario agregado";
             }
@@ -98,18 +98,18 @@ namespace Curso_Java_a_.net.Controllers
         }
         [HttpPut]
         [Route("/PutUsuario")]
-        public string UpdateUsuario(int idusuario, string nombre, string genero, DateTime fechaNacimiento, string correo, int edad)
+        public string UpdateUsuario(int IdUsuario, string Nombre, string Genero, DateTime FechaNacimiento, string Correo, int Edad)
         {
             var res = "";
             try
             {
-                usuarios usuario = _escuelaContext.usuarios.Find(idusuario);
-                usuario.nombre = nombre;
-                usuario.genero = genero;
-                usuario.correo = correo;
-                usuario.edad = edad;
-                usuario.fechanacimiento = fechaNacimiento;
-                _escuelaContext.usuarios.Update(usuario);
+                Usuarios usuario = _escuelaContext.Usuarios.Find(IdUsuario);
+                usuario.Nombre = Nombre;
+                usuario.Genero = Genero;
+                usuario.Correo = Correo;
+                usuario.Edad = Edad;
+                usuario.FechaNacimiento = FechaNacimiento;
+                _escuelaContext.Usuarios.Update(usuario);
                 _escuelaContext.SaveChanges();
                 return "Usuario actualizado";
             }
@@ -121,13 +121,13 @@ namespace Curso_Java_a_.net.Controllers
         }
         [HttpDelete]
         [Route("/DeleteUsuario")]
-        public string DeleteUsuario(int idusuario)
+        public string DeleteUsuario(int IdUsuario)
         {
             var res = "";
             try
             {
-                usuarios usuario = _escuelaContext.usuarios.Find(idusuario);
-                _escuelaContext.usuarios.Remove(usuario);
+                Usuarios usuario = _escuelaContext.Usuarios.Find(IdUsuario);
+                _escuelaContext.Usuarios.Remove(usuario);
                 _escuelaContext.SaveChanges();
                 return "Usuario eliminado";
 
@@ -142,16 +142,16 @@ namespace Curso_Java_a_.net.Controllers
         #region Materias
         [HttpPost]
         [Route("/PostMateria")]
-        public string InsertMateria(string nombre, string horario, string maestro)
+        public string InsertMateria(string Nombre, string Horario, string Maestro)
         {
             var res = "";
             try
             {
-                materias materia = new materias();
-                materia.nombre = nombre;
-                materia.horario = horario;
-                materia.maestro = maestro;
-                _escuelaContext.materias.Add(materia);
+                Materias materia = new Materias();
+                materia.Nombre = Nombre;
+                materia.Horario = Horario;
+                materia.Maestro = Maestro;
+                _escuelaContext.Materias.Add(materia);
                 _escuelaContext.SaveChanges();
                 return "Materia agregada";
             }
@@ -163,16 +163,16 @@ namespace Curso_Java_a_.net.Controllers
         }
         [HttpPut]
         [Route("/PutMateria")]
-        public string UpdateMateria(int idmateria, string nombre, string horario, string maestro)
+        public string UpdateMateria(int IdMateria, string Nombre, string Horario, string Maestro)
         {
             var res = "";
             try
             {
-                materias materia = _escuelaContext.materias.Find(idmateria);
-                materia.nombre = nombre;
-                materia.horario = horario;
-                materia.maestro = maestro;
-                _escuelaContext.materias.Update(materia);
+                Materias materia = _escuelaContext.Materias.Find(IdMateria);
+                materia.Nombre = Nombre;
+                materia.Horario = Horario;
+                materia.Maestro = Maestro;
+                _escuelaContext.Materias.Update(materia);
                 _escuelaContext.SaveChanges();
                 return "Materia actualizada";
             }
@@ -184,13 +184,13 @@ namespace Curso_Java_a_.net.Controllers
         }
         [HttpDelete]
         [Route("/DeleteMateria")]
-        public string DeleteMateria(int idmateria)
+        public string DeleteMateria(int IdMateria)
         {
             var res = "";
             try
             {
-                materias materia = _escuelaContext.materias.Find(idmateria);
-                _escuelaContext.materias.Remove(materia);
+                Materias materia = _escuelaContext.Materias.Find(IdMateria);
+                _escuelaContext.Materias.Remove(materia);
                 _escuelaContext.SaveChanges();
                 return "Materia eliminada";
 
@@ -205,15 +205,15 @@ namespace Curso_Java_a_.net.Controllers
         #region MateriasUsuarios
         [HttpPost]
         [Route("/PostMateriaUsuario")]
-        public string InsertMateriaUsuario(int idmateria, int idusuario)
+        public string InsertMateriaUsuario(int IdMateria, int IdUsuario)
         {
             var res = "";
             try
             {
-                materiasusuarios materiausuario = new materiasusuarios();
-                materiausuario.idmateria = idmateria;
-                materiausuario.idusuario = idusuario;
-                _escuelaContext.materiasusuarios.Add(materiausuario);
+                MateriasUsuarios materiausuario = new MateriasUsuarios();
+                materiausuario.IdMateria = IdMateria;
+                materiausuario.IdUsuario = IdUsuario;
+                _escuelaContext.MateriasUsuarios.Add(materiausuario);
                 _escuelaContext.SaveChanges();
                 return "MateriaUsuario agregada";
             }
@@ -225,15 +225,15 @@ namespace Curso_Java_a_.net.Controllers
         }
         [HttpPut]
         [Route("/PutMateriaUsuario")]
-        public string UpdateMateriaUsuario(int idmateriausuario, int idmateria, int idusuario)
+        public string UpdateMateriaUsuario(int IdMateriausuario, int IdMateria, int IdUsuario)
         {
             var res = "";
             try
             {
-                materiasusuarios materiausuario = _escuelaContext.materiasusuarios.Find(idmateriausuario);
-                materiausuario.idmateria = idmateria;
-                materiausuario.idusuario = idusuario;
-                _escuelaContext.materiasusuarios.Update(materiausuario);
+                MateriasUsuarios materiausuario = _escuelaContext.MateriasUsuarios.Find(IdMateriausuario);
+                materiausuario.IdMateria = IdMateria;
+                materiausuario.IdUsuario = IdUsuario;
+                _escuelaContext.MateriasUsuarios.Update(materiausuario);
                 _escuelaContext.SaveChanges();
                 return "MateriaUsuario actualizada";
             }
@@ -245,13 +245,13 @@ namespace Curso_Java_a_.net.Controllers
         }
         [HttpDelete]
         [Route("/DeleteMateriaUsuario")]
-        public string DeleteMateriaUsuario(int idmateriausuario)
+        public string DeleteMateriaUsuario(int IdMateriausuario)
         {
             var res = "";
             try
             {
-                materiasusuarios materiausuario = _escuelaContext.materiasusuarios.Find(idmateriausuario);
-                _escuelaContext.materiasusuarios.Remove(materiausuario);
+                MateriasUsuarios materiausuario = _escuelaContext.MateriasUsuarios.Find(IdMateriausuario);
+                _escuelaContext.MateriasUsuarios.Remove(materiausuario);
                 _escuelaContext.SaveChanges();
                 return "MateriaUsuario eliminada";
             }
