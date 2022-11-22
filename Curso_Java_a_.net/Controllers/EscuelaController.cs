@@ -1,8 +1,6 @@
-﻿using Curso_Java_a_.net.DataAccess.DAL;
-using Curso_Java_a_.net.DataAccess.Models;
-using Curso_Java_a_.net.DataAccess;
+﻿using Curso_Java_a_.net.DataAccess.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
+using Curso_Java_a_.net.Context.DAL;
 
 namespace Curso_Java_a_.net.Controllers
 {

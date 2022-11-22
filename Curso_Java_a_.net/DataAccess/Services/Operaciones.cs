@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using System.ComponentModel.DataAnnotations;
 
-namespace Curso_Java_a_.net.Services
+namespace Curso_Java_a_.net.Data.Access.Services
 {
     public class Operaciones : IOperaciones
     {

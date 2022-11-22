@@ -1,6 +1,5 @@
+using Curso_Java_a_.net.Context.DAL;
 using Curso_Java_a_.net.DataAccess;
-using Curso_Java_a_.net.DataAccess.DAL;
-using Curso_Java_a_.net.DataAccess.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Curso_Java_a_.net.Controllers
@@ -10,15 +9,15 @@ namespace Curso_Java_a_.net.Controllers
     public class CalculadoraController : ControllerBase
     {
 
-        private readonly ILogger<CalculadoraController> _logger;
-        public IOperacionesMatematicas _operaciones;
-        private EscuelaContext _escuelaContext;
+        private readonly ILogger<CalculadoraController> _Logger;
+        public IOperacionesMatematicas _Operaciones;
+        private EscuelaContext _EscuelaContext;
 
-        public CalculadoraController(ILogger<CalculadoraController> logger,
-            IOperacionesMatematicas operaciones)
+        public CalculadoraController(ILogger<CalculadoraController> Logger,
+            IOperacionesMatematicas Operaciones)
         {
-            _logger = logger;
-            _operaciones = operaciones;
+            _Logger = Logger;
+            _Operaciones = Operaciones;
         }
 
         [HttpGet]
@@ -28,7 +27,7 @@ namespace Curso_Java_a_.net.Controllers
             var res = "";
             try
             {
-                res = "El resultado de la suma es: " + _operaciones.sumar(a, b);
+                res = "El resultado de la suma es: " + _Operaciones.sumar(a, b);
             }
             catch (ArithmeticException ex)
             {
@@ -50,7 +49,7 @@ namespace Curso_Java_a_.net.Controllers
             var res = "";
             try
             {
-                res = "El resultado de la resta es: " + _operaciones.restar(a, b);
+                res = "El resultado de la resta es: " + _Operaciones.restar(a, b);
             }
             catch (Exception ex)
             {
@@ -67,7 +66,7 @@ namespace Curso_Java_a_.net.Controllers
             var res = "";
             try
             {
-                res = "El resultado de la multiplicacion es: " + _operaciones.multiplicar(a, b);
+                res = "El resultado de la multiplicacion es: " + _Operaciones.multiplicar(a, b);
             }
             catch (Exception ex)
             {
@@ -84,7 +83,7 @@ namespace Curso_Java_a_.net.Controllers
             var res = "";
             try
             {
-                res = "El resultado de la divicion es: " + _operaciones.dividir(a, b);
+                res = "El resultado de la divicion es: " + _Operaciones.dividir(a, b);
             }
             catch (DivideByZeroException ex)
             {

@@ -1,8 +1,8 @@
 using Curso_Java_a_.net.DataAccess;
 using Curso_Java_a_.net.Classes;
-using Curso_Java_a_.net.DataAccess.DAL;
 using Microsoft.EntityFrameworkCore;
 using Curso_Java_a_.Classes;
+using Curso_Java_a_.net.Context.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 

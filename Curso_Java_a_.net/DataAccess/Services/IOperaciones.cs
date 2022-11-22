@@ -1,4 +1,4 @@
-﻿namespace Curso_Java_a_.net.Services
+﻿namespace Curso_Java_a_.net.Data.Access.Services
 {
     public interface IOperaciones
     {
