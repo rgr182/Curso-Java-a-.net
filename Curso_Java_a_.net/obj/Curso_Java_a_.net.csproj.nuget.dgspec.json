@@ -1,33 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {}
+    "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {
+    "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+        "projectUniqueName": "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
         "projectName": "Curso_Java_a_.net",
-        "projectPath": "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
-        "packagesPath": "C:\\Users\\lajs5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
+        "projectPath": "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+        "packagesPath": "C:\\Users\\epile\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\lajs5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\epile\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

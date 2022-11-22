@@ -1,6 +1,7 @@
 ﻿using Curso_Java_a_.net.Controllers;
 using Microsoft.Extensions.Logging;
 using System.ComponentModel.DataAnnotations;
+using Curso_Java_a_.net.Data.Access.Services;
 
 namespace Curso_Java_a_.net.Data.Access.Services
 {
@@ -36,6 +37,11 @@ namespace Curso_Java_a_.net.Data.Access.Services
         public double Division(int a, int b)
         {
             return a / b;
+        }
+
+        public int showUsuarios()
+        {
+            throw new NotImplementedException();
         }
     }
 }

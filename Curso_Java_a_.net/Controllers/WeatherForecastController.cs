@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Curso_Java_a_.Classes;
+using Curso_Java_a_.net.Classes;
+using Curso_Java_a_.net.Data.Access.Services;
 
 namespace Curso_Java_a_.net.Controllers
 {
@@ -10,10 +11,10 @@ namespace Curso_Java_a_.net.Controllers
 
         public readonly ILogger<WeatherForecastController> _logger;
         //public readonly IOperaciones _op;
-        public readonly IConsulta _query;
+        public readonly IOperaciones _query;
 
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IConsulta query)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IOperaciones query)
         {
             _logger = logger;
             _query = query;

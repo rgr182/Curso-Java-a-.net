@@ -6,6 +6,7 @@
 
         public int Resta(int a, int b);
 
-        public double Division(int a, int b);       
+        public double Division(int a, int b);
+        int showUsuarios();
     }
 }
