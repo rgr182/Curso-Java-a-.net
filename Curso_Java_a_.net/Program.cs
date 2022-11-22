@@ -9,13 +9,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 
-var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
+const  String MyAllowSpecificOrigins = "_MyAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: myAllowSpecificOrigins,
+    options.AddPolicy(name: MyAllowSpecificOrigins,
                       builder =>
                       {
                           builder.WithOrigins("http://localhost:8080", "http://localhost:3000", "http://127.0.0.1:5500");
@@ -50,7 +50,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors(myAllowSpecificOrigins);
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthorization();
 

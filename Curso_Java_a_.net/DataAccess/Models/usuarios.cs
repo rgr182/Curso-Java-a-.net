@@ -1,19 +1,19 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Curso_Java_a_.net.DataAccess.Models
 {
-    public class usuarios
+    public class Usuarios
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int idusuario { get; set; }
-        public string nombre { get; set; }
-        public string genero { get; set; }
-        public DateTime fechanacimiento { get; set; }
-        public string correo { get; set; }
-        public int edad { get; set; }
+        public int IdUsuario { get; set; }
+        public string Nombre { get; set; }
+        public string Genero { get; set; }
+        public DateTime FechaNacimiento { get; set; }
+        public string Correo { get; set; }
+        public int Edad { get; set; }
     }
 }
