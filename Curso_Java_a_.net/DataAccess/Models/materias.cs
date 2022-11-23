@@ -1,10 +1,5 @@
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore.Storage.Internal;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
 
 namespace Curso_Java_a_.net.DataAccess.Models
 {
@@ -16,6 +11,5 @@ namespace Curso_Java_a_.net.DataAccess.Models
         public string Nombre { get; set; }
         public string Horario { get; set; }
         public string Maestro { get; set; }
-
     }
 }

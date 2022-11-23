@@ -1,10 +1,6 @@
 ﻿using Curso_Java_a_.net.DataAccess.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Storage.Internal;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-using Curso_Java_a_.net.Context.DAL;
+using Curso_Java_a_.net.Context;
 
 namespace Curso_Java_a_.net.Controllers
 {
@@ -18,7 +14,7 @@ namespace Curso_Java_a_.net.Controllers
             _escuelaContext = escuelaContext;
         }
 
-        #region GetsTodo
+        #region Public Methods
         [HttpGet]
         [Route("/Materias")]
         public IEnumerable<Materias> GetMaterias()
@@ -71,6 +67,11 @@ namespace Curso_Java_a_.net.Controllers
             return _escuelaContext.Usuarios.ToList();
         }
         #endregion
+
+
+        #region Private Methods
+
+        #endregion 
 
         #region Usuarios
         [HttpPost]

@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 using Curso_Java_a_.net.DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Curso_Java_a_.net.Context.DAL
+namespace Curso_Java_a_.net.Context
 {
     public class EscuelaContext : DbContext
     {
