@@ -1,4 +1,8 @@
-using Curso_Java_a_.Classes;
+using Microsoft.EntityFrameworkCore;
+using Curso_Java_a_.net.DataAccess.Models;
+using Curso_Java_a_.net.Context;
+
+string myAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,10 +13,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//builder.Services.AddScoped<IOperaciones, OperacionesAritmeticas>();
-builder.Services.AddScoped<IConsulta, Consulta>();
+
+var connectionString = builder.Configuration.GetConnectionString("EscuelaMysqlConnection");
+Environment.SetEnvironmentVariable("Connection", connectionString);
+builder.Services.AddDbContext<EscuelaContext>(options =>
+{
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+});
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
