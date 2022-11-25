@@ -1,11 +1,16 @@
-﻿using Curso_Java_a_.net.DataAccess.Models;
+using Curso_Java_a_.net.DataAccess.Models;
 using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.Context;
+using MySqlConnector;
+using Dapper;
 
 namespace Curso_Java_a_.net.Controllers
 {
     public class EscuelaController : Controller
     {
+        private string ConnString;
+        private string SQL;
+        private List<Usuarios> ListaUsuarios;
         private readonly ILogger<EscuelaController> _logger;
         private EscuelaContext _escuelaContext;
         public EscuelaController(ILogger<EscuelaController> logger,
@@ -15,6 +20,19 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         #region Public Methods
+        [HttpGet]
+        [Route("/ShowUsuarios")]
+        public int ShowUsuarios()
+        {
+            ConnString = Environment.GetEnvironmentVariable("Connection");
+            SQL = "SELECT * FROM Usuarios";
+            using (var connection = new MySqlConnection(ConnString))
+            {
+                ListaUsuarios = (List<Usuarios>)connection.Query<Usuarios>(SQL);
+            }
+            return ListaUsuarios.Count;
+        }
+
         [HttpGet]
         [Route("/Materias")]
         public IEnumerable<Materias> GetMaterias()
