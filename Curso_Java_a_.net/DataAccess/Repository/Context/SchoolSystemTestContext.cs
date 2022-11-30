@@ -1,0 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using Curso_Java_a_.net.DataAccess.Entities;
+
+namespace Curso_Java_a_.net.DataAccess.Repository.Context
+{
+    public class SchoolSystemTestContext : DbContext
+    {
+        public SchoolSystemTestContext(DbContextOptions<SchoolSystemTestContext> options) : base(options)
+        {
+
+        }
+        public DbSet<UsersSubjects> Users { get; set; }
+        public DbSet<Subjects> Subjects { get; set; }
+        public DbSet<UsersSubjects> UsersSubjects { get; set; }
+    }
+}

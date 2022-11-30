@@ -1,11 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using Curso_Java_a_.net.DataAccess.Models;
-using Curso_Java_a_.net.Context;
+using Curso_Java_a_.net.DataAccess.Entities;
+using Curso_Java_a_.net.DataAccess.Repository.Context;
 
 string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
-
 
 builder.Services.AddCors(o =>
     o.AddDefaultPolicy(b =>
@@ -18,15 +17,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-var connectionString = builder.Configuration.GetConnectionString("EscuelaMysqlConnection");
-Environment.SetEnvironmentVariable("Connection", connectionString);
-builder.Services.AddDbContext<EscuelaContext>(options =>
+string connectionStringtest = builder.Configuration.GetConnectionString("EscuelaMysqlConnection");
+Environment.SetEnvironmentVariable("Connection", connectionStringtest);
+builder.Services.AddDbContext<SchoolSystemTestContext>(options =>
 {
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+    options.UseMySql(connectionStringtest, ServerVersion.AutoDetect(connectionStringtest));
 });
 
 var app = builder.Build();
-
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
