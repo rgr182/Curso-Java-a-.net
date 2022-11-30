@@ -1,0 +1,1741 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatar0.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatar0.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatar1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatar1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatar2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatar2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatar3.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatar3.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatar4.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatar4.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatarFace0.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatarFace0.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatarFace1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatarFace1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatarFace2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatarFace2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatarFace3.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatarFace3.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatarFace4.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatarFace4.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatarLalo.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatarLalo.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatarLaloP.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatarLaloP.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatarLia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatarLia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\avatarLiaP.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\avatarLiaP.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\boot.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\boot.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\bootFace.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\bootFace.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\laloFace.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\laloFace.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\laloPreFace.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\laloPreFace.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\liaFace.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\liaFace.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\liaPreFace.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\liaPreFace.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\pantalla12.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\pantalla12.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\profile.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\profile.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\avatars\\user.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\avatars\\user.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\Background.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\Background.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\Countdown-003.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\Countdown-003.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\Countdown-004.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\Countdown-004.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\Maestro4.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\Maestro4.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\Maestro6.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\Maestro6.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\RecursosClase.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\RecursosClase.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\_0007_Objeto-inteligente-vectorial.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\_0007_Objeto-inteligente-vectorial.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\_0008_nave-frente.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\_0008_nave-frente.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\_0012_Vector-Smart-Object.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\_0012_Vector-Smart-Object.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\background-space.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\background-space.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\banner-papas.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\banner-papas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\dark-material-bg.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\dark-material-bg.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\header-bg.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\header-bg.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\backgrounds\\miembro-cursos.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\backgrounds\\miembro-cursos.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\bottons\\backArrow.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\bottons\\backArrow.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\calendar\\autumn.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\calendar\\autumn.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\calendar\\buttonCalendar.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\calendar\\buttonCalendar.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\calendar\\buttonClasses.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\calendar\\buttonClasses.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\calendar\\spring.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\calendar\\spring.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\calendar\\summer.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\calendar\\summer.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\calendar\\winter.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\calendar\\winter.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\cursos\\progKids.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\cursos\\progKids.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\Lia-2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\Lia-2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\Lia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\Lia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\alumnos-2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\alumnos-2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\alumnos.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\alumnos.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\campana.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\campana.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\clases-2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\clases-2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\clases.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\clases.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\comunidad-2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\comunidad-2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\comunidad.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\comunidad.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\course.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\course.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\escuela.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\escuela.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\escuelas.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\escuelas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\friends.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\friends.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\groupUsers.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\groupUsers.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\house-2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\house-2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\house.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\house.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\importar_usuarios.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\importar_usuarios.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\kinder.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\kinder.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\likes.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\likes.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\product.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\product.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\profile.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\profile.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\recursosLia-2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\recursosLia-2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\recursosLia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\recursosLia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\share.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\share.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\shopping-bag.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\shopping-bag.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\tareas-2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\tareas-2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\tareas.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\tareas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\dashboard\\usuarios.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\dashboard\\usuarios.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\demo-content\\morain-lake.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\demo-content\\morain-lake.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\ecommerce\\a-walk-amongst-friends.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\ecommerce\\a-walk-amongst-friends.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\ecommerce\\braies-lake.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\ecommerce\\braies-lake.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\ecommerce\\fall-glow.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\ecommerce\\fall-glow.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\ecommerce\\first-snow.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\ecommerce\\first-snow.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\ecommerce\\lago-di-braies.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\ecommerce\\lago-di-braies.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\ecommerce\\lago-di-sorapis.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\ecommerce\\lago-di-sorapis.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\ecommerce\\morain-lake.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\ecommerce\\morain-lake.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\ecommerce\\never-stop-changing.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\ecommerce\\never-stop-changing.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\ecommerce\\product-image-placeholder.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\ecommerce\\product-image-placeholder.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\ecommerce\\reaching.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\ecommerce\\reaching.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\ecommerce\\yosemite.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\ecommerce\\yosemite.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\etc\\fuse-react-project-structure.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\etc\\fuse-react-project-structure.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\etc\\sample-file-preview.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\etc\\sample-file-preview.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\examples\\shiba1.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\examples\\shiba1.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\examples\\shiba2.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\examples\\shiba2.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\examples\\thumbup-icon.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\examples\\thumbup-icon.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\flags\\es.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\flags\\es.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\flags\\sa.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\flags\\sa.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\flags\\tr.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\flags\\tr.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\flags\\us.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\flags\\us.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\help\\Pre1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\help\\Pre1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\help\\Pre2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\help\\Pre2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\help\\Pre3.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\help\\Pre3.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\help\\Pre4.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\help\\Pre4.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\help\\Pre5.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\help\\Pre5.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\help\\Pre6.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\help\\Pre6.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\help\\clases1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\help\\clases1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\help\\clases2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\help\\clases2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\home\\learningLiaBanner.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\home\\learningLiaBanner.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg10\\10.2.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg10\\10.2.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg10\\10.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg10\\10.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg1\\1.2.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg1\\1.2.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg1\\1.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg1\\1.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg2\\2.2.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg2\\2.2.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg2\\2.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg2\\2.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg3\\3.2.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg3\\3.2.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg3\\3.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg3\\3.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg4\\4.2.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg4\\4.2.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg4\\4.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg4\\4.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg5\\5.2.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg5\\5.2.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg5\\5.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg5\\5.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg6\\6.2.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg6\\6.2.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg6\\6.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg6\\6.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg7\\7.2.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg7\\7.2.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg7\\7.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg7\\7.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg8\\8.2.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg8\\8.2.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg8\\8.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg8\\8.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg9\\9.2.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg9\\9.2.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\homeworks\\svg9\\9.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\homeworks\\svg9\\9.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\iconsHomework\\actividad.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\iconsHomework\\actividad.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\iconsHomework\\documents.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\iconsHomework\\documents.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\iconsHomework\\excel.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\iconsHomework\\excel.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\iconsHomework\\image.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\iconsHomework\\image.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\iconsHomework\\powerpoint.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\iconsHomework\\powerpoint.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\iconsHomework\\url.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\iconsHomework\\url.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\iconsHomework\\word.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\iconsHomework\\word.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\login\\BOTTOM.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\login\\BOTTOM.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\login\\cir_alumnos.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\login\\cir_alumnos.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\login\\cir_escuelas.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\login\\cir_escuelas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\login\\cir_maestros.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\login\\cir_maestros.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\login\\cir_padres.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\login\\cir_padres.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\login\\tablero_alumno.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\login\\tablero_alumno.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\login\\tareas.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\login\\tareas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\Otro.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\Otro.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\auth0.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\auth0.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\btn_google_signin_dark_focus_web.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\btn_google_signin_dark_focus_web.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\btn_google_signin_dark_normal_web.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\btn_google_signin_dark_normal_web.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\check.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\check.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\checkInverse.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\checkInverse.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\clublia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\clublia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\clublia.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\clublia.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\clublia_ori.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\clublia_ori.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\file.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\file.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\firebase.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\firebase.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\fuse.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\fuse.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\globalSchool.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\globalSchool.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\google-drive.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\google-drive.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\google-forms.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\google-forms.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\google-meet.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\google-meet.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\google-slides.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\google-slides.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\google.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\google.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\jwt.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\jwt.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\liaU.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\liaU.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\logoComunidad.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\logoComunidad.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\recurso-audio.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\recurso-audio.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\recurso-enlace.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\recurso-enlace.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\recurso-excel.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\recurso-excel.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\recurso-imagen.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\recurso-imagen.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\recurso-pdf.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\recurso-pdf.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\recurso-powerpoint.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\recurso-powerpoint.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\recurso-video.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\recurso-video.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\recurso-word.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\recurso-word.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\whitelia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\whitelia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\logos\\wwwIcon.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\logos\\wwwIcon.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\mail\\attachment-1.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\mail\\attachment-1.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\mail\\attachment-2.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\mail\\attachment-2.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\mail\\attachment-3.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\mail\\attachment-3.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\aula.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\aula.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\canal.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\canal.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\civismo.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\civismo.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\comunidad.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\comunidad.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\cursos.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\cursos.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\eventos.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\eventos.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\experiencia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\experiencia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\galaxia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\galaxia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\podcast.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\podcast.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\premios.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\premios.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\programacion.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\programacion.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\reportes.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\reportes.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\membershipFeatures\\talks.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\membershipFeatures\\talks.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\mygalaxies\\background.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\mygalaxies\\background.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\mygalaxies\\club-arte.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\mygalaxies\\club-arte.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\mygalaxies\\club-felicidad.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\mygalaxies\\club-felicidad.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\mygalaxies\\club-futuro.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\mygalaxies\\club-futuro.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\mygalaxies\\club-letras.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\mygalaxies\\club-letras.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\mygalaxies\\club-verde.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\mygalaxies\\club-verde.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\notes\\beach.jpeg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\notes\\beach.jpeg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\notes\\road-trip.jpeg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\notes\\road-trip.jpeg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\patterns\\rain-grey.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\patterns\\rain-grey.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\patterns\\rain.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\patterns\\rain.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\Back-iconos.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\Back-iconos.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\Back-tareas.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\Back-tareas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\BackDashboard.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\BackDashboard.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\BackDashboard1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\BackDashboard1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\BackgroundPreescolar.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\BackgroundPreescolar.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\BackgroundPrimariaAlta.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\BackgroundPrimariaAlta.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\ButtonLIA.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\ButtonLIA.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\CL+.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\CL+.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\GOOGLE.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\GOOGLE.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\Galaxias.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\Galaxias.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\HERRAMIENTAS.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\HERRAMIENTAS.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\MATERIALES.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\MATERIALES.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\Mi-avatar-1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\Mi-avatar-1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\Mi-avatar.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\Mi-avatar.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\MiMundoLIA.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\MiMundoLIA.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\MisClases.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\MisClases.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\MisTareasPLANETA.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\MisTareasPLANETA.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\Misgalaxias.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\Misgalaxias.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\MisgalaxiasFinal.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\MisgalaxiasFinal.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\_0024_Materias-DESPLIEGUE.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\_0024_Materias-DESPLIEGUE.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\artes-1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\artes-1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\artes.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\artes.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\artes1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\artes1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\artes2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\artes2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\b1.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\b1.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\b2.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\b2.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\colores-iconos.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\colores-iconos.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\comunicacion-1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\comunicacion-1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\comunicacion.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\comunicacion.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\comunicacionButton.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\comunicacionButton.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\cursos-isla.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\cursos-isla.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\entregado.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\entregado.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\explorer-1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\explorer-1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\explorer.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\explorer.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\explorer1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\explorer1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\explorer2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\explorer2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\fecha.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\fecha.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\file.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\file.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\flecha.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\flecha.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\infoestudiante.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\infoestudiante.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\islaClases.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\islaClases.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\islaMundoLIA.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\islaMundoLIA.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\islaTareas.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\islaTareas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\islas-experiencias.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\islas-experiencias.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logos\\score_clases-envivo.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logos\\score_clases-envivo.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logos\\score_clases-pregrabadas.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logos\\score_clases-pregrabadas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logos\\score_clublia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logos\\score_clublia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logos\\score_herramienta.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logos\\score_herramienta.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logos\\score_lia-u.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logos\\score_lia-u.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logos\\score_logoclublia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logos\\score_logoclublia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logos\\score_mi-salon.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logos\\score_mi-salon.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logos\\score_mis-herramientas.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logos\\score_mis-herramientas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logos\\score_misgalaxias.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logos\\score_misgalaxias.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logos\\score_misgrupos.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logos\\score_misgrupos.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logos\\score_novedades.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logos\\score_novedades.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logos\\score_recursoslia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logos\\score_recursoslia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\logoutLia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\logoutLia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\miscalificaciones.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\miscalificaciones.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\pantalla12.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\pantalla12.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\pendientes.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\pendientes.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\proxima-tareaspendientes.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\proxima-tareaspendientes.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\tiempo-tareaspendientes.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\tiempo-tareaspendientes.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\preescolar\\tituloback.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\preescolar\\tituloback.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\pricing\\fondo_amarillo.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\pricing\\fondo_amarillo.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\pricing\\fondo_azul.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\pricing\\fondo_azul.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\pricing\\fondo_morado.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\pricing\\fondo_morado.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\pricing\\fondo_rojo.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\pricing\\fondo_rojo.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\BACK.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\BACK.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\BACK2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\BACK2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\Back-iconos.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\Back-iconos.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\Back-tareas.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\Back-tareas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\Boton.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\Boton.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\Boton_Small.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\Boton_Small.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\Boton_large.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\Boton_large.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\Card.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\Card.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\Card1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\Card1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\adjuntarIcon.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\adjuntarIcon.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\calendario.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\calendario.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\cardDashboard.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\cardDashboard.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\enviarIcon.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\enviarIcon.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\fondoDashboard.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\fondoDashboard.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\icons\\alerta.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\icons\\alerta.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\icons\\aprobatoria.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\icons\\aprobatoria.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\icons\\en-tiempo.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\icons\\en-tiempo.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\icons\\fuera-de-tiempo.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\icons\\fuera-de-tiempo.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\icons\\nota-del-maestro.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\icons\\nota-del-maestro.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\icons\\nota.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\icons\\nota.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\icons\\recibida.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\icons\\recibida.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\icons\\revision-especial.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\icons\\revision-especial.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\nota.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\nota.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\realizarIcon.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\realizarIcon.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\primariaalta\\tituloback.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\primariaalta\\tituloback.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\profile\\a-walk-amongst-friends-small.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\profile\\a-walk-amongst-friends-small.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\profile\\braies-lake-small.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\profile\\braies-lake-small.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\profile\\fall-glow-small.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\profile\\fall-glow-small.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\profile\\first-snow-small.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\profile\\first-snow-small.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\profile\\lago-di-braies-small.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\profile\\lago-di-braies-small.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\profile\\lago-di-sorapis-small.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\profile\\lago-di-sorapis-small.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\profile\\morain-lake-small.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\profile\\morain-lake-small.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\profile\\morain-lake.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\profile\\morain-lake.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\profile\\never-stop-changing-small.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\profile\\never-stop-changing-small.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\profile\\never-stop-changing.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\profile\\never-stop-changing.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\profile\\reaching-small.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\profile\\reaching-small.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\profile\\yosemite-small.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\profile\\yosemite-small.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\azul.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\azul.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Adivinanzas con imagen.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Adivinanzas con imagen.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Audio.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Audio.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Cancion.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Cancion.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Colorear.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Colorear.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Completar la frase.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Completar la frase.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Crucigrama.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Crucigrama.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Cuestionario.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Cuestionario.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Escape Room.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Escape Room.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Evaluacion.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Evaluacion.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Experimento.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Experimento.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Juego de mesa.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Juego de mesa.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Lectura.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Lectura.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Memorama.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Memorama.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Otro.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Otro.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Presentacion.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Presentacion.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Proyecto.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Proyecto.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Quiz.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Quiz.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Receta.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Receta.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Relacionar columnas.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Relacionar columnas.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Relacionar imagenes.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Relacionar imagenes.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Reto.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Reto.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Rompecabezas.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Rompecabezas.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Ruleta.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Ruleta.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Secuencia.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Secuencia.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Sopa de letras.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Sopa de letras.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\Video.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\Video.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\VideoJuego.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\VideoJuego.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\iconos\\relleno de color.svg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\iconos\\relleno de color.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\Arte.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\Arte.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\Ciencias naturales.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\Ciencias naturales.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\Educacion Socioemocional.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\Educacion Socioemocional.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\Espanol.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\Espanol.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\Formacion Civica y Etica.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\Formacion Civica y Etica.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\Geografia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\Geografia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\Historia.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\Historia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\Ingles.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\Ingles.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\Matematicas.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\Matematicas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\Mindfulness.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\Mindfulness.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\STEM.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\STEM.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\Salud y Bienestar.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\Salud y Bienestar.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\Tecnologia y Habilidades Digitales.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\Tecnologia y Habilidades Digitales.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\misClases1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\misClases1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\misClases2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\misClases2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\mundoLia1.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\mundoLia1.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\islands\\mundoLia2.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\islands\\mundoLia2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\morado.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\morado.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\naranja.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\naranja.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\rosa.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\rosa.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\resources\\verde.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\resources\\verde.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\scrumboard\\calendar.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\scrumboard\\calendar.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\scrumboard\\header-1.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\scrumboard\\header-1.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\scrumboard\\header-2.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\scrumboard\\header-2.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\scrumboard\\mail.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\scrumboard\\mail.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\user-import\\Plantilla_Usuarios_LIA.xlsx",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\user-import\\Plantilla_Usuarios_LIA.xlsx"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\user-import\\csv_ico.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\user-import\\csv_ico.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\user-import\\xls_ico.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\user-import\\xls_ico.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\user-import\\xlsx1.jpg",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\user-import\\xlsx1.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\usersList\\alumnos.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\usersList\\alumnos.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\usersList\\alumnosgs.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\usersList\\alumnosgs.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\usersList\\escuelas.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\usersList\\escuelas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\usersList\\interesados.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\usersList\\interesados.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\images\\usersList\\maestros.png",
+      "PackagePath": "staticwebassets\\assets-club lia\\images\\usersList\\maestros.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Actividades Calidicadas.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Actividades Calidicadas.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Actividades Entregadas.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Actividades Entregadas.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Actividades Pendientes.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Actividades Pendientes.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Adjuntar.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Adjuntar.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Calendario de Actividades.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Calendario de Actividades.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Calificacion.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Calificacion.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Canal LIA.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Canal LIA.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Clases en Vivo.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Clases en Vivo.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Dashboard.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Dashboard.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Descripcion.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Descripcion.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Enviar.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Enviar.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Estatus.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Estatus.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\LIA University.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\LIA University.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Materia.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Materia.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Mi Mundo Lia.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Mi Mundo Lia.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Mi Score.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Mi Score.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Mi avatar.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Mi avatar.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Mis Actividades.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Mis Actividades.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Mis Clases.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Mis Clases.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Mis Grupos.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Mis Grupos.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Mis Herramientas.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Mis Herramientas.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Mis Recursos LIA.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Mis Recursos LIA.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Mis Tareas.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Mis Tareas.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Salir.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Salir.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\sounds\\Vencimiento.mp3",
+      "PackagePath": "staticwebassets\\assets-club lia\\sounds\\Vencimiento.mp3"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets-club lia\\videos\\tutorial primaria.mp4",
+      "PackagePath": "staticwebassets\\assets-club lia\\videos\\tutorial primaria.mp4"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\grobold\\GROBOLD.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\grobold\\GROBOLD.ttf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\material-outline-icons\\material-outline-icons.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\material-outline-icons\\material-outline-icons.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\material-outline-icons\\material-outline-icons.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\material-outline-icons\\material-outline-icons.ttf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\material-outline-icons\\material-outline-icons.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\material-outline-icons\\material-outline-icons.woff"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\material-outline-icons\\styles.css",
+      "PackagePath": "staticwebassets\\assets\\fonts\\material-outline-icons\\styles.css"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\Read Me.txt",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\Read Me.txt"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\demo-files\\demo.css",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\demo-files\\demo.css"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\demo-files\\demo.js",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\demo-files\\demo.js"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\demo.html",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\demo.html"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\fonts\\Angella_demo.otf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\fonts\\Angella_demo.otf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\fonts\\GROBOLD.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\fonts\\GROBOLD.ttf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\fonts\\HaettenschweilerRegular.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\fonts\\HaettenschweilerRegular.ttf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\fonts\\Pangolin-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\fonts\\Pangolin-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\fonts\\Poppins-Medium.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\fonts\\Poppins-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\fonts\\RAGER.otf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\fonts\\RAGER.otf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\fonts\\SCR1rahv RAGER HEVVY.otf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\fonts\\SCR1rahv RAGER HEVVY.otf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\fonts\\WendyOne-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\fonts\\WendyOne-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\fonts\\meteocons.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\fonts\\meteocons.svg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\fonts\\meteocons.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\fonts\\meteocons.ttf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\fonts\\meteocons.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\fonts\\meteocons.woff"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\liga.js",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\liga.js"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\selection.json",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\selection.json"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\meteocons\\style.css",
+      "PackagePath": "staticwebassets\\assets\\fonts\\meteocons\\style.css"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\new-fonts\\Averta Black.otf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\new-fonts\\Averta Black.otf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\new-fonts\\Averta Bold.otf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\new-fonts\\Averta Bold.otf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\new-fonts\\Averta Light Italic.otf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\new-fonts\\Averta Light Italic.otf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\fonts\\pangolin\\Pangolin-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\pangolin\\Pangolin-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\login\\Home-Lia.jpg",
+      "PackagePath": "staticwebassets\\assets\\login\\Home-Lia.jpg"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\login\\SignIn.png",
+      "PackagePath": "staticwebassets\\assets\\login\\SignIn.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\login\\bg_alumnos.png",
+      "PackagePath": "staticwebassets\\assets\\login\\bg_alumnos.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\login\\bg_escuelas.png",
+      "PackagePath": "staticwebassets\\assets\\login\\bg_escuelas.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\login\\bg_maestros.png",
+      "PackagePath": "staticwebassets\\assets\\login\\bg_maestros.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\login\\bg_padres.png",
+      "PackagePath": "staticwebassets\\assets\\login\\bg_padres.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\login\\circle-complete-horizontal.png",
+      "PackagePath": "staticwebassets\\assets\\login\\circle-complete-horizontal.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\login\\circle-complete.png",
+      "PackagePath": "staticwebassets\\assets\\login\\circle-complete.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\login\\circle-complete2.png",
+      "PackagePath": "staticwebassets\\assets\\login\\circle-complete2.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\login\\circle.png",
+      "PackagePath": "staticwebassets\\assets\\login\\circle.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\login\\clublia.png",
+      "PackagePath": "staticwebassets\\assets\\login\\clublia.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\assets\\login\\lia-style.png",
+      "PackagePath": "staticwebassets\\assets\\login\\lia-style.png"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
+    },
+    {
+      "Id": "C:\\Codes\\clubliaUmbraco\\clubliaUmbraco\\wwwroot\\scripts\\script.js",
+      "PackagePath": "staticwebassets\\scripts\\script.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.clubliaUmbraco.props",
+      "PackagePath": "build\\clubliaUmbraco.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.clubliaUmbraco.props",
+      "PackagePath": "buildMultiTargeting\\clubliaUmbraco.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.clubliaUmbraco.props",
+      "PackagePath": "buildTransitive\\clubliaUmbraco.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.clubliaUmbraco.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
