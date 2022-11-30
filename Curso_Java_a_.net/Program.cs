@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Curso_Java_a_.net.DataAccess.Models;
-using Curso_Java_a_.net.Context;
+using Curso_Java_a_.net.Repository.Context;
 
 string myAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -16,7 +15,7 @@ builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration.GetConnectionString("EscuelaMysqlConnection");
 Environment.SetEnvironmentVariable("Connection", connectionString);
-builder.Services.AddDbContext<EscuelaContext>(options =>
+builder.Services.AddDbContext<TrainingSystemContext>(options =>
 {
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
 });

@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
-using System.Data.SqlClient;
-using Curso_Java_a_.net.DataAccess.Models;
+using Curso_Java_a_.net.DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Curso_Java_a_.net.Context
+namespace Curso_Java_a_.net.Repository.Context
 {
-    public class EscuelaContext : DbContext
+    public class TrainingSystemContext : DbContext
     {
-        public EscuelaContext(DbContextOptions<EscuelaContext> options) : base(options)
+        public TrainingSystemContext(DbContextOptions<TrainingSystemContext> options) : base(options)
         {
             
         }
