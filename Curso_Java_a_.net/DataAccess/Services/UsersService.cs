@@ -32,6 +32,24 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw ex;
             }
         }
+        public async Task<string> LoginUser(string user, string password)
+        {
+            try
+            {
+                var User = await _usersRepository.LoginUser(user, password);
+                if (User == null)
+                {
+                    return "";
+                }
+                string jwd = "fY4fULu2f4+3KGub5QTC8RpQ1XOwCK27hPnn7bGa+pG1oSN8LdYH3bpHkGQdXnCVZ4N5Dhyzytw=";
+                return jwd;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Error in UsersService");
+                throw ex;
+            }
+        }
 
         public void PostUser(Users user)
         {

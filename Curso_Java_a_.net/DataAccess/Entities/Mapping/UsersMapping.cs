@@ -25,8 +25,8 @@ namespace Curso_Java_a_.net.DataAccess.Entities.Mapping
                 .HasColumnName("Name")
                 .IsRequired();
             modelBuilder.Entity<Users>()
-                .Property(x => x.Genre)
-                .HasColumnName("Genre")
+                .Property(x => x.Gender)
+                .HasColumnName("Gender")
                 .IsRequired();
             modelBuilder.Entity<Users>().
                 Property(x => x.Email)
@@ -35,6 +35,10 @@ namespace Curso_Java_a_.net.DataAccess.Entities.Mapping
             modelBuilder.Entity<Users>()
                 .Property(x => x.Age)
                 .HasColumnName("Age")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.Password)
+                .HasColumnName("Password")
                 .IsRequired();
             #endregion
             #endregion

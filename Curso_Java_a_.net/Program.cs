@@ -22,7 +22,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-string connectionStringtest = builder.Configuration.GetConnectionString("EscuelaMysqlConnection");
+string connectionStringtest = builder.Configuration.GetConnectionString("ClubLiaConnection");
 Environment.SetEnvironmentVariable("Connection", connectionStringtest);
 builder.Services.AddDbContext<SchoolSystemTestContext>(options =>
 {
