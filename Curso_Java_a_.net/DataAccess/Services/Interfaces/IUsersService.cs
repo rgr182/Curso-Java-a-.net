@@ -1,8 +1,9 @@
+
 using Curso_Java_a_.net.DataAccess.Entities;
 
-namespace Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces
+namespace Curso_Java_a_.net.DataAccess.Services.Interfaces
 {
-    public interface IUsersRepository
+    public interface IUsersService
     {
         public Task<Users> GetUserById(int id);
         public void PostUser(Users user);

@@ -11,14 +11,11 @@ namespace Curso_Java_a_.net.DataAccess.Entities.Mapping
                 .ToTable("subjects");
             #region Primary Keys
             modelBuilder.Entity<Subjects>()
-                .HasKey(x => x.SubjectId);
+                .HasKey(x => x.SubjectId)
+                .HasName("SubjectId");
             #endregion
             #region Properties
-            modelBuilder.Entity<Subjects>()
-                .Property(x => x.SubjectId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("SubjectId")
-                .IsRequired();
+                
             modelBuilder.Entity<Subjects>()
                 .Property(x => x.Name)
                 .HasColumnName("Name")

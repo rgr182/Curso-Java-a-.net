@@ -11,7 +11,8 @@ namespace Curso_Java_a_.net.DataAccess.Entities.Mapping
                 .ToTable("users");
             #region Primary Keys
             modelBuilder.Entity<Users>()
-                .HasKey(x => x.UserId);
+                .HasKey(x => x.UserId)
+                .HasName("UserId");
             #endregion
             #region Properties
             modelBuilder.Entity<Users>()

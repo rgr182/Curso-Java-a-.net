@@ -13,22 +13,27 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context = context;
         }
 
-        public Task<Users> DeleteUser(int id)
+        public void DeleteUser(int id)
         {
-            throw new NotImplementedException();
+            Users user = _context.Users.Find(id);
+            _context.Users.Remove(user);
+            _context.SaveChanges();
         }
 
         public Task<Users> GetUserById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Users
+                .Where(x => x.UserId == id)
+                .FirstOrDefaultAsync();
         }
 
-        public Task<Users> PostUser(Users user)
+        public void PostUser(Users user)
         {
-            throw new NotImplementedException();
+            _context.Users
+                .AddAsync(user);
         }
 
-        public Task<Users> PutUser(Users user)
+        public void PutUser(Users user)
         {
             throw new NotImplementedException();
         }
