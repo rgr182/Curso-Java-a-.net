@@ -23,7 +23,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                var user = await _usersRepository.GetUserById(id);
+                Users user = await _usersRepository.GetUserById(id);
                 return user;
             }
             catch (Exception ex)

@@ -22,16 +22,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-builder.Services.AddScoped<IUsersService, UsersService>();
-builder.Services.AddScoped<IUsersRepository, UsersRepository>();
-
 string connectionStringtest = builder.Configuration.GetConnectionString("EscuelaMysqlConnection");
 Environment.SetEnvironmentVariable("Connection", connectionStringtest);
 builder.Services.AddDbContext<SchoolSystemTestContext>(options =>
 {
     options.UseMySql(connectionStringtest, ServerVersion.AutoDetect(connectionStringtest));
 });
+
+builder.Services.AddScoped<IUsersService, UsersService>();
+builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 
 var app = builder.Build();
 

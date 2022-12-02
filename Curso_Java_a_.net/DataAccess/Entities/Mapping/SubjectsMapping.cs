@@ -27,5 +27,10 @@ namespace Curso_Java_a_.net.DataAccess.Entities.Mapping
             #endregion
             #endregion
         }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=.;Database=Curso_Java_a_.net;Trusted_Connection=True;");
+            optionsBuilder.EnableSensitiveDataLogging();
+        }
     }
 }
