@@ -41,11 +41,11 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var auth = await _usersService.LoginUser(user, password);
-                if (auth != "")
+                if (auth == "")
                 {
-                    return Ok(auth);
+                     return Unauthorized("Usuario o contraseña incorrectos");
                 }
-                return Unauthorized("Usuario o contraseña incorrectos");
+                return Ok(auth);
             }
             catch (Exception ex)
             {
