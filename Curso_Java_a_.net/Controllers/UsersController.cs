@@ -18,7 +18,7 @@ namespace Curso_Java_a_.net.Controllers
         {
             _usersService = usersService;
         }
-        
+
         [HttpGet]
         [Route("/ShowUsuarios")]
         public async Task<ActionResult<Users>> GetUsers(int id)
@@ -41,16 +41,11 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var auth = await _usersService.LoginUser(user, password);
-                if (auth!= "")
+                if (auth != "")
                 {
                     return Ok(auth);
                 }
-                else
-                {
-                    return Unauthorized("Usuario o contraseña incorrectos");
-                }
-
-                
+                return Unauthorized("Usuario o contraseña incorrectos");
             }
             catch (Exception ex)
             {
