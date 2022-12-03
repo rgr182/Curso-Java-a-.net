@@ -20,10 +20,10 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context.SaveChanges();
         }
 
-        public Task<Users> GetUserById(int id)
+        public Task<Users> GetUserById(string usuario, string pass)
         {
             return _context.Users
-                .Where(x => x.UserId == id)
+                .Where(x => x.Name  == usuario && x.UserPassword == pass)
                 .FirstOrDefaultAsync();
         }
 

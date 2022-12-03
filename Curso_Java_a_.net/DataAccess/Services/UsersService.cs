@@ -19,11 +19,15 @@ namespace Curso_Java_a_.net.DataAccess.Services
             throw new NotImplementedException();
         }
 
-        public async Task<Users> GetUserById(int id)
+        public async Task<Users> GetUserByUserAndPassword(string usuario, string pass)
         {
             try
             {
-                Users user = await _usersRepository.GetUserById(id);
+                Users user = await _usersRepository.GetUserById(usuario,  pass);
+                if (user == null)
+                {
+                    throw new UnauthorizedAccessException();
+                }
                 return user;
             }
             catch (Exception ex)

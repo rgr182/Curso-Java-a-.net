@@ -2167,23 +2167,6 @@
           }
         }
       },
-      "Pomelo.EntityFrameworkCore.MySql/7.0.0-alpha.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "7.0.0",
-          "MySqlConnector": "2.2.0"
-        },
-        "compile": {
-          "lib/net6.0/Pomelo.EntityFrameworkCore.MySql.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Pomelo.EntityFrameworkCore.MySql.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -6907,22 +6890,6 @@
         "nuget.versioning.nuspec"
       ]
     },
-    "Pomelo.EntityFrameworkCore.MySql/7.0.0-alpha.1": {
-      "sha512": "zyt7BFrKvpMaK+v37t5YpKHZRRGMV1mNVCklD/Cuqre32ZQ2VYr/qghHeyv/LSe2LZKEEReAya/9/xnKe31xPg==",
-      "type": "package",
-      "path": "pomelo.entityframeworkcore.mysql/7.0.0-alpha.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/net6.0/Pomelo.EntityFrameworkCore.MySql.dll",
-        "lib/net6.0/Pomelo.EntityFrameworkCore.MySql.xml",
-        "lib/net7.0/Pomelo.EntityFrameworkCore.MySql.dll",
-        "lib/net7.0/Pomelo.EntityFrameworkCore.MySql.xml",
-        "pomelo.entityframeworkcore.mysql.7.0.0-alpha.1.nupkg.sha512",
-        "pomelo.entityframeworkcore.mysql.nuspec"
-      ]
-    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "sha512": "HdSSp5MnJSsg08KMfZThpuLPJpPwE5hBXvHwoKWosyHHfe8Mh5WKT0ylEOf6yNzX6Ngjxe4Whkafh5q7Ymac4Q==",
       "type": "package",
@@ -11402,40 +11369,37 @@
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10",
       "MySqlConnector >= 2.2.1",
-      "Pomelo.EntityFrameworkCore.MySql >= 7.0.0-alpha.1",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "System.Data.SqlClient >= 4.8.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lajs5\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\epile\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+      "projectUniqueName": "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
       "projectName": "Curso_Java_a_.net",
-      "projectPath": "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
-      "packagesPath": "C:\\Users\\lajs5\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
+      "projectPath": "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+      "packagesPath": "C:\\Users\\epile\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lajs5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\epile\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11495,10 +11459,6 @@
           "MySqlConnector": {
             "target": "Package",
             "version": "[2.2.1, )"
-          },
-          "Pomelo.EntityFrameworkCore.MySql": {
-            "target": "Package",
-            "version": "[7.0.0-alpha.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

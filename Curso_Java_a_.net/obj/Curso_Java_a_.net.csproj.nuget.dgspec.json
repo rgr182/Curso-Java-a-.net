@@ -53,6 +53,14 @@
               "target": "Package",
               "version": "[6.4.4, )"
             },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.0.1, )"
@@ -64,6 +72,20 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

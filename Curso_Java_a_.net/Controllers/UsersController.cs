@@ -8,31 +8,44 @@ using Microsoft.AspNetCore.Mvc;
 using Controller = Microsoft.AspNetCore.Mvc.Controller;
 using Curso_Java_a_.net.DataAccess.Entities;
 
+
 namespace Curso_Java_a_.net.Controllers
 {
     public class UsersController : ControllerBase
     {
         public readonly IUsersService _usersService;
-        public UsersController(IUsersService usersService)
+        public ILogger<UsersController> _logger;
+
+        public UsersController(IUsersService usersService, ILogger<UsersController> logger)
         {
             _usersService = usersService;
+            _logger = logger;
         }
 
         [HttpGet]
         [Route("/ShowUsuarios")]
-        public async Task<ActionResult<Users>> GetUsers(int id)
+        public async Task<ActionResult<Users>> GetUsers(string usuario, string pass)
+
         {
             try
             {
-                var user = await _usersService.GetUserById(id);
+                var user = await _usersService.GetUserByUserAndPassword(usuario, pass);
 
-                return Ok(user);
+                string token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+                return Ok(token);
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException uex) {
+                _logger.LogError(uex, "User and password does not match");
+                return Unauthorized("User and password does not match");
+            }
+            catch (Exception uex)
             {
-                return Problem(ex.ToString());
+                
+                return Problem("Some error happened please contact Sys Admin");
             }
         }
+
+
         
     }
 }
