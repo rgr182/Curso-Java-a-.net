@@ -7,6 +7,7 @@ using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using Microsoft.AspNetCore.Mvc;
 using Controller = Microsoft.AspNetCore.Mvc.Controller;
 using Curso_Java_a_.net.DataAccess.Entities;
+using Curso_Java_a_.net.DataAccess.Repository.Repositories;
 
 
 namespace Curso_Java_a_.net.Controllers
@@ -31,8 +32,10 @@ namespace Curso_Java_a_.net.Controllers
             {
                 var user = await _usersService.GetUserByUserAndPassword(usuario, pass);
 
-                string token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
-                return Ok(token);
+                // string token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
+                var tokenDomain = new Tokens;
+
+                return Ok(tokenDomain);
             }
             catch (UnauthorizedAccessException uex) {
                 _logger.LogError(uex, "User and password does not match");

@@ -14,11 +14,8 @@ namespace Curso_Java_a_.net.DataAccess.Services
             _usersRepository = usersRepository;
             this.logger = logger;
         }
-        public void DeleteUser(int id)
-        {
-            throw new NotImplementedException();
-        }
-
+      
+        
         public async Task<Users> GetUserByUserAndPassword(string usuario, string pass)
         {
             try
