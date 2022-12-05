@@ -32,6 +32,13 @@ builder.Services.AddDbContext<SchoolSystemTestContext>(options =>
 builder.Services.AddScoped<IUsersService, UsersService>();
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 
+builder.Services.AddScoped<ISubjectsService, SubjectsService>();
+builder.Services.AddScoped<ISubjectsRepository, SubjectsRepository>();
+
+
+builder.Services.AddScoped<IUsersSubjectsRepository, UsersSubjectsRepository>();
+builder.Services.AddScoped<IUsersSubjectsService, UsersSubjectsService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

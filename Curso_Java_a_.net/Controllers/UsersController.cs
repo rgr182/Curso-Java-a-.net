@@ -36,7 +36,7 @@ namespace Curso_Java_a_.net.Controllers
         }
         [HttpPost]
         [Route("/Login")]
-        public async Task<ActionResult<string>> Login(string user, string password)
+        public async Task<ActionResult> Login(string user, string password)
         {
             try
             {
