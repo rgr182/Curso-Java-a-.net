@@ -40,18 +40,17 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                var auth = await _usersService.LoginUser(user, password);
-                if (auth == "")
+                var User = await _usersService.LoginUser(user, password);
+                if (User == null)
                 {
                      return Unauthorized("Usuario o contraseña incorrectos");
                 }
-                return Ok(auth);
+                return Ok(User);
             }
             catch (Exception ex)
             {
                 return Problem(ex.ToString());
             }
         }
-
     }
 }
