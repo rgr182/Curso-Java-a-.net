@@ -27,12 +27,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
                 .Where(x => x.Name  == usuario && x.UserPassword == pass)
                 .FirstOrDefaultAsync();
         }
-        public Task<Users> LoginUser(string user, string password)
-        {
-            return _context.Users
-                .Where(x => x.Name == user && x.Password == password)
-                .FirstOrDefaultAsync();            
-        }
 
         public void PostUser(Users user)
         {

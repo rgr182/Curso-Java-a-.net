@@ -1,6 +1,5 @@
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
 using HttpGetAttribute = Microsoft.AspNetCore.Mvc.HttpGetAttribute;
-using HttpPostAttribute = Microsoft.AspNetCore.Mvc.HttpPostAttribute;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
@@ -44,24 +43,8 @@ namespace Curso_Java_a_.net.Controllers
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
-        [HttpPost]
-        [Route("/Login")]
-        public async Task<ActionResult<string>> Login(string user, string password)
-        {
-            try
-            {
-                var auth = await _usersService.LoginUser(user, password);
-                if (auth == "")
-                {
-                     return Unauthorized("Usuario o contraseña incorrectos");
-                }
-                return Ok(auth);
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.ToString());
-            }
-        }
+
+        
 
     }
 
