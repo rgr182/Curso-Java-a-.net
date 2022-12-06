@@ -28,10 +28,18 @@ builder.Services.AddDbContext<SchoolSystemContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("EscuelaConnection"));
 });
 
+#region Services
 builder.Services.AddScoped<IUsersService, UsersService>();
-builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 builder.Services.AddScoped<ISessionService, SessionService>();
+builder.Services.AddScoped<IGradesService, GradesService>();
+#endregion
+
+
+#region Repositories
+builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 builder.Services.AddScoped<ISessionRepository, SessionRepository>();
+builder.Services.AddScoped<IGradesRepository, GradesRepository>();
+#endregion
 
 var app = builder.Build();
 
