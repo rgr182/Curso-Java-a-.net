@@ -16,8 +16,8 @@ using Umbraco.Cms.Infrastructure.ModelsBuilder;
 using Umbraco.Cms.Core;
 using Umbraco.Extensions;
 
-[assembly:ModelsBuilderAssembly(IsInMemory = true, SourceHash = "a92dce9660d9d9d02ae1c46c15fee6ad385f0012")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
+[assembly:ModelsBuilderAssembly(IsInMemory = true, SourceHash = "3efb9e525dd8ced1c7ff254db73bf3fb4aa3b66b")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
@@ -35,11 +35,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		string ButtonText { get; }
 
-		/// <summary>LoginImage</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::Umbraco.Cms.Core.Models.MediaWithCrops CircleImage { get; }
-
 		/// <summary>FooterText</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -49,6 +44,11 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		string ForgotPasswordText { get; }
+
+		/// <summary>LoginImage</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		global::Umbraco.Cms.Core.Models.MediaWithCrops LoginImage { get; }
 
 		/// <summary>LoginText</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
@@ -139,19 +139,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public static string GetButtonText(ILogin that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "buttonText");
 
 		///<summary>
-		/// LoginImage: Select the correct circle image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("circleImage")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops CircleImage => GetCircleImage(this, _publishedValueFallback);
-
-		/// <summary>Static getter for LoginImage</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::Umbraco.Cms.Core.Models.MediaWithCrops GetCircleImage(ILogin that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(publishedValueFallback, "circleImage");
-
-		///<summary>
 		/// FooterText: Type the footer text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
@@ -176,6 +163,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static string GetForgotPasswordText(ILogin that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "forgotPasswordText");
+
+		///<summary>
+		/// LoginImage: Select the correct circle image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("loginImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops LoginImage => GetLoginImage(this, _publishedValueFallback);
+
+		/// <summary>Static getter for LoginImage</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static global::Umbraco.Cms.Core.Models.MediaWithCrops GetLoginImage(ILogin that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(publishedValueFallback, "loginImage");
 
 		///<summary>
 		/// LoginText: Type of Login
@@ -304,14 +304,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string ButtonText => global::Umbraco.Cms.Web.Common.PublishedModels.Login.GetButtonText(this, _publishedValueFallback);
 
 		///<summary>
-		/// LoginImage: Select the correct circle image
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("circleImage")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops CircleImage => global::Umbraco.Cms.Web.Common.PublishedModels.Login.GetCircleImage(this, _publishedValueFallback);
-
-		///<summary>
 		/// FooterText: Type the footer text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
@@ -326,6 +318,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("forgotPasswordText")]
 		public virtual string ForgotPasswordText => global::Umbraco.Cms.Web.Common.PublishedModels.Login.GetForgotPasswordText(this, _publishedValueFallback);
+
+		///<summary>
+		/// LoginImage: Select the correct circle image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("loginImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops LoginImage => global::Umbraco.Cms.Web.Common.PublishedModels.Login.GetLoginImage(this, _publishedValueFallback);
 
 		///<summary>
 		/// LoginText: Type of Login
