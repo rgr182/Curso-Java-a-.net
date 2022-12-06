@@ -32,6 +32,7 @@ builder.Services.AddDbContext<SchoolSystemContext>(options =>
 builder.Services.AddScoped<IUsersService, UsersService>();
 builder.Services.AddScoped<ISessionService, SessionService>();
 builder.Services.AddScoped<IGradesService, GradesService>();
+builder.Services.AddScoped<IMembersService, MembersService>();
 #endregion
 
 
@@ -39,6 +40,7 @@ builder.Services.AddScoped<IGradesService, GradesService>();
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 builder.Services.AddScoped<ISessionRepository, SessionRepository>();
 builder.Services.AddScoped<IGradesRepository, GradesRepository>();
+builder.Services.AddScoped<IMembersRepository, MembersRepository>();
 #endregion
 
 var app = builder.Build();

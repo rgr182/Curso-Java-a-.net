@@ -9,10 +9,10 @@ namespace Curso_Java_a_.net.Controllers
 {
     public class UsersController : ControllerBase
     {
-        public readonly IUsersService _usersService;
+        public readonly IMembersService _usersService;
         public ILogger<UsersController> _logger;
 
-        public UsersController(IUsersService usersService, ILogger<UsersController> logger)
+        public UsersController(IMembersService usersService, ILogger<UsersController> logger)
         {
             _usersService = usersService;
             _logger = logger;
@@ -22,16 +22,12 @@ namespace Curso_Java_a_.net.Controllers
         [Route("/ShowUsuarios")]
 
         
-        public async Task<ActionResult<Users>> GetUsers(string usuario, string pass)
+        public async Task<ActionResult<Members>> GetUsers(string usuario, string pass)
         {
             try
             {
-                var user = await _usersService.GetUserByUserAndPassword(usuario, pass);
-
-                string token = Guid.NewGuid().ToString();
-                DateTime issuedOn = DateTime.Now;
-                DateTime expiredOn = DateTime.Now.AddDays(1);
-                return Ok(token);
+                var user = await _usersService.GetMemberByUserAndPassword(usuario, pass);            
+                return Ok(user);
             }
             catch (UnauthorizedAccessException uex) {
                 _logger.LogError(uex, "User and password does not match");
