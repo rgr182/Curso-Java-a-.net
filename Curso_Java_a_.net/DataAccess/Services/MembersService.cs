@@ -7,9 +7,9 @@ namespace Curso_Java_a_.net.DataAccess.Services
 {
     public class MembersService : IMembersService
     {
-        readonly ILogger<UsersService> logger;
+        readonly ILogger<MembersService> logger;
         IMembersRepository _membersRepository;
-        public MembersService(IMembersRepository membersRepository, ILogger<UsersService> logger)
+        public MembersService(IMembersRepository membersRepository, ILogger<MembersService> logger)
         {
             _membersRepository = membersRepository;
             this.logger = logger;

@@ -21,7 +21,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpGet]
         [Route("/GetGrades")]
-        public async Task<ActionResult<Users>> GetGrades(int UserId, string period)
+        public async Task<ActionResult<Members>> GetGrades(int UserId, string period)
         {
             try
             {

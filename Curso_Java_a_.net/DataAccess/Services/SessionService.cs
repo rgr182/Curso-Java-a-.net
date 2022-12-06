@@ -6,10 +6,10 @@ namespace Curso_Java_a_.net.DataAccess.Services
 {
     public class SessionService : ISessionService
     {
-        readonly ILogger<UsersService> _logger;
+        readonly ILogger<MembersService> _logger;
         readonly ISessionRepository _securityRepository;
 
-        public SessionService(ILogger<UsersService> logger, ISessionRepository securityRepository)
+        public SessionService(ILogger<MembersService> logger, ISessionRepository securityRepository)
         {
             _logger = logger;
             _securityRepository = securityRepository;

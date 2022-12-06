@@ -10,7 +10,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Context
         {
 
         }
-        public DbSet<Users> Users { get; set; }
+        
         public DbSet<Subjects> Subjects { get; set; }
         public DbSet<UsersSubjects> UsersSubjects { get; set; }
         public DbSet<Session> Session { get; set; }
