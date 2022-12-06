@@ -1,0 +1,168 @@
+@font-face {
+    font-family: GROBOLD;
+    src: url("../assets/fonts/grobold/GROBOLD.ttf");
+    
+}
+h5{
+    color: white;
+    font-family: GROBOLD;
+    font-weight: 500;
+    font-size: 32px;
+    text-shadow: 2px 2px 2px black;
+    line-height: 1.5;
+}
+h6{
+    color: white;
+    text-align: center;
+    font-family: GROBOLD;
+    font-weight: 500;
+    font-size: 16px;
+    text-shadow: 2px 2px 2px black;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.btn-actividades{
+    display: flex;
+    align-items: center;
+}
+
+.btn-actividades-img{
+    width: 180px;
+}
+
+
+.btn-logout{
+    width: 109px;
+    margin-right: 1rem;
+}
+
+.islas{
+    display: flex;
+    flex-direction: column;
+}
+
+.isla{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.isla-img{
+    width: 134px;
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+.user-img{
+    height: 30px;
+    width: 120px;
+
+   background-image: url("../assets/misActividades/info-user.png");
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   border-radius: 20px; 
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    padding-top: 0.5rem;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+/**********ACTIVIDADES**********/
+.table-actividades{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.header-contenedor{
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header-table{
+    background-image: url("../assets/misActividades/tituloback.png");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 280px;
+    height: 70px;
+}
+
+.header-table-title{
+
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.table-actividades-body{
+    margin-top: -2rem;
+    padding: 3rem 2rem;
+    height: 400px;
+    max-height: 400px;
+    width: 360px;
+
+    background-image: url("../assets/misActividades/Back-tareas.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 20px;
+    
+    overflow: hidden;
+    /*overflow-y: scroll;*/
+
+}
+
+.registro-actividad{
+    display: flex;
+    justify-content: space-between;
+}
+
+.registro-actividad-img{
+    width: 50px;
+}
+
+.registro-actividad-materia{
+    height: 55px;
+    width: 120px;
+
+   background-image: url("../assets/misActividades/info.png");
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    padding-top: 0.5rem;
+}

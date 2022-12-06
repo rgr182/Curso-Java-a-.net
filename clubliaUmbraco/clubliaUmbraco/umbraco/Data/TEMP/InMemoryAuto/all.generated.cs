@@ -5,8 +5,8 @@ using  Umbraco.Cms.Core.PublishedCache;
 using  Umbraco.Cms.Infrastructure.ModelsBuilder;
 using  Umbraco.Cms.Core;
 using  Umbraco.Extensions;
-[assembly:ModelsBuilderAssembly(IsInMemory = true, SourceHash = "1a9db4ac5ea6d1735a4da130aa7dfed6275085f7")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.5")]
+[assembly:ModelsBuilderAssembly(IsInMemory = true, SourceHash = "a92dce9660d9d9d02ae1c46c15fee6ad385f0012")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
 
 
 // FILE: models.generated.cs
@@ -387,6 +387,404 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("userText")]
 		public virtual string UserText => global::Umbraco.Cms.Web.Common.PublishedModels.Login.GetUserText(this, _publishedValueFallback);
+	}
+
+	// Mixin Content Type with alias "homeComposition"
+	/// <summary>HomeComposition</summary>
+	public partial interface IHomeComposition : IPublishedElement
+	{
+		/// <summary>FirstIslandTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string FirstIslandTitle { get; }
+
+		/// <summary>SecondIslandTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string SecondIslandTitle { get; }
+
+		/// <summary>TextButton</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string TextButton { get; }
+
+		/// <summary>ThirdIslandTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string ThirdIslandTitle { get; }
+	}
+
+	/// <summary>HomeComposition</summary>
+	[PublishedModel("homeComposition")]
+	public partial class HomeComposition : PublishedElementModel, IHomeComposition
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		public new const string ModelTypeAlias = "homeComposition";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public new static IPublishedContentType GetModelContentType(IPublishedSnapshotAccessor publishedSnapshotAccessor)
+			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<HomeComposition, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
+#pragma warning restore 0109
+
+		private IPublishedValueFallback _publishedValueFallback;
+
+		// ctor
+		public HomeComposition(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
+			: base(content, publishedValueFallback)
+		{
+			_publishedValueFallback = publishedValueFallback;
+		}
+
+		// properties
+
+		///<summary>
+		/// FirstIslandTitle: Type the title of the first Island
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("firstIslandTitle")]
+		public virtual string FirstIslandTitle => GetFirstIslandTitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for FirstIslandTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetFirstIslandTitle(IHomeComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "firstIslandTitle");
+
+		///<summary>
+		/// SecondIslandTitle: Type the second island title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("secondIslandTitle")]
+		public virtual string SecondIslandTitle => GetSecondIslandTitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for SecondIslandTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetSecondIslandTitle(IHomeComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "secondIslandTitle");
+
+		///<summary>
+		/// TextButton: Type the text of the buttoon
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("textButton")]
+		public virtual string TextButton => GetTextButton(this, _publishedValueFallback);
+
+		/// <summary>Static getter for TextButton</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetTextButton(IHomeComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "textButton");
+
+		///<summary>
+		/// ThirdIslandTitle: Type the third island title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("thirdIslandTitle")]
+		public virtual string ThirdIslandTitle => GetThirdIslandTitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for ThirdIslandTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetThirdIslandTitle(IHomeComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "thirdIslandTitle");
+	}
+
+	/// <summary>HomePage</summary>
+	[PublishedModel("homePage")]
+	public partial class HomePage : PublishedContentModel, IHomeComposition
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		public new const string ModelTypeAlias = "homePage";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public new static IPublishedContentType GetModelContentType(IPublishedSnapshotAccessor publishedSnapshotAccessor)
+			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<HomePage, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
+#pragma warning restore 0109
+
+		private IPublishedValueFallback _publishedValueFallback;
+
+		// ctor
+		public HomePage(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+			: base(content, publishedValueFallback)
+		{
+			_publishedValueFallback = publishedValueFallback;
+		}
+
+		// properties
+
+		///<summary>
+		/// FirstIslandTitle: Type the title of the first Island
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("firstIslandTitle")]
+		public virtual string FirstIslandTitle => global::Umbraco.Cms.Web.Common.PublishedModels.HomeComposition.GetFirstIslandTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// SecondIslandTitle: Type the second island title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("secondIslandTitle")]
+		public virtual string SecondIslandTitle => global::Umbraco.Cms.Web.Common.PublishedModels.HomeComposition.GetSecondIslandTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// TextButton: Type the text of the buttoon
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("textButton")]
+		public virtual string TextButton => global::Umbraco.Cms.Web.Common.PublishedModels.HomeComposition.GetTextButton(this, _publishedValueFallback);
+
+		///<summary>
+		/// ThirdIslandTitle: Type the third island title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("thirdIslandTitle")]
+		public virtual string ThirdIslandTitle => global::Umbraco.Cms.Web.Common.PublishedModels.HomeComposition.GetThirdIslandTitle(this, _publishedValueFallback);
+	}
+
+	// Mixin Content Type with alias "myActivitiesComposition"
+	/// <summary>MyActivitiesComposition</summary>
+	public partial interface IMyActivitiesComposition : IPublishedElement
+	{
+		/// <summary>CalendarTableTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string CalendarTableTitle { get; }
+
+		/// <summary>DeliveredTableTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string DeliveredTableTitle { get; }
+
+		/// <summary>FirstIslandTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string FirstIslandTitle { get; }
+
+		/// <summary>GradedTableTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string GradedTableTitle { get; }
+
+		/// <summary>PendingTableTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string PendingTableTitle { get; }
+
+		/// <summary>SecondIslandTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string SecondIslandTitle { get; }
+	}
+
+	/// <summary>MyActivitiesComposition</summary>
+	[PublishedModel("myActivitiesComposition")]
+	public partial class MyActivitiesComposition : PublishedElementModel, IMyActivitiesComposition
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		public new const string ModelTypeAlias = "myActivitiesComposition";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public new static IPublishedContentType GetModelContentType(IPublishedSnapshotAccessor publishedSnapshotAccessor)
+			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<MyActivitiesComposition, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
+#pragma warning restore 0109
+
+		private IPublishedValueFallback _publishedValueFallback;
+
+		// ctor
+		public MyActivitiesComposition(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
+			: base(content, publishedValueFallback)
+		{
+			_publishedValueFallback = publishedValueFallback;
+		}
+
+		// properties
+
+		///<summary>
+		/// CalendarTableTitle: Type the title of the calendar of activities
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("calendarTableTitle")]
+		public virtual string CalendarTableTitle => GetCalendarTableTitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for CalendarTableTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetCalendarTableTitle(IMyActivitiesComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "calendarTableTitle");
+
+		///<summary>
+		/// DeliveredTableTitle: Type the title of the delivered activities
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("deliveredTableTitle")]
+		public virtual string DeliveredTableTitle => GetDeliveredTableTitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for DeliveredTableTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetDeliveredTableTitle(IMyActivitiesComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "deliveredTableTitle");
+
+		///<summary>
+		/// FirstIslandTitle: Type the first island title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("firstIslandTitle")]
+		public virtual string FirstIslandTitle => GetFirstIslandTitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for FirstIslandTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetFirstIslandTitle(IMyActivitiesComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "firstIslandTitle");
+
+		///<summary>
+		/// GradedTableTitle: Type the title of the graded activities
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("gradedTableTitle")]
+		public virtual string GradedTableTitle => GetGradedTableTitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for GradedTableTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetGradedTableTitle(IMyActivitiesComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "gradedTableTitle");
+
+		///<summary>
+		/// PendingTableTitle: Type the title of pending activities table
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("pendingTableTitle")]
+		public virtual string PendingTableTitle => GetPendingTableTitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for PendingTableTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetPendingTableTitle(IMyActivitiesComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "pendingTableTitle");
+
+		///<summary>
+		/// SecondIslandTitle: Type the title of the second island
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("secondIslandTitle")]
+		public virtual string SecondIslandTitle => GetSecondIslandTitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for SecondIslandTitle</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetSecondIslandTitle(IMyActivitiesComposition that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "secondIslandTitle");
+	}
+
+	/// <summary>MyActivitiesPage</summary>
+	[PublishedModel("myActivitiesPage")]
+	public partial class MyActivitiesPage : PublishedContentModel, IMyActivitiesComposition
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		public new const string ModelTypeAlias = "myActivitiesPage";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public new static IPublishedContentType GetModelContentType(IPublishedSnapshotAccessor publishedSnapshotAccessor)
+			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<MyActivitiesPage, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
+#pragma warning restore 0109
+
+		private IPublishedValueFallback _publishedValueFallback;
+
+		// ctor
+		public MyActivitiesPage(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+			: base(content, publishedValueFallback)
+		{
+			_publishedValueFallback = publishedValueFallback;
+		}
+
+		// properties
+
+		///<summary>
+		/// CalendarTableTitle: Type the title of the calendar of activities
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("calendarTableTitle")]
+		public virtual string CalendarTableTitle => global::Umbraco.Cms.Web.Common.PublishedModels.MyActivitiesComposition.GetCalendarTableTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// DeliveredTableTitle: Type the title of the delivered activities
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("deliveredTableTitle")]
+		public virtual string DeliveredTableTitle => global::Umbraco.Cms.Web.Common.PublishedModels.MyActivitiesComposition.GetDeliveredTableTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// FirstIslandTitle: Type the first island title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("firstIslandTitle")]
+		public virtual string FirstIslandTitle => global::Umbraco.Cms.Web.Common.PublishedModels.MyActivitiesComposition.GetFirstIslandTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// GradedTableTitle: Type the title of the graded activities
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("gradedTableTitle")]
+		public virtual string GradedTableTitle => global::Umbraco.Cms.Web.Common.PublishedModels.MyActivitiesComposition.GetGradedTableTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// PendingTableTitle: Type the title of pending activities table
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("pendingTableTitle")]
+		public virtual string PendingTableTitle => global::Umbraco.Cms.Web.Common.PublishedModels.MyActivitiesComposition.GetPendingTableTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// SecondIslandTitle: Type the title of the second island
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("secondIslandTitle")]
+		public virtual string SecondIslandTitle => global::Umbraco.Cms.Web.Common.PublishedModels.MyActivitiesComposition.GetSecondIslandTitle(this, _publishedValueFallback);
 	}
 
 	/// <summary>Folder</summary>
