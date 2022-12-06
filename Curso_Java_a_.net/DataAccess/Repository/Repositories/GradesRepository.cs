@@ -21,7 +21,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public Task<List<Grades>>GetGradesByMembersByIdAndPeriod(int MemberId, string Period)
         {
            return  _context.Grades
-                  .Where(g => g.GradesId == MemberId &
+                  .Where(g => g.MembersId == MemberId &
                        g.Period.ToLower() == Period.ToLower())
                        .ToListAsync();
         }

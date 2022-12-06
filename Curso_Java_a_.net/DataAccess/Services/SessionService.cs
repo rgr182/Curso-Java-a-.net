@@ -30,7 +30,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
                        CreationDate = DateTime.UtcNow,
                        ExpirationDate = DateTime.UtcNow.AddDays(1),
                        UserId = UserID,
-                       UserToken = GenerateToken()
+                       UserToken = GenerateToken().ToString()
                    });        
            
             }
