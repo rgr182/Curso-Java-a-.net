@@ -7,8 +7,6 @@ using MySqlConnector;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories;
 
-string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(o =>
@@ -25,13 +23,15 @@ builder.Services.AddSwaggerGen();
 string connectionStringtest = builder.Configuration.GetConnectionString("EscuelaConnection");
 
 Environment.SetEnvironmentVariable("Connection", connectionStringtest);
-builder.Services.AddDbContext<SchoolSystemTestContext>(options =>
+builder.Services.AddDbContext<SchoolSystemContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("EscuelaConnection"));
 });
 
 builder.Services.AddScoped<IUsersService, UsersService>();
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+builder.Services.AddScoped<ISessionService, SessionService>();
+builder.Services.AddScoped<ISessionRepository, SessionRepository>();
 
 var app = builder.Build();
 

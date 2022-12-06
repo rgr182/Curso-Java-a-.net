@@ -8,8 +8,8 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
     public class UsersRepository : IUsersRepository
     {
-        internal SchoolSystemTestContext _context;
-        public UsersRepository(SchoolSystemTestContext context)
+        internal SchoolSystemContext _context;
+        public UsersRepository(SchoolSystemContext context)
         {
             _context = context;
         }

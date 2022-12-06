@@ -1,13 +1,8 @@
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
-using MySqlConnector;
-using Dapper;
-using System.Web.Http;
 using HttpGetAttribute = Microsoft.AspNetCore.Mvc.HttpGetAttribute;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using Microsoft.AspNetCore.Mvc;
-using Controller = Microsoft.AspNetCore.Mvc.Controller;
 using Curso_Java_a_.net.DataAccess.Entities;
-using Curso_Java_a_.net.DataAccess.Repository.Repositories;
 
 
 namespace Curso_Java_a_.net.Controllers
@@ -25,30 +20,33 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpGet]
         [Route("/ShowUsuarios")]
-        public async Task<ActionResult<Users>> GetUsers(string usuario, string pass)
 
+        
+        public async Task<ActionResult<Users>> GetUsers(string usuario, string pass)
         {
             try
             {
                 var user = await _usersService.GetUserByUserAndPassword(usuario, pass);
 
-                // string token = Convert.ToBase64String(Guid.NewGuid().ToByteArray());
-                var tokenDomain = new Tokens;
-
-                return Ok(tokenDomain);
+                string token = Guid.NewGuid().ToString();
+                DateTime issuedOn = DateTime.Now;
+                DateTime expiredOn = DateTime.Now.AddDays(1);
+                return Ok(token);
             }
             catch (UnauthorizedAccessException uex) {
                 _logger.LogError(uex, "User and password does not match");
                 return Unauthorized("User and password does not match");
             }
-            catch (Exception uex)
+            catch (Exception)
             {
                 
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
 
-
         
+
     }
+
+
 }
