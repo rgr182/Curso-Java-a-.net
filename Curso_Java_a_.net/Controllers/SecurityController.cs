@@ -28,8 +28,7 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var user = await _membersService.GetMemberByUserAndPassword(User, Password);
-                await _sessionService.SaveSession(user.MembersId);
-                var session = await _sessionService.GetSession(user.MembersId);
+                var session = await _sessionService.SaveSession(user.MembersId);                
 
                 return Ok(session);
             }

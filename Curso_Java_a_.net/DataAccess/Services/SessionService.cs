@@ -8,7 +8,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
     public class SessionService : ISessionService
     {
         readonly ILogger<MembersService> _logger;
-        readonly ISessionRepository _securityRepository;
+        readonly ISessionRepository _sessionRepository;
         readonly IUtils _utils;
 
         public SessionService(ILogger<MembersService> logger,
@@ -16,27 +16,29 @@ namespace Curso_Java_a_.net.DataAccess.Services
                               IUtils utils)
         {
             _logger = logger;
-            _securityRepository = securityRepository;
+            _sessionRepository = securityRepository;
             _utils = utils;
         }
 
         public async Task<Session> GetSession(int UserId)
         {
-           return await _securityRepository.GetSession(UserId);
+            return await _sessionRepository.GetSession(UserId);
         }
 
-        public async Task SaveSession(int UserID)
+        public async Task<Session> SaveSession(int MembersId)
         {
             try
             {
-                await _securityRepository
+                await _sessionRepository
                    .AddSession(new Session()
                    {
                        CreationDate = DateTime.UtcNow,
                        ExpirationDate = DateTime.UtcNow.AddDays(1),
-                       UserId = UserID,
+                       UserId = MembersId,
                        UserToken = _utils.GenerateTokenString()
-                   });            
+                   });
+
+                return await _sessionRepository.GetSession(MembersId);
             }
             catch (Exception ex)
             {
