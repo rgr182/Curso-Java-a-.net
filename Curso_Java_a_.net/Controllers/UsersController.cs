@@ -4,7 +4,6 @@ using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
 
-
 namespace Curso_Java_a_.net.Controllers
 {
     public class UsersController : ControllerBase
@@ -19,9 +18,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpGet]
-        [Route("/ShowUsuarios")]
-
-        
+        [Route("/ShowUsuarios")]        
         public async Task<ActionResult<Members>> GetUsers(string usuario, string pass)
         {
             try
@@ -29,20 +26,13 @@ namespace Curso_Java_a_.net.Controllers
                 var user = await _usersService.GetMemberByUserAndPassword(usuario, pass);            
                 return Ok(user);
             }
-            catch (UnauthorizedAccessException uex) {
-                _logger.LogError(uex, "User and password does not match");
+            catch (UnauthorizedAccessException) {                
                 return Unauthorized("User and password does not match");
             }
             catch (Exception)
-            {
-                
+            {                
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
-
-        
-
     }
-
-
 }

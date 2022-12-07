@@ -3,7 +3,6 @@ using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
     public class MembersRepository : IMembersRepository

@@ -6,9 +6,8 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Context
     public class SchoolSystemContext : DbContext
     {
         public SchoolSystemContext(DbContextOptions<SchoolSystemContext> options)
-            : base(options)
+            : base(options) 
         {
-
         }
         
         public DbSet<Subjects> Subjects { get; set; }

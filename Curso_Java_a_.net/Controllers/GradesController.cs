@@ -4,7 +4,6 @@ using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
 
-
 namespace Curso_Java_a_.net.Controllers
 {
     public class GradesController : ControllerBase
@@ -35,13 +34,12 @@ namespace Curso_Java_a_.net.Controllers
                 var grades =  await _gradesService.GetGradesByMembersByIdAndPeriod(UserId, period);
                 return Ok(grades);
             }
-            catch (UnauthorizedAccessException uex)
+            catch (UnauthorizedAccessException)
             {
                 return Unauthorized("Session Expired");
             }
             catch (Exception)
             {
-
                 return Problem("Some error happened please contact Sys Admin");
             }
         }

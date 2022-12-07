@@ -8,19 +8,13 @@ namespace Curso_Java_a_.net.Infraestructure
 {
     public class DependencyRegistry
     {
-
-        WebApplicationBuilder _builder;
-
-        public DependencyRegistry(WebApplicationBuilder builder) {
-
-            _builder = builder;
-
+        public DependencyRegistry(WebApplicationBuilder builder)
+        {
             #region Services
             builder.Services.AddScoped<ISessionService, SessionService>();
             builder.Services.AddScoped<IGradesService, GradesService>();
             builder.Services.AddScoped<IMembersService, MembersService>();
             #endregion
-
 
             #region Repositories
             builder.Services.AddScoped<ISessionRepository, SessionRepository>();

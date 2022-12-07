@@ -12,8 +12,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             _membersRepository = membersRepository;
             this.logger = logger;
-        }
-      
+        }      
         
         public async Task<Members> GetMemberByUserAndPassword(string usuario, string pass)
         {

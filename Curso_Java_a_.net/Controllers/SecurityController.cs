@@ -31,18 +31,16 @@ namespace Curso_Java_a_.net.Controllers
                 await _sessionService.SaveSession(user.MembersId);
                 var session = await _sessionService.GetSession(user.MembersId);
 
-
                 return Ok(session);
             }
-            catch (UnauthorizedAccessException uex) {                
+            catch (UnauthorizedAccessException)
+            {
                 return Unauthorized("User and password does not match");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                
                 return Problem("Some error happened please contact Sys Admin");
             }
-        }       
-
+        }
     }
 }
