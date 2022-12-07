@@ -19,6 +19,13 @@ namespace Curso_Java_a_.net.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// This endpoint is used to provide grades related to different categories just like 
+        /// English, Tech , Soft Skills... etc
+        /// </summary>
+        /// <param name="UserId"></param>
+        /// <param name="period"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("/GetGrades")]
         public async Task<ActionResult<Members>> GetGrades(int UserId, string period)
