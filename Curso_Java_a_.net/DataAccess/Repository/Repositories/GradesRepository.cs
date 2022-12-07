@@ -2,6 +2,7 @@ using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
@@ -25,14 +26,17 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
                        .ToListAsync();
         }
 
-        public void PostGrades(Grades user)
+        public async Task PostGradesAsync(Grades grade)
         {
-            throw new NotImplementedException();
+            await _context.Grades.AddAsync(grade);
+            await _context.SaveChangesAsync();
         }
 
-        public void PutGrades(Grades user)
+        public async Task PutGradesAsync(Grades grade)
         {
-            throw new NotImplementedException();
+            _context.Grades.Attach(grade);
+            _context.Entry(grade).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
         }
     }
 }
