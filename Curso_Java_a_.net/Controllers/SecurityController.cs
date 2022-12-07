@@ -1,5 +1,4 @@
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
-using System.Web.Http;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using HttpPostAttribute = Microsoft.AspNetCore.Mvc.HttpPostAttribute;
 using Microsoft.AspNetCore.Mvc;

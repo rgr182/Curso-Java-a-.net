@@ -1,11 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
-using Curso_Java_a_.net.DataAccess.Services;
-using Curso_Java_a_.net.DataAccess.Services.Interfaces;
-using MySqlConnector;
-using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
-using Curso_Java_a_.net.DataAccess.Repository.Repositories;
 using Curso_Java_a_.net.Infraestructure;
 
 var builder = WebApplication.CreateBuilder(args);
