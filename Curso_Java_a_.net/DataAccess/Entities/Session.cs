@@ -14,9 +14,9 @@ namespace Curso_Java_a_.net.DataAccess.Entities
         [Required]
         [StringLength(250)]
 
-        public String UserToken { get; set; }
+        public String UserToken { get; set; } = new Guid().ToString();
 
-        public DateTime CreationDate { get; set; }
+        public DateTime CreationDate { get; set; } = DateTime.UtcNow;
 
         public DateTime ExpirationDate { get; set; }
     }
