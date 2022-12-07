@@ -14,29 +14,9 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context = context;
         }
 
-        //public void DeleteUser(int id)
-        //{
-        //    //Members Members = _context.Members.Find(id);
-        //    //_context.Members.Remove(Member);
-        //    //_context.SaveChanges();
-        //}
-
-        public Task<Members> GetMemberById(string usuario, string pass)
-        {
-            return _context.Members
-                .Where(x => x.Name  == usuario && x.Password == pass)
+        public Task<Members> GetMemberById(string usuario, string pass) =>
+             _context.Members
+                .Where(x => x.Name == usuario && x.Password == pass)
                 .FirstOrDefaultAsync();
-        }
-
-        //public void PostMember(Members user)
-        //{
-        //    _context.Members
-        //        .AddAsync(user);
-        //}
-
-        //public void PutMember(Members user)
-        //{
-        //    throw new NotImplementedException();
-        //}
-    }   
+    }
 }

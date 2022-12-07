@@ -1,6 +1,7 @@
 using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
+using Curso_Java_a_.net.Utils.Interfaces;
 
 namespace Curso_Java_a_.net.DataAccess.Services
 {
@@ -8,11 +9,15 @@ namespace Curso_Java_a_.net.DataAccess.Services
     {
         readonly ILogger<MembersService> _logger;
         readonly ISessionRepository _securityRepository;
+        readonly IUtils _utils;
 
-        public SessionService(ILogger<MembersService> logger, ISessionRepository securityRepository)
+        public SessionService(ILogger<MembersService> logger,
+                              ISessionRepository securityRepository,
+                              IUtils utils)
         {
             _logger = logger;
             _securityRepository = securityRepository;
+            _utils = utils;
         }
 
         public async Task<Session> GetSession(int UserId)
@@ -30,18 +35,14 @@ namespace Curso_Java_a_.net.DataAccess.Services
                        CreationDate = DateTime.UtcNow,
                        ExpirationDate = DateTime.UtcNow.AddDays(1),
                        UserId = UserID,
-                       UserToken = GenerateToken().ToString()
-                   });        
-           
+                       UserToken = _utils.GenerateTokenString()
+                   });            
             }
             catch (Exception ex)
             {
-
-                throw ex; 
+                _logger.LogError(ex, ex.Message);
+                throw;
             }
         }
-
-        private Guid GenerateToken() => Guid.NewGuid();
-
     }
 }

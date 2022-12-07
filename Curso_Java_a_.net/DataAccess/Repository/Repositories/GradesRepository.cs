@@ -8,8 +8,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
     public class GradesRepository : IGradesRepository
     {
         internal SchoolSystemContext _context;
-        public GradesRepository(SchoolSystemContext context)
-        {
+        public GradesRepository(SchoolSystemContext context)     {
             _context = context;
         }
 

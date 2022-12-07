@@ -6,6 +6,7 @@ using Curso_Java_a_.net.DataAccess.Services.Interfaces;
 using MySqlConnector;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories;
+using Curso_Java_a_.net.Infraestructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,18 +29,7 @@ builder.Services.AddDbContext<SchoolSystemContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("EscuelaConnection"));
 });
 
-#region Services
-builder.Services.AddScoped<ISessionService, SessionService>();
-builder.Services.AddScoped<IGradesService, GradesService>();
-builder.Services.AddScoped<IMembersService, MembersService>();
-#endregion
-
-
-#region Repositories
-builder.Services.AddScoped<ISessionRepository, SessionRepository>();
-builder.Services.AddScoped<IGradesRepository, GradesRepository>();
-builder.Services.AddScoped<IMembersRepository, MembersRepository>();
-#endregion
+DependencyRegistry Registry = new DependencyRegistry(builder);
 
 var app = builder.Build();
 

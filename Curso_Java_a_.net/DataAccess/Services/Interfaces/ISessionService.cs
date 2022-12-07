@@ -6,7 +6,6 @@ namespace Curso_Java_a_.net.DataAccess.Services.Interfaces
     {
         public Task SaveSession(int UserID);
 
-        public Task<Session> GetSession(int UserId);
-     
+        public Task<Session> GetSession(int UserId);     
     }
 }
