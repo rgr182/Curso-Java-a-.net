@@ -7,12 +7,11 @@ namespace Curso_Java_a_.net.DataAccess.Entities
         [Key]
         public int SessionId { get; set; }
 
-        public int UserId { get; set; }
+        public int MemberId { get; set; }
 
         [Required]
-        [StringLength(250)]
 
-        public String UserToken { get; set; } = new Guid().ToString();
+        public string UserToken { get; set; }
 
         public DateTime CreationDate { get; set; } = DateTime.UtcNow;
 

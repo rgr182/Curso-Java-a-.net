@@ -9,8 +9,8 @@ builder.Services.AddCors(o =>
         b.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
 
 // Add services to the container.
-
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -23,7 +23,8 @@ builder.Services.AddDbContext<SchoolSystemContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("EscuelaConnection"));
 });
 
-DependencyRegistry Registry = new DependencyRegistry(builder);
+DependencyRegistry registry = new DependencyRegistry(builder);
+AuthenticationConfig authenticationConfig = new AuthenticationConfig(builder);
 
 var app = builder.Build();
 
@@ -33,6 +34,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseRouting();
+app.UseAuthentication();
+//app.UseAuthorization();
 
 app.UseHttpsRedirection();
 

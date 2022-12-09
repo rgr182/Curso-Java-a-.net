@@ -6,12 +6,13 @@ namespace Curso_Java_a_.net.DataAccess.Services
 {
     public class MembersService : IMembersService
     {
-        readonly ILogger<MembersService> logger;
+        readonly ILogger<MembersService> _logger;
         IMembersRepository _membersRepository;
-        public MembersService(IMembersRepository membersRepository, ILogger<MembersService> logger)
+        public MembersService(IMembersRepository membersRepository,
+                              ILogger<MembersService> logger)
         {
             _membersRepository = membersRepository;
-            this.logger = logger;
+            _logger = logger;
         }      
         
         public async Task<Members> GetMemberByUserAndPassword(string usuario, string pass)
@@ -23,13 +24,29 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 {
                     throw new UnauthorizedAccessException();
                 }
+
                 return member;
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Error in MemberService");
+                _logger.LogError(ex, "Error in MemberService");
                 throw ex;
             }
-        }     
+        }
+
+        public async Task<Members> SaveMembersAsync(Members member)
+        {
+            try
+            {
+               await _membersRepository.SaveMemberAsync(member);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Some error happened on Members Service");
+                throw ex;
+            }
+
+            return member;
+        }
     }
 }

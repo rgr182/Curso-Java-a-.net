@@ -9,36 +9,50 @@ namespace Curso_Java_a_.net.DataAccess.Services
     {
         readonly ILogger<MembersService> _logger;
         readonly ISessionRepository _sessionRepository;
-        readonly IUtils _utils;
+        readonly IAuthUtils _authUtils;
 
         public SessionService(ILogger<MembersService> logger,
                               ISessionRepository securityRepository,
-                              IUtils utils)
+                              IAuthUtils authUtils)
         {
             _logger = logger;
             _sessionRepository = securityRepository;
-            _utils = utils;
+            _authUtils = authUtils;
         }
 
         public async Task<Session> GetSession(int UserId)
         {
-            return await _sessionRepository.GetSession(UserId);
+            Session result = new Session();
+
+            try
+            {
+                result = await _sessionRepository.GetSession(UserId);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "some error happened on SessionService");
+                throw;
+            }
+
+            return result;
         }
 
-        public async Task<Session> SaveSession(int MembersId)
+        public async Task<Session> SaveSession(Members user)
         {
             try
             {
-                await _sessionRepository
-                   .AddSession(new Session()
-                   {
-                       CreationDate = DateTime.UtcNow,
-                       ExpirationDate = DateTime.UtcNow.AddDays(1),
-                       UserId = MembersId,
-                       UserToken = _utils.GenerateTokenString()
-                   });
+                var session = new Session()
+                {
+                    CreationDate = DateTime.UtcNow,
+                    ExpirationDate = DateTime.UtcNow.AddDays(1),
+                    MemberId = user.MembersId,
+                    UserToken = _authUtils.GenerateJWT(user)
+                }; 
 
-                return await _sessionRepository.GetSession(MembersId);
+                await _sessionRepository
+                   .AddSession(session);
+
+                return session;
             }
             catch (Exception ex)
             {

@@ -22,13 +22,13 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpPost]
-        [Route("/Session")]
-        public async Task<ActionResult<Session>> SaveSession(string User, string Password)
+        [Route("/Login")]
+        public async Task<ActionResult<Session>> Login(string User, string Password)
         {
             try
             {
                 var user = await _membersService.GetMemberByUserAndPassword(User, Password);
-                var session = await _sessionService.SaveSession(user.MembersId);                
+                var session = await _sessionService.SaveSession(user);                
 
                 return Ok(session);
             }

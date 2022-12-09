@@ -3,6 +3,7 @@ using Curso_Java_a_.net.DataAccess.Repository.Repositories;
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
 using Curso_Java_a_.net.DataAccess.Services;
 using Curso_Java_a_.net.Utils.Interfaces;
+using Curso_Java_a_.net.Utils.Security;
 
 namespace Curso_Java_a_.net.Infraestructure
 {
@@ -24,6 +25,7 @@ namespace Curso_Java_a_.net.Infraestructure
 
             #region Utils
             builder.Services.AddScoped<IUtils, Utils.Utils>();
+            builder.Services.AddScoped<IAuthUtils, AuthUtils>();
             #endregion
         }
     }

@@ -17,5 +17,11 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
              _context.Members
                 .Where(x => x.Name == usuario && x.Password == pass)
                 .FirstOrDefaultAsync();
+
+        public async Task SaveMemberAsync(Members member)
+        {
+            await _context.Members.AddAsync(member);
+            await _context.SaveChangesAsync();
+        }             
     }
 }

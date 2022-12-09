@@ -18,8 +18,8 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public Task<Session> GetSession(int UserId)
         {
             return _context.Session
-                .Where(u => u.UserId == UserId)
-                .OrderBy(x => x.UserId)
+                .Where(u => u.MemberId == UserId)
+                .OrderBy(x => x.MemberId)
                 .LastAsync();
         }
 
