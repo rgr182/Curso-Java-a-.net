@@ -13,6 +13,9 @@ builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+AuthenticationConfig authenticationConfig = new AuthenticationConfig(builder);
+
 builder.Services.AddSwaggerGen();
 
 string connectionStringtest = builder.Configuration.GetConnectionString("EscuelaConnection");
@@ -24,8 +27,6 @@ builder.Services.AddDbContext<SchoolSystemContext>(options =>
 });
 
 DependencyRegistry registry = new DependencyRegistry(builder);
-AuthenticationConfig authenticationConfig = new AuthenticationConfig(builder);
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,15 +36,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseRouting();
-app.UseAuthentication();
-//app.UseAuthorization();
-
 app.UseHttpsRedirection();
 
-app.UseCors();
+app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
+app.UseCors();
 
 app.MapControllers();
 

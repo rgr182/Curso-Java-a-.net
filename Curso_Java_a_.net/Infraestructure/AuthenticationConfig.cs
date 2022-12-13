@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -8,31 +9,20 @@ namespace Curso_Java_a_.net.Infraestructure
     {
         public AuthenticationConfig(WebApplicationBuilder builder)
         {
-            builder.Services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(o =>
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(o =>
             {
                 o.TokenValidationParameters = new TokenValidationParameters
                 {
-                    IssuerSigningKey = new SymmetricSecurityKey
-                    (Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
                     ValidateIssuer = false,
                     ValidateAudience = false,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true
+                    ValidateLifetime = false,
+                    ValidateIssuerSigningKey = true,
+                    //ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                    //ValidAudience = builder.Configuration["Jwt:Issuer"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
                 };
             });
-
-            builder.Services.ConfigureApplicationCookie(options =>
-            {
-                // Cookie settings
-                options.Cookie.HttpOnly = true;
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(3600);                              
-                options.SlidingExpiration = true;
-            });           
         }
     }
 }

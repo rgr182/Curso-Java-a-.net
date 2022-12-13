@@ -3,6 +3,7 @@ using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using HttpPostAttribute = Microsoft.AspNetCore.Mvc.HttpPostAttribute;
 using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Curso_Java_a_.net.Controllers
 {
@@ -23,6 +24,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPost]
         [Route("/Login")]
+        [AllowAnonymous]
         public async Task<ActionResult<Session>> Login(string User, string Password)
         {
             try

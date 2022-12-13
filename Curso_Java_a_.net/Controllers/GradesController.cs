@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
 
 namespace Curso_Java_a_.net.Controllers
-{
+{    
     public class GradesController : ControllerBase
     {
         public readonly IGradesService _gradesService;
