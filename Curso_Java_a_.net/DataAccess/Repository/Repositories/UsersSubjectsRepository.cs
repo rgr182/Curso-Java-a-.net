@@ -31,7 +31,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
                    join s in _context.Subjects
                        on us.SubjectId equals s.SubjectId
                    join u in _context.Users
-                       on us.UserId equals u.UserId
+                       on us.UserId equals u.Id
                    where us.UserId == id
                    select new
                    {

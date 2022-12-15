@@ -23,7 +23,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public Task<Users> GetUserById(int id)
         {
             return _context.Users
-                .Where(x => x.UserId == id)
+                .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
         }
         public Task<Users> LoginUser(string user, string password)

@@ -6,42 +6,114 @@ namespace Curso_Java_a_.net.DataAccess.Entities.Mapping
     {
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            #region Users
+            #region users
             modelBuilder.Entity<Users>()
-                .ToTable("users");
+                .ToTable("users")
+                .HasKey(x => x.Id);
             #region Primary Keys
             modelBuilder.Entity<Users>()
-                .HasKey(x => x.UserId)
-                .HasName("UserId");
+                .HasKey(x => x.Id)
+                .HasName("id");
             #endregion
             #region Properties
             modelBuilder.Entity<Users>()
-                .Property(x => x.UserId)
+                .Property(x => x.Id)
                 .ValueGeneratedOnAdd()
-                .HasColumnName("UserId")
+                .HasColumnName("id")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.AppUserId)
+                .HasColumnName("AppUserId")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.Uuid)
+                .HasColumnName("uuid")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.Username)
+                .HasColumnName("username")
                 .IsRequired();
             modelBuilder.Entity<Users>()
                 .Property(x => x.Name)
-                .HasColumnName("Name")
+                .HasColumnName("name")
                 .IsRequired();
             modelBuilder.Entity<Users>()
-                .Property(x => x.Gender)
-                .HasColumnName("Gender")
-                .IsRequired();
-            modelBuilder.Entity<Users>().
-                Property(x => x.Email)
-                .HasColumnName("Email")
+                .Property(x => x.SecondName)
+                .HasColumnName("second_name")
                 .IsRequired();
             modelBuilder.Entity<Users>()
-                .Property(x => x.Age)
-                .HasColumnName("Age")
+                .Property(x => x.LastName)
+                .HasColumnName("last_name")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.SecondLastName)
+                .HasColumnName("second_last_name")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.SchoolId)
+                .HasColumnName("school_id")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.CompanyId)
+                .HasColumnName("company_id")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.SchoolKeyId)
+                .HasColumnName("school_key_id")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.RoleId)
+                .HasColumnName("role_id")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.LevelId)
+                .HasColumnName("level_id")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.TutorId)
+                .HasColumnName("tutor_id")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.Email)
+                .HasColumnName("email")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.Grade)
+                .HasColumnName("grade")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.Avatar)
+                .HasColumnName("avatar")
                 .IsRequired();
             modelBuilder.Entity<Users>()
                 .Property(x => x.Password)
-                .HasColumnName("Password")
+                .HasColumnName("password")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.IsActive)
+                .HasColumnName("is_active")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.MemberSince)
+                .HasColumnName("member_since")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.LastLogin)
+                .HasColumnName("last_login")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.CreatedAt)
+                .HasColumnName("created_at")
+                .IsRequired();
+            modelBuilder.Entity<Users>()
+                .Property(x => x.UpdatedAt)
+                .HasColumnName("updated_at")
                 .IsRequired();
             #endregion
             #endregion
+            
+
+
         }
     }
 }
