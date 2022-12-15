@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {}
+    "C:\\Users\\Space\\Documents\\Bootcamp prj\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {}
   },
   "projects": {
-    "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {
+    "C:\\Users\\Space\\Documents\\Bootcamp prj\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+        "projectUniqueName": "C:\\Users\\Space\\Documents\\Bootcamp prj\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
         "projectName": "Curso_Java_a_.net",
-        "projectPath": "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
-        "packagesPath": "C:\\Users\\epile\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\epile\\OneDrive\\Documentos\\BootCamp\\git practica\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
+        "projectPath": "C:\\Users\\Space\\Documents\\Bootcamp prj\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+        "packagesPath": "C:\\Users\\Space\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Space\\Documents\\Bootcamp prj\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\epile\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Space\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,6 +52,14 @@
               "target": "Package",
               "version": "[6.4.4, )"
             },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.0.1, )"
@@ -64,6 +71,24 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0-alpha.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -93,7 +118,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
