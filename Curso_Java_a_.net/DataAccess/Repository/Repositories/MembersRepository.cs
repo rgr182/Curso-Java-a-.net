@@ -13,6 +13,13 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context = context;
         }
 
+        public Task<Members> GetMember(long id)
+        {
+            return _context.Members
+                .Where(x => x.MembersId == id)
+                .FirstOrDefaultAsync();
+        }
+
         public Task<Members> GetMemberById(string usuario, string pass) =>
              _context.Members
                 .Where(x => x.Name == usuario && x.Password == pass)

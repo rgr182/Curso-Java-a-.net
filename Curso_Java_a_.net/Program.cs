@@ -27,6 +27,12 @@ builder.Services.AddDbContext<SchoolSystemContext>(options =>
 });
 
 DependencyRegistry registry = new DependencyRegistry(builder);
+
+//services cors
+builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+{
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -36,6 +42,31 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseHttpsRedirection();
+
+app.UseCors();
+
+app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
+app.Run();
+/*
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+app.UseCors("corsapp");
 app.UseHttpsRedirection();
 
 app.UseRouting();
@@ -48,8 +79,8 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
 });
 
-app.UseCors();
 
 app.MapControllers();
 
 app.Run();
+*/

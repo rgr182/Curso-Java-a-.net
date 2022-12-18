@@ -238,6 +238,25 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Razor.Language/6.0.0": {
         "type": "package",
         "compile": {
@@ -4274,6 +4293,21 @@
         "lib/net45/System.Web.WebPages.xml",
         "microsoft.aspnet.webpages.3.2.9.nupkg.sha512",
         "microsoft.aspnet.webpages.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.12": {
+      "sha512": "rmuhCPoty7f44XoLwQeGlUw0RzGfDBbb48hMqsodbaYi92KPIZJJjf/f2fu+F80LhLWPiCt6ftcCpG9U0nsWUA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
+        "microsoft.aspnetcore.authentication.jwtbearer.6.0.12.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Razor.Language/6.0.0": {
@@ -11368,6 +11402,7 @@
       "EntityFramework >= 6.4.4",
       "Microsoft.AspNet.Mvc >= 5.2.9",
       "Microsoft.AspNet.WebApi.Core >= 5.2.9",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.12",
       "Microsoft.Data.SqlClient >= 5.0.1",
       "Microsoft.EntityFrameworkCore >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
@@ -11381,32 +11416,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rakzo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\lajs5\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rakzo\\OneDrive\\Documents\\GitHub\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+      "projectUniqueName": "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
       "projectName": "Curso_Java_a_.net",
-      "projectPath": "C:\\Users\\rakzo\\OneDrive\\Documents\\GitHub\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
-      "packagesPath": "C:\\Users\\rakzo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rakzo\\OneDrive\\Documents\\GitHub\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
+      "projectPath": "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+      "packagesPath": "C:\\Users\\lajs5\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\rakzo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lajs5\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11440,6 +11477,10 @@
           "Microsoft.AspNet.WebApi.Core": {
             "target": "Package",
             "version": "[5.2.9, )"
+          },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[6.0.12, )"
           },
           "Microsoft.Data.SqlClient": {
             "target": "Package",

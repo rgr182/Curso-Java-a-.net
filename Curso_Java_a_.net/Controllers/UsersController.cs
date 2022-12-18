@@ -3,6 +3,8 @@ using HttpGetAttribute = Microsoft.AspNetCore.Mvc.HttpGetAttribute;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
+using Curso_Java_a_.net.DataAccess.DTO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Curso_Java_a_.net.Controllers
 {
@@ -16,21 +18,22 @@ namespace Curso_Java_a_.net.Controllers
             _usersService = usersService;
             _logger = logger;
         }
-
-        [HttpGet]
-        [Route("/ShowUsuarios")]        
-        public async Task<ActionResult<Members>> GetUsers(string usuario, string pass)
+        [Authorize]
+        [HttpGet("authenticate")]
+        [Route("/user")]
+        public async Task<ActionResult<Members>> GetUsers([FromBody] UserDTO user)
         {
             try
             {
-                var user = await _usersService.GetMemberByUserAndPassword(usuario, pass);            
-                return Ok(user);
-            }
-            catch (UnauthorizedAccessException) {                
-                return Unauthorized("User and password does not match");
+                var userD = await _usersService.GetMember(user.Id);
+                if (userD == null)
+                {
+                    return BadRequest("User don´t exist");
+                }
+                return Ok(userD);
             }
             catch (Exception)
-            {                
+            {
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
