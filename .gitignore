@@ -398,6 +398,9 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
+Curso_Java_a_.net/obj/
+Curso_Java_a_.net/bin/
+vs/
 Curso_Java_a_.net\obj\staticwebassets.pack.sentinel
 Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.pdb
 Curso_Java_a_.net\obj\Debug\net6.0\Curso_Java_a_.net.GeneratedMSBuildEditorConfig.editorconfig
