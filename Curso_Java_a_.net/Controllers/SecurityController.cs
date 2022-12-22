@@ -8,6 +8,8 @@ using Curso_Java_a_.net.DataAccess.DTO;
 
 namespace Curso_Java_a_.net.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class SecurityController : ControllerBase
     {
         public readonly ISessionService _sessionService;

@@ -8,20 +8,24 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Curso_Java_a_.net.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
+    [Authorize]
     public class UsersController : ControllerBase
     {
+
         public readonly IMembersService _usersService;
         public ILogger<UsersController> _logger;
+        
 
         public UsersController(IMembersService usersService, ILogger<UsersController> logger)
         {
             _usersService = usersService;
             _logger = logger;
         }
-        [Authorize]
-        [HttpGet("authenticate")]
-        [Route("/user")]
-        public async Task<ActionResult<Members>> GetUsers([FromBody] UserDTO user)
+        [HttpPost]
+        [Route("/GetUser")]
+        public async Task<ActionResult<Members>> GetUser([FromBody] UserDTO user)
         {
             try
             {

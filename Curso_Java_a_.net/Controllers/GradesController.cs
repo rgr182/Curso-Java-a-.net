@@ -3,9 +3,13 @@ using HttpGetAttribute = Microsoft.AspNetCore.Mvc.HttpGetAttribute;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Curso_Java_a_.net.Controllers
-{    
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    [Authorize]
     public class GradesController : ControllerBase
     {
         public readonly IGradesService _gradesService;
