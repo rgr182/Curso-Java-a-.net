@@ -9,19 +9,17 @@ namespace Curso_Java_a_.net.Infraestructure
     {
         public AuthenticationConfig(WebApplicationBuilder builder)
         {
-            string a = builder.Configuration["Jwt:Key"];
-            builder.Services.AddAuthentication(d =>
+            builder.Services.AddAuthentication(x => {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
             {
-                d.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                d.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(d =>
-            {
-                d.RequireHttpsMetadata = false;
-                d.SaveToken = true;
-                d.TokenValidationParameters = new TokenValidationParameters
+                options.RequireHttpsMetadata = false;
+                options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters()
                 {
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"])),
                     ValidateIssuer = false,
                     ValidateAudience = false
                 };

@@ -8,9 +8,10 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Curso_Java_a_.net.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class UsersController : ControllerBase
     {
 

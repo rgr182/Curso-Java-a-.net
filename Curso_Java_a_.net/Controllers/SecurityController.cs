@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Curso_Java_a_.net.DataAccess.DTO;
+using Microsoft.AspNetCore.Components;
 
 namespace Curso_Java_a_.net.Controllers
 {
@@ -45,7 +46,27 @@ namespace Curso_Java_a_.net.Controllers
             {
                 return Problem("Some error happened please contact Sys Admin");
             }
-        }
+        }/*
+        //autenticar session
+        [Route("/Auth")]
+        public async Task<ActionResult<Session>> Auth([FromBody] UserDTO user)
+        {
+            try
+            {
+                var userD = await _membersService.GetMemberByUserAndPassword(user.User, user.Password);
+                var session = await _sessionService.SaveSession(userD);
+
+                return Ok(session);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Unauthorized("User and password does not match");
+            }
+            catch (Exception)
+            {
+                return Problem("Some error happened please contact Sys Admin");
+            }
+        }*/
 
     }
 }
