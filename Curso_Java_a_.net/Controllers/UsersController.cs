@@ -1,12 +1,7 @@
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
-using MySqlConnector;
-using Dapper;
-using System.Web.Http;
 using HttpGetAttribute = Microsoft.AspNetCore.Mvc.HttpGetAttribute;
-using HttpPostAttribute = Microsoft.AspNetCore.Mvc.HttpPostAttribute;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using Microsoft.AspNetCore.Mvc;
-using Controller = Microsoft.AspNetCore.Mvc.Controller;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.DTO;
 using Microsoft.AspNetCore.Authorization;
@@ -33,7 +28,7 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                var User = await _usersService.LoginUser(user, password);
+                var User = await _usersService.GetMemberByUserAndPassword(user.User,user.Password);
                 if (User == null)
                 {
                     return BadRequest("User don´t exist");
