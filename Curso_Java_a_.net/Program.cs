@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.Infraestructure;
 using Curso_Java_a_.net.Utils.Security;
