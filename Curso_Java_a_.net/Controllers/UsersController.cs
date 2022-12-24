@@ -14,11 +14,9 @@ namespace Curso_Java_a_.net.Controllers
     
     public class UsersController : ControllerBase
     {
-
         public readonly IMembersService _usersService;
         public ILogger<UsersController> _logger;
         
-
         public UsersController(IMembersService usersService, ILogger<UsersController> logger)
         {
             _usersService = usersService;
