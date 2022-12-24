@@ -8,48 +8,41 @@ using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using Microsoft.AspNetCore.Mvc;
 using Controller = Microsoft.AspNetCore.Mvc.Controller;
 using Curso_Java_a_.net.DataAccess.Entities;
+using Curso_Java_a_.net.DataAccess.DTO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Curso_Java_a_.net.Controllers
 {
+    [Authorize]
+    [Route("api/[controller]")]
+    [ApiController]
+    
     public class UsersController : ControllerBase
     {
-        public readonly IUsersService _usersService;
-        public UsersController(IUsersService usersService)
+        public readonly IMembersService _usersService;
+        public ILogger<UsersController> _logger;
+        
+        public UsersController(IMembersService usersService, ILogger<UsersController> logger)
         {
             _usersService = usersService;
-        }
-
-        [HttpGet]
-        [Route("/ShowUsuarios")]
-        public async Task<ActionResult<Users>> GetUsers(int id)
-        {
-            try
-            {
-                var user = await _usersService.GetUserById(id);
-
-                return Ok(user);
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.ToString());
-            }
+            _logger = logger;
         }
         [HttpPost]
-        [Route("/Login")]
-        public async Task<ActionResult> Login(string user, string password)
+        [Route("/GetUser")]
+        public async Task<ActionResult<Members>> GetUser([FromBody] UserDTO user)
         {
             try
             {
                 var User = await _usersService.LoginUser(user, password);
                 if (User == null)
                 {
-                     return Unauthorized("Usuario o contraseña incorrectos");
+                    return BadRequest("User don´t exist");
                 }
                 return Ok(User);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return Problem(ex.ToString());
+                return Problem("Some error happened please contact Sys Admin");
             }
         }
     }

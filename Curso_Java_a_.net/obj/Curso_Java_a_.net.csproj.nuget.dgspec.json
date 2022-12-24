@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Space\\Documents\\Bootcamp prj\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {}
+    "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Space\\Documents\\Bootcamp prj\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {
+    "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Space\\Documents\\Bootcamp prj\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+        "projectUniqueName": "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
         "projectName": "Curso_Java_a_.net",
-        "projectPath": "C:\\Users\\Space\\Documents\\Bootcamp prj\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
-        "packagesPath": "C:\\Users\\Space\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Space\\Documents\\Bootcamp prj\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
+        "projectPath": "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso_Java_a_.net\\Curso_Java_a_.net.csproj",
+        "packagesPath": "C:\\Users\\lajs5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lajs5\\Desktop\\Cursos\\Bootcamp\\Curso-Java-a-.net\\Curso_Java_a_.net\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Space\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lajs5\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -60,6 +62,14 @@
               "target": "Package",
               "version": "[5.2.9, )"
             },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.0.1, )"
@@ -78,6 +88,26 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Microsoft.IdentityModel.JsonWebTokens": {
+              "target": "Package",
+              "version": "[6.25.1, )"
+            },
+            "Microsoft.IdentityModel.LoggingExtensions": {
+              "target": "Package",
+              "version": "[6.25.1, )"
+            },
+            "Microsoft.IdentityModel.Protocols": {
+              "target": "Package",
+              "version": "[6.25.1, )"
+            },
+            "Microsoft.IdentityModel.Protocols.OpenIdConnect": {
+              "target": "Package",
+              "version": "[6.25.1, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.25.1, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -86,17 +116,25 @@
               "target": "Package",
               "version": "[2.2.1, )"
             },
-            "Pomelo.EntityFrameworkCore.MySql": {
+            "Newtonsoft.Json.Bson": {
               "target": "Package",
-              "version": "[7.0.0-alpha.1, )"
+              "version": "[1.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
             },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.5, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.25.1, )"
             }
           },
           "imports": [
@@ -118,7 +156,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
