@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.Infraestructure;
+using Curso_Java_a_.net.Utils.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,9 +15,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
+builder.Services.AddSwaggerGen();
+
 AuthenticationConfig authenticationConfig = new AuthenticationConfig(builder);
 
-builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<AuthUtils>(new AuthUtils(builder.Configuration));
 
 string connectionStringtest = builder.Configuration.GetConnectionString("EscuelaConnection");
 
@@ -27,6 +30,12 @@ builder.Services.AddDbContext<SchoolSystemContext>(options =>
 });
 
 DependencyRegistry registry = new DependencyRegistry(builder);
+
+//services cors
+builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+{
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -38,6 +47,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors();
+
 app.UseRouting();
 
 app.UseAuthentication();
@@ -47,9 +58,5 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
 });
-
-app.UseCors();
-
-app.MapControllers();
 
 app.Run();

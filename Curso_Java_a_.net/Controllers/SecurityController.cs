@@ -4,9 +4,13 @@ using HttpPostAttribute = Microsoft.AspNetCore.Mvc.HttpPostAttribute;
 using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Microsoft.AspNetCore.Authorization;
+using Curso_Java_a_.net.DataAccess.DTO;
+using Microsoft.AspNetCore.Components;
 
 namespace Curso_Java_a_.net.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class SecurityController : ControllerBase
     {
         public readonly ISessionService _sessionService;
@@ -25,12 +29,12 @@ namespace Curso_Java_a_.net.Controllers
         [HttpPost]
         [Route("/Login")]
         [AllowAnonymous]
-        public async Task<ActionResult<Session>> Login(string User, string Password)
+        public async Task<ActionResult<Session>> Login([FromBody] UserDTO user)
         {
             try
             {
-                var user = await _membersService.GetMemberByUserAndPassword(User, Password);
-                var session = await _sessionService.SaveSession(user);                
+                var userD = await _membersService.GetMemberByUserAndPassword(user.User, user.Password);
+                var session = await _sessionService.SaveSession(userD);                
 
                 return Ok(session);
             }

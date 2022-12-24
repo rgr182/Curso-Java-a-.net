@@ -33,7 +33,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw ex;
             }
         }
-
+        
         public async Task<Members> SaveMembersAsync(Members member)
         {
             try
@@ -47,6 +47,24 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
 
             return member;
+        }
+        
+        public async Task<Members> GetMember(long memberId)
+        {
+            try
+            {
+                Members member = await _membersRepository.GetMember(memberId);
+                if (member == null)
+                {
+                    throw new UnauthorizedAccessException();
+                }
+                return member;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Some error happened on Members Service");
+                throw ex;
+            }
         }
     }
 }
