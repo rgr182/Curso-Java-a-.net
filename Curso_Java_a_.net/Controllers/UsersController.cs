@@ -15,6 +15,7 @@ namespace Curso_Java_a_.net.Controllers
     public class UsersController : ControllerBase
     {
         public readonly IMembersService _usersService;
+        
         public ILogger<UsersController> _logger;
         
         public UsersController(IMembersService usersService, ILogger<UsersController> logger)
@@ -22,13 +23,15 @@ namespace Curso_Java_a_.net.Controllers
             _usersService = usersService;
             _logger = logger;
         }
-        [HttpPost]
+
+
+        [HttpGet]
         [Route("/GetUser")]
-        public async Task<ActionResult<Members>> GetUser([FromBody] UserDTO user)
+        public async Task<ActionResult<Members>> GetMember([FromBody] int id)
         {
             try
             {
-                var userD = await _usersService.GetMember(user.Id);
+                var userD = await _usersService.GetMember(id);
                 if (userD == null)
                 {
                     return BadRequest("User don´t exist");
@@ -40,5 +43,65 @@ namespace Curso_Java_a_.net.Controllers
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
+
+
+       [HttpPost]
+        [Route("/PostUser")]
+        public async Task<ActionResult<Members>> PostMembers([FromBody] Members m)
+        {
+            try
+            {
+                var member = await _usersService.PostMembers(m);
+               
+                return Ok(member);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        [HttpPut]
+        [Route("/PutUser")]
+        public async Task<ActionResult<Members>> UpdateMembers([FromBody] Members mem)
+        {
+            try
+            {
+                var member = await _usersService.UpdateMembers(mem);
+
+                return Ok(member);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        [HttpDelete]
+        [Route("/DeleteMembers")]
+        public async Task<ActionResult<Members>> DeleteMembers([FromBody] MemberDTO members)
+        {
+            try
+            {
+                var member = await _usersService.DeleteMembers(members.MembersId);
+
+                return Ok(member);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+
     }
 }
