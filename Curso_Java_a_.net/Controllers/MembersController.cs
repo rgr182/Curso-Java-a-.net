@@ -12,31 +12,31 @@ namespace Curso_Java_a_.net.Controllers
     [Route("api/[controller]")]
     [ApiController]
     
-    public class UsersController : ControllerBase
+    public class MembersController : ControllerBase
     {
-        public readonly IMembersService _usersService;
+        public readonly IMembersService _memberService;
         
-        public ILogger<UsersController> _logger;
+        public ILogger<MembersController> _logger;
         
-        public UsersController(IMembersService usersService, ILogger<UsersController> logger)
+        public MembersController(IMembersService memberService, ILogger<MembersController> logger)
         {
-            _usersService = usersService;
+            _memberService = memberService;
             _logger = logger;
         }
 
 
         [HttpGet]
-        [Route("/GetUser")]
+        [Route("/GetMember")]
         public async Task<ActionResult<Members>> GetMember([FromBody] int id)
         {
             try
             {
-                var userD = await _usersService.GetMember(id);
-                if (userD == null)
+                var memberD = await _memberService.GetMember(id);
+                if (memberD == null)
                 {
                     return BadRequest("User don´t exist");
                 }
-                return Ok(userD);
+                return Ok(memberD);
             }
             catch (Exception)
             {
@@ -46,12 +46,12 @@ namespace Curso_Java_a_.net.Controllers
 
 
        [HttpPost]
-        [Route("/PostUser")]
+        [Route("/PostMember")]
         public async Task<ActionResult<Members>> PostMembers([FromBody] Members m)
         {
             try
             {
-                var member = await _usersService.PostMembers(m);
+                var member = await _memberService.PostMembers(m);
                
                 return Ok(member);
 
@@ -65,12 +65,12 @@ namespace Curso_Java_a_.net.Controllers
 
 
         [HttpPut]
-        [Route("/PutUser")]
+        [Route("/PutMember")]
         public async Task<ActionResult<Members>> UpdateMembers([FromBody] Members mem)
         {
             try
             {
-                var member = await _usersService.UpdateMembers(mem);
+                var member = await _memberService.UpdateMembers(mem);
 
                 return Ok(member);
 
@@ -89,7 +89,7 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                var member = await _usersService.DeleteMembers(members.MembersId);
+                var member = await _memberService.DeleteMembers(members.MembersId);
 
                 return Ok(member);
 

@@ -24,18 +24,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         public Task<Members> GetMemberById(string usuario, string pass) =>
              _context.Members
                 .Where(x => x.Name == usuario && x.Password == pass)
@@ -83,6 +71,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 
         public async Task<Members> DeleteMembers(int membersId)
          {
+
             Members member = _context.Members.Find(membersId);
             _context.Members.Remove(member);
             _context.SaveChanges();
