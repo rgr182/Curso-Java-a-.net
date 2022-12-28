@@ -24,12 +24,12 @@ namespace Curso_Java_a_.net.Utils.Security
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                new Claim("Id", Guid.NewGuid().ToString()),
+                new Claim("Id", member.MembersId.ToString()),
                 new Claim(JwtRegisteredClaimNames.Sub, member.User),
                 new Claim(JwtRegisteredClaimNames.Email, member.Name),
                 new Claim(JwtRegisteredClaimNames.Jti,
-                Guid.NewGuid().ToString())
-             }),
+                Guid.NewGuid().ToString()),
+            }),
                 Expires = DateTime.UtcNow.AddMinutes(60),
                 SigningCredentials = new SigningCredentials
                 (new SymmetricSecurityKey(key),
