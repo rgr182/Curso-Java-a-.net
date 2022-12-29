@@ -20,7 +20,7 @@
 
 <body style="background-image: url('../assets/home/BackgroundPreescolar.png');">
 
-    <div class="header">
+    <div class="header float-animation">
 
         <a class="btn-actividades" href="misActividades.html">
             <img src="../assets/home/explorer2.png" class="btn-actividades-img" alt="Isla">
@@ -60,7 +60,7 @@
 
         </div>
 
-        <div class="table-actividades">
+        <div class="table-actividades" id="table-actividades-pendientes">
 
             <div class="header-contenedor">
                 <div class="header-table">
@@ -70,22 +70,25 @@
 
             <div class="table-actividades-body">
 
-                <div class="registro-actividad">
-                    <a href="#">
-                        <img class="registro-actividad-img" src="../assets/misActividades/tiempo-tareaspendientes.png"
-                             alt="">
-                    </a>
-                    <div class="registro-actividad-materia">
-                        <h6>Mate 2</>
+                <div class="registers">
+                    <div class="registro-actividad mb-1">
+                        <a href="#">
+                            <img class="registro-actividad-img" src="../assets/misActividades/tiempo-tareaspendientes.png"
+                                alt="">
+                        </a>
+                        <div class="registro-actividad-materia">
+                            <h6>Mate 2</>
+                        </div>
+                        <div class="registro-actividad-materia">
+                            <h6>24-Sep</>
+                        </div>
                     </div>
-                    <div class="registro-actividad-materia">
-                        <h6>24-Sep</>
-                    </div>
+                </div>
                 </div>
 
             </div>
 
-        </div>
+       
 
         <div class="table-actividades">
 
@@ -146,6 +149,8 @@
             </div>
 
         </div>
+   </div>
+
 
         <script src="../scripts/misActividades.js"></script>
 

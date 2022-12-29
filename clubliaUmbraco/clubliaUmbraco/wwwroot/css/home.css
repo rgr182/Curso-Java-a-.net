@@ -3,29 +3,56 @@
     src: url("../assets/fonts/grobold/GROBOLD.ttf");
     
 }
-h5{
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-18px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+h5 {
     color: white;
     font-family: GROBOLD;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 3rem;
     text-shadow: 2px 2px 2px black;
     line-height: 1.5;
 }
-a{
+
+@media (max-width: 479px) {
+    h5 {
+        font-size: 2rem;
+    }
+}
+
+a {
     text-decoration: none;
 }
 
-body{
+body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.header{
+.header {
+    margin-top: 1rem;
     display: flex;
     justify-content: end;
 }
-.btn-logout{
+
+.btn-logout {
     width: 109px;
 }
 
@@ -41,7 +68,7 @@ body{
     border: solid 4px white;
 } */
 
-.btn-dashboard{
+.btn-dashboard {
     color: white;
     font-family: GROBOLD;
     font-weight: 500;
@@ -51,10 +78,9 @@ body{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-
     border: none;
-
     width: 250px;
     height: 120px;
     background-color: transparent;
 }
+
