@@ -28,7 +28,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpGet]
-        [Route("/Auth")]
+        [Route("/auth")]
         public async Task<ActionResult<Session>> Auth()
         {
             try
