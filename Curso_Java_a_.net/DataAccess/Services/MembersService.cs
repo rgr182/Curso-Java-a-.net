@@ -1,10 +1,6 @@
 using Curso_Java_a_.net.DataAccess.Entities;
-using Curso_Java_a_.net.DataAccess.Repository.Repositories;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
-using Microsoft.Identity.Client;
-using System.Diagnostics.Metrics;
-using static Dapper.SqlMapper;
 
 namespace Curso_Java_a_.net.DataAccess.Services
 {
@@ -52,8 +48,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
 
             return member;
         }
-        
-
 
         public async Task<Members> GetMember(int memberId)
         {
@@ -91,30 +85,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-
-
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public async Task<Members> PostMembers(Members members)
         {
             try
@@ -142,25 +112,5 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw;
             }
         }
-
-
-       /* public async Task<Members> DeleteMembers(long memberId)
-        {
-            try
-            {
-                await _membersRepository.DeleteMembers(memberId);
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-        }*/
-
-
-
-
     }
 }

@@ -51,18 +51,14 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                var member = await _memberService.PostMembers(m);
-               
+                var member = await _memberService.PostMembers(m);               
                 return Ok(member);
-
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
-
 
         [HttpPut]
         [Route("/PutMember")]
@@ -71,17 +67,13 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var member = await _memberService.UpdateMembers(mem);
-
                 return Ok(member);
-
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
-
 
         [HttpDelete]
         [Route("/DeleteMembers")]
@@ -100,8 +92,5 @@ namespace Curso_Java_a_.net.Controllers
                 throw;
             }
         }
-
-
-
     }
 }
