@@ -7,6 +7,12 @@ namespace Curso_Java_a_.net.DataAccess.Services.Interfaces
         public Task<Members> GetMemberByUserAndPassword(string user, string pass);
         
         public Task<Members> SaveMembersAsync(Members member);
-        public Task<Members> GetMember(long memberId);
+        public Task<Members> GetMember(int memberId);
+
+        public Task<Members> PostMembers(Members member);
+
+        public Task<Members> UpdateMembers(Members members);
+
+       public Task<Members> DeleteMembers(int MembersId);
     }
 }

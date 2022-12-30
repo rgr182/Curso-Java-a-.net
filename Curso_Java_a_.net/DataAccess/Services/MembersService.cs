@@ -48,8 +48,8 @@ namespace Curso_Java_a_.net.DataAccess.Services
 
             return member;
         }
-        
-        public async Task<Members> GetMember(long memberId)
+
+        public async Task<Members> GetMember(int memberId)
         {
             try
             {
@@ -64,6 +64,52 @@ namespace Curso_Java_a_.net.DataAccess.Services
             {
                 _logger.LogError(ex, "Some error happened on Members Service");
                 throw ex;
+            }
+        }
+
+        public async Task<Members> DeleteMembers(int id)
+        {
+            try
+            {
+                Members member = await _membersRepository.DeleteMembers(id);
+                if (member == null)
+                {
+                    throw new UnauthorizedAccessException();
+                }
+                return member;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Some error happened on Members Service");
+                throw ex;
+            }
+        }
+
+        public async Task<Members> PostMembers(Members members)
+        {
+            try
+            {
+                await _membersRepository.PostMembers(members);
+                return members;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                throw;
+            }
+        }
+
+        public async Task<Members> UpdateMembers(Members members)
+        {
+            try
+            {
+                await _membersRepository.UpdateMembers(members);
+                return members;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                throw;
             }
         }
     }
