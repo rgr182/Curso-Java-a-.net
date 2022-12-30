@@ -13,14 +13,12 @@ namespace Curso_Java_a_.net.Infraestructure
         {
             #region Services
             builder.Services.AddScoped<ISessionService, SessionService>();
-            builder.Services.AddScoped<IGradesService, GradesService>();
-            builder.Services.AddScoped<IMembersService, MembersService>();
+            builder.Services.AddScoped<IUsersService, UsersService>();
             #endregion
 
             #region Repositories
             builder.Services.AddScoped<ISessionRepository, SessionRepository>();
-            builder.Services.AddScoped<IGradesRepository, GradesRepository>();
-            builder.Services.AddScoped<IMembersRepository, MembersRepository>();
+            builder.Services.AddScoped<IUsersRepository, UsersRepository>();
             #endregion
 
             #region Utils

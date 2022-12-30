@@ -11,33 +11,45 @@ namespace Curso_Java_a_.net.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    
     public class UsersController : ControllerBase
     {
-        public readonly IMembersService _usersService;
-        public ILogger<UsersController> _logger;
-        
-        public UsersController(IMembersService usersService, ILogger<UsersController> logger)
+        public readonly IUsersService _usersService;
+        public UsersController(IUsersService usersService)
         {
             _usersService = usersService;
-            _logger = logger;
         }
-        [HttpPost]
-        [Route("/GetUser")]
-        public async Task<ActionResult<Members>> GetUser([FromBody] UserDTO user)
+
+        [HttpGet]
+        [Route("/ShowUsuarios")]
+        public async Task<ActionResult<Users>> GetUsers(int id)
         {
             try
             {
-                var User = await _usersService.GetMemberByUserAndPassword(user.User,user.Password);
+                var user = await _usersService.GetUserById(id);
+
+                return Ok(user);
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.ToString());
+            }
+        }
+        [HttpPost]
+        [Route("/Login")]
+        public async Task<ActionResult> Login(string user, string password)
+        {
+            try
+            {
+                var User = await _usersService.LoginUser(user, password);
                 if (User == null)
                 {
-                    return BadRequest("User don´t exist");
+                    return Unauthorized("Usuario o contraseña incorrectos");
                 }
                 return Ok(User);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return Problem("Some error happened please contact Sys Admin");
+                return Problem(ex.ToString());
             }
         }
     }

@@ -8,18 +8,18 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
     public class SessionRepository : ISessionRepository
     {
-        internal SchoolSystemContext _context;
+        internal ClubLiaContext _context;
 
-        public SessionRepository(SchoolSystemContext context)
+        public SessionRepository(ClubLiaContext context)
         {
             _context = context;
         }
 
-        public Task<Session> GetSession(int UserId)
+        public Task<Session> GetSession(long UserId)
         {
             return _context.Session
-                .Where(u => u.MemberId == UserId)
-                .OrderBy(x => x.MemberId)
+                .Where(u => u.UserId == UserId)
+                .OrderBy(x => x.UserId)
                 .LastAsync();
         }
 

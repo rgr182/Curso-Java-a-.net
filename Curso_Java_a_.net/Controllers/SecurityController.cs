@@ -15,16 +15,16 @@ namespace Curso_Java_a_.net.Controllers
     public class SecurityController : ControllerBase
     {
         public readonly ISessionService _sessionService;
-        public readonly IMembersService _membersService;
+        public readonly IUsersService _usersService;
         public ILogger<SecurityController> _logger;
 
         public SecurityController(ISessionService securityService,
                                   ILogger<SecurityController> logger,
-                                  IMembersService membersService)
+                                  IUsersService usersService)
         {
             _sessionService = securityService;
             _logger = logger;
-            _membersService = membersService;
+            _usersService = usersService;
         }
 
         [HttpGet]
@@ -55,7 +55,7 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                var userD = await _membersService.GetMemberByUserAndPassword(user.User, user.Password);
+                var userD = await _usersService.LoginUser(user.User, user.Password);
                 var session = await _sessionService.SaveSession(userD);                
 
                 return Ok(session);

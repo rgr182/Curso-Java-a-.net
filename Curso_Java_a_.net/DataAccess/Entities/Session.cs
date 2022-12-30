@@ -1,13 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace Curso_Java_a_.net.DataAccess.Entities
 {
     public partial class Session
     {
-        [Key]
-        public int SessionId { get; set; }
-
-        public int MemberId { get; set; }
+        [Key]        
+        public long UserId { get; set; }
 
         [Required]
 

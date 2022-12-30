@@ -25,7 +25,7 @@ builder.Services.AddSingleton<AuthUtils>(new AuthUtils(builder.Configuration));
 string connectionStringtest = builder.Configuration.GetConnectionString("EscuelaConnection");
 
 Environment.SetEnvironmentVariable("Connection", connectionStringtest);
-builder.Services.AddDbContext<SchoolSystemContext>(options =>
+builder.Services.AddDbContext<ClubLiaContext>(options =>
 {
     options.UseMySql(connectionStringtest, ServerVersion.AutoDetect(connectionStringtest));
 });
