@@ -22,8 +22,7 @@ AuthenticationConfig authenticationConfig = new AuthenticationConfig(builder);
 
 builder.Services.AddSingleton<AuthUtils>(new AuthUtils(builder.Configuration));
 
-string connectionStringtest = builder.Configuration.GetConnectionString("EscuelaConnection");
-
+string connectionStringtest = builder.Configuration.GetConnectionString("ClubLiaConnection");
 Environment.SetEnvironmentVariable("Connection", connectionStringtest);
 builder.Services.AddDbContext<ClubLiaContext>(options =>
 {

@@ -1,4 +1,4 @@
-namespace Curso_Java_a_.net.DataAccess.Entities.Mapping
+namespace Curso_Java_a_.net.DataAccess.Entities
 {
     public class Homework
     {

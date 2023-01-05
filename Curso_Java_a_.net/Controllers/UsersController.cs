@@ -34,9 +34,9 @@ namespace Curso_Java_a_.net.Controllers
                 return Problem(ex.ToString());
             }
         }
-        [HttpPost]
-        [Route("/Login")]
-        public async Task<ActionResult> Login(string user, string password)
+        //[HttpPost]
+        //[Route("/Login")]
+        /*public async Task<ActionResult> Login(string user, string password)
         {
             try
             {
@@ -51,6 +51,6 @@ namespace Curso_Java_a_.net.Controllers
             {
                 return Problem(ex.ToString());
             }
-        }
+        }*/
     }
 }

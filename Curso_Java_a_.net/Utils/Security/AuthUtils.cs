@@ -24,7 +24,7 @@ namespace Curso_Java_a_.net.Utils.Security
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                new Claim("Id", user.Id.ToString()),
+                new Claim("Id", user.id.ToString()),
                 new Claim(JwtRegisteredClaimNames.Name, user.Name),
                 new Claim(JwtRegisteredClaimNames.Exp, user.Grade.ToString()),
                 new Claim(JwtRegisteredClaimNames.Jti,

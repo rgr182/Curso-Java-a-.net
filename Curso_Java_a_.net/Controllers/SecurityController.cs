@@ -49,7 +49,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpPost]
-        [Route("/Login")]
+        [Route("/api/login")]
         [AllowAnonymous]
         public async Task<ActionResult<Session>> Login([FromBody] UserDTO user)
         {

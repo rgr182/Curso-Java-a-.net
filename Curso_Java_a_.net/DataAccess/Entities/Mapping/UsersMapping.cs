@@ -9,15 +9,15 @@ namespace Curso_Java_a_.net.DataAccess.Entities.Mapping
             #region users
             modelBuilder.Entity<Users>()
                 .ToTable("users")
-                .HasKey(x => x.Id);
+                .HasKey(x => x.id);
             #region Primary Keys
             modelBuilder.Entity<Users>()
-                .HasKey(x => x.Id)
+                .HasKey(x => x.id)
                 .HasName("id");
             #endregion
             #region Properties
             modelBuilder.Entity<Users>()
-                .Property(x => x.Id)
+                .Property(x => x.id)
                 .ValueGeneratedOnAdd()
                 .HasColumnName("id")
                 .IsRequired();
