@@ -55,19 +55,8 @@ body {
 
 .btn-logout {
     width: 109px;
+    margin-right: 1rem;
 }
-
-/* .btn-dashboard{
-    color: white;
-    font-family: GROBOLD;
-    font-weight: 500;
-    font-size: 32px;
-    text-shadow: 2px 2px 2px black;
-    line-height: 1.5;
-    background-color: #febd16;
-    border-radius: 12px ;
-    border: solid 4px white;
-} */
 
 .btn-dashboard {
     color: white;

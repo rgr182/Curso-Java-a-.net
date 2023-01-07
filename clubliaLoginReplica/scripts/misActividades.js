@@ -1,17 +1,47 @@
-const perfil = JSON.parse(localStorage.getItem("perfil"));
+import {getTareasPendientes} from './API.js'
 
-const nameUser = document.querySelector("#nameUser");
-nameUser.textContent= perfil.name;
+const profile = JSON.parse(localStorage.getItem("profile"));
 
-const ageUser = document.querySelector("#ageUser");
-ageUser.textContent= perfil.age;
+const userName = document.querySelector("#userName");
+const grade = document.querySelector("#grade");
+const schoolName = document.querySelector("#schoolName");
 
-const emailUser = document.querySelector("#emailUser");
-emailUser.textContent= perfil.email;
+const registrosTareasPendientes = document.querySelector('#registros-actividades-pendientes');
+const apMensaje= document.querySelector('#actividades-pendientes-body-mensaje');
 
-const registersAP = document.querySelector(".registers");
-const numeroRAP= registersAP.children.length;
+userName.textContent= profile.displayName;
+grade.textContent= profile.grade;
+schoolName.textContent= profile.school_name;
 
-if( numeroRAP > 5){
-    console.log('Tienes mas actividades pendientess')
+const tareasPendientes = await getTareasPendientes();
+
+if(tareasPendientes.length !== 0){
+    tareasPendientes.forEach(tarea => {
+        const registroTareaPendiente  = document.createElement('div');
+        const fecha = new Date(tarea.limit_date);
+      
+        registroTareaPendiente.classList.add('registro-actividad');
+        registroTareaPendiente.innerHTML = `
+                            <a href="#">
+                                <img class="registro-actividad-img"
+                                    src="./assets/misActividades/tiempo-tareaspendientes.png" alt="">
+                            </a>
+                            <div class="registro-actividad-materia">
+                                <h6>${tarea.name}</>
+                            </div>
+                            <div class="registro-actividad-materia">
+                                <h6>${fecha.getDate()}-${ fecha.toLocaleString("en-US", { month: "short" })}</>
+                            </div>
+        `;
+    
+        registrosTareasPendientes.appendChild(registroTareaPendiente);
+    
+    });
+    
+    apMensaje.remove();
+    
 }
+
+
+
+

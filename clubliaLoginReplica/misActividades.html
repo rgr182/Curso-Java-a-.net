@@ -18,15 +18,20 @@
             <img src="./assets/home/explorer2.png" class="btn-actividades-img" alt="Isla">
             <h5>Mis actividades</h5>
         </a>
+
+        <div class="avatar">
+            <img class="avatar-img" src="/assets/images/avatars/bootFace.png" alt="Avatar">
+        </div>
+
         <div class="user">
             <div class="user-img">
-                <h6 id="nameUser">Nikola</h6>
+                <h6 id="userName">Nikola</h6>
             </div>
             <div class="user-img">
-                <h6 id="ageUser">Tercer Grado</h6>
+                <h6 id="grade">Tercer Grado</h6>
             </div>
             <div class="user-img">
-                <h6 id="emailUser">Test Lia</h6>
+                <h6 id="schoolName">Test Lia</h6>
             </div>
 
         </div>
@@ -52,7 +57,7 @@
 
         </div>
 
-        <div class="table-actividades" id="table-actividades-pendientes">
+        <div class="table-actividades" id="tabla-actividades-pendientes">
 
             <div class="header-contenedor">
                 <div class="header-table">
@@ -62,51 +67,16 @@
 
             <div class="table-actividades-body">
 
-                <div class="registers">
+                <div class="registros-actividades" id="registros-actividades-pendientes">
 
-                    <div class="registro-actividad mb-1">
-                        <a href="#">
-                            <img class="registro-actividad-img" src="./assets/misActividades/tiempo-tareaspendientes.png"
-                                alt="">
-                        </a>
-                        <div class="registro-actividad-materia">
-                            <h6>Mate 2</>
-                        </div>
-                        <div class="registro-actividad-materia">
-                            <h6>24-Sep</>
-                        </div>
-                    </div>
-    
-                    <div class="registro-actividad">
-                        <a href="#">
-                            <img class="registro-actividad-img" src="./assets/misActividades/tiempo-tareaspendientes.png"
-                                alt="">
-                        </a>
-                        <div class="registro-actividad-materia">
-                            <h6>Mate 2</>
-                        </div>
-                        <div class="registro-actividad-materia">
-                            <h6>24-Sep</>
-                        </div>
-                    </div>
-    
-                    <div class="registro-actividad">
-                        <a href="#">
-                            <img class="registro-actividad-img" src="./assets/misActividades/tiempo-tareaspendientes.png"
-                                alt="">
-                        </a>
-                        <div class="registro-actividad-materia">
-                            <h6>Mate 2</>
-                        </div>
-                        <div class="registro-actividad-materia">
-                            <h6>24-Sep</>
-                        </div>
-                    </div>
+                    <div class="registro-actividad" id="actividades-pendientes-body-mensaje">
+                        <h6>No hay actividades que mostrar!</h6>
 
-                    <div class="registro-actividad">
+                    </div>
+                    <!-- <div class="registro-actividad">
                         <a href="#">
-                            <img class="registro-actividad-img" src="./assets/misActividades/tiempo-tareaspendientes.png"
-                                alt="">
+                            <img class="registro-actividad-img"
+                                src="./assets/misActividades/tiempo-tareaspendientes.png" alt="">
                         </a>
                         <div class="registro-actividad-materia">
                             <h6>Mate 2</>
@@ -114,28 +84,14 @@
                         <div class="registro-actividad-materia">
                             <h6>24-Sep</>
                         </div>
-                    </div>
-
-                    <div class="registro-actividad">
-                        <a href="#">
-                            <img class="registro-actividad-img" src="./assets/misActividades/tiempo-tareaspendientes.png"
-                                alt="">
-                        </a>
-                        <div class="registro-actividad-materia">
-                            <h6>Mate 2</>
-                        </div>
-                        <div class="registro-actividad-materia">
-                            <h6>24-Sep</>
-                        </div>
-                    </div>
-    
-                </div>     
+                    </div> -->
+                </div>
 
             </div>
 
         </div>
 
-        <div class="table-actividades" id="table-actividades-entregadas">
+        <div class="table-actividades" id="actividades-entregadas">
 
             <div class="header-contenedor">
                 <div class="header-table">
@@ -145,16 +101,18 @@
 
             <div class="table-actividades-body">
 
-                <div class="registro-actividad">
-                    <h6>No hay actividades que mostrar!</h6>
-                    
+                <div class="registros-actividades">
+                    <div class="registro-actividad">
+                        <h6>No hay actividades que mostrar!</h6>
+
+                    </div>
                 </div>
 
             </div>
 
         </div>
 
-        <div class="table-actividades" id="table-actividades-calificadas">
+        <div class="table-actividades" id="actividades-calificadas">
 
             <div class="header-contenedor">
                 <div class="header-table">
@@ -163,10 +121,10 @@
             </div>
 
             <div class="table-actividades-body">
-                
-
-                <div class="registro-actividad">
-                    <h6>No hay actividades calificadas!</h6>
+                <div class="registros-actividades">
+                    <div class="registro-actividad">
+                        <h6>No hay actividades que mostrar!</h6>
+                    </div>
                 </div>
 
             </div>
@@ -191,9 +149,9 @@
 
         </div>
     </div>
-        
-        <script src="./scripts/misActividades.js"></script>
-        <script src="/bjs/bootstrap.bundle.min.js"></script>
+
+    <script src="./scripts/misActividades.js" type="module"></script>
+    <script src="/bjs/bootstrap.bundle.min.js"></script>
 
 </body>
 

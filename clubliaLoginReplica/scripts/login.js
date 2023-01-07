@@ -1,5 +1,5 @@
-(function ()
-{
+    import {login} from './API.js'
+    
     const formulario = document.querySelector("#login");
     const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
@@ -19,42 +19,38 @@
         }, 3000)
     }
 
+
     formulario.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const user = document.querySelector("#user").value;
+        const username = document.querySelector("#user").value;
         const password = document.querySelector("#password").value;
 
-        if (password === '' || user === '') {
-            mostrarError('Todos los campos son obligatorios')
+
+
+        if (password === '' || username === '') {
+            alertaError('Todos los campos son obligatorios')
+            return;
+        }
+        
+        const respuesta = await login(username, password);
+
+        //Validacion de los errores de la respuesta
+        if(respuesta.error){
+            alertaError(respuesta.error, 'danger');
             return;
         }
 
-        const resultado = await fetch(`http://clubliaback-dev.eba-usrmkstp.us-east-1.elasticbeanstalk.com/Login?user=${user.toString()}&password=${password.toString()}`, {
-            method: 'POST',
-        }).then(response => {
-            if (response.status === 200) {
-                return response.json();
-            }
-            return "error";
-        }).then(data => {
-            if (data === "error") {
-                alertaError('Datos Incorrectos!!', 'danger');
-            } else {
-                localStorage.setItem('perfil', JSON.stringify(data));
-                location.href = "../home.html";
-            }
-
-
-        });
-
-
+        if(respuesta.user.data.role === 'preescolar'){
+            location.href = "../home.html";
+        }
+        
     });
 
 
-}
-    
-    )();
+
+
+
 
 
 
