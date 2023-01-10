@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Curso_Java_a_.net.DataAccess.DTO;
-using Microsoft.AspNetCore.Components;
 using System.Security.Claims;
 
 namespace Curso_Java_a_.net.Controllers

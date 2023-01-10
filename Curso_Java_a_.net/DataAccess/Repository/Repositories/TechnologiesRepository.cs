@@ -1,3 +1,5 @@
+using Curso_Java_a_.net.DataAccess.DTO;
+using Curso_Java_a_.net.DataAccess.DTO.DTOMapping;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
@@ -12,40 +14,41 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context = context;
         }
 
-        public void DeleteTechnologies(Tecnologies name)
+        public async Task DeleteTechnologiesById(int TechnologyId)
         {
-            throw new NotImplementedException();
+            var Technology = await _context.Technologies
+                .Where(t => t.TechnologyId == TechnologyId)
+                .FirstOrDefaultAsync();
+
+            _context.Technologies.Remove(Technology);
+
+            _context.SaveChanges();            
         }
 
-        public Task<List<Tecnologies>> GetTechnologiesByName(string name)
+        public Task<List<Technologies>> GetTechnologiesByName(string name)
         {
-           return  _context.Tecnologies
+           return  _context.Technologies
                  .ToListAsync();
         }
 
-        public async Task<Tecnologies> PostTechnologiesAsync(Tecnologies name)
+        public async Task<Technologies> PostTechnologiesAsync(Technologies name)
         {
-            await _context.Tecnologies.AddAsync(name);
+            await _context.Technologies.AddAsync(name);
             await _context.SaveChangesAsync();
             return name;
         }
 
-        public async Task<Tecnologies> UpdateTechnologiesAsync(Tecnologies name)
+        public async Task<Technologies> UpdateTechnologiesAsync(TechnologyDTO tech)
         {
-            var res = "";
-
-            Tecnologies Name = _context.Tecnologies.Find(name);
-            members1.Name = members.Name;
-            members1.FirstName = members.FirstName;
-            members1.SecondName = members.SecondName;
-            members1.CurrentLocationId = members.CurrentLocationId;
-            members1.MemberRegistratior = members.MemberRegistratior;
-            members1.Email = members.Email;
-            members1.User = members.User;
-            members1.Password = members.Password;
-            _context.Members.Update(members1);
+            var techUpdated = tech.Map();
+            _context.Technologies.Update(techUpdated);
             await _context.SaveChangesAsync();
-            return members1;
+            return techUpdated;
+        }
+
+        bool ITechnologiesRepository.DeleteTechnologiesById(int technologyId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -4,9 +4,7 @@ using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Microsoft.AspNetCore.Authorization;
-using System.Collections.Generic;
-using Microsoft.DotNet.Scaffolding.Shared.Messaging;
-using Curso_Java_a_.net.DataAccess.Services;
+using Curso_Java_a_.net.DataAccess.DTO;
 
 namespace Curso_Java_a_.net.Controllers
 {
@@ -27,7 +25,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpGet]
         [Route("/GetTechName")]
-        public async Task<ActionResult<Tecnologies>> GetTechnologiesByName(string Name)
+        public async Task<ActionResult<Technologies>> GetTechnologiesByName(string Name)
         {
             try
             {
@@ -47,12 +45,12 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPost]
         [Route("/PostTechnology")]
-        public async Task<ActionResult<Members>> PostMembers([FromBody] Members m)
+        public async Task<ActionResult<Members>> PostMembers([FromBody] TechnologyDTO tech)
         {
             try
             {
-                var member = await _ITechnologiesService.Post;
-                return Ok(member);
+                await _ITechnologiesService.PostTechnologiesAsync(tech);
+                return Ok(tech);
             }
             catch (Exception)
             {

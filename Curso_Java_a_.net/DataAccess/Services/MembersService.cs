@@ -112,5 +112,10 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw;
             }
         }
+
+        public Task<Members> GetMember(int memberId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

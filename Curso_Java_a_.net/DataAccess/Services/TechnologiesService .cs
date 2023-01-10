@@ -1,5 +1,5 @@
+using Curso_Java_a_.net.DataAccess.DTO;
 using Curso_Java_a_.net.DataAccess.Entities;
-using Curso_Java_a_.net.DataAccess.Repository.Repositories;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
 
@@ -15,27 +15,38 @@ namespace Curso_Java_a_.net.DataAccess.Services
             _logger = logger;
         }
 
-        public async Task<List<Tecnologies>> GetTechnologiesByName(string Name)
+        public async Task<List<Technologies>> GetTechnologiesByName(string Name)
         {
             return await _TechnologiesRepository.GetTechnologiesByName(Name);
         }
 
-        public async Task<Tecnologies> DeleteTechnologiesByName(string Name)
+        public bool DeleteTechnologiesByName(int technologyId)
         {
             try
             {
-                await _TechnologiesRepository.DeleteTechnologies(Name);
-              
+               _TechnologiesRepository.DeleteTechnologiesById(technologyId);
+               return true;
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, ex.Message);
                 throw;
-            }
+            }            
+        }     
+
+        public Task PutTechnologiesAsync(Technologies name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteTechnologies(Technologies name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task PostTechnologiesAsync(TechnologyDTO name)
+        {
+            throw new NotImplementedException();
         }
     }
-        
-        
-
-
 }

@@ -47,7 +47,7 @@ namespace Curso_Java_a_.net.Controllers
 
        [HttpPost]
         [Route("/PostMember")]
-        public async Task<ActionResult<Members>> PostMembers([FromBody] MembersDTO m)
+        public async Task<ActionResult<Members>> PostMembers([FromBody] MemberDTO m)
         {
             try
             {
@@ -55,7 +55,7 @@ namespace Curso_Java_a_.net.Controllers
                     MembersId = 0,
                     Name = m.Name,
                     FirstName = m.Name,
-                    SecondName = m.LastName,
+                    SecondName = m.SecondName,
                     MemberRegistratior = DateTime.UtcNow,
                     CurrentLocationId=1,
                     Email = m.Email,
