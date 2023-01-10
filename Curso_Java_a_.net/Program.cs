@@ -1,28 +1,37 @@
 using Microsoft.EntityFrameworkCore;
-using Curso_Java_a_.net.DataAccess.Models;
-using Curso_Java_a_.net.Context;
-
-string myAllowSpecificOrigins = "_myAllowSpecificOrigins";
+using MySqlConnector;
+using Curso_Java_a_.net.DataAccess.Repository.Context;
+using Curso_Java_a_.net.Infraestructure;
+using Curso_Java_a_.net.Utils.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddCors(o =>
+    o.AddDefaultPolicy(b =>
+        b.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
 
+// Add services to the container.
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
 
+AuthenticationConfig authenticationConfig = new AuthenticationConfig(builder);
 
-var connectionString = builder.Configuration.GetConnectionString("EscuelaMysqlConnection");
-Environment.SetEnvironmentVariable("Connection", connectionString);
-builder.Services.AddDbContext<EscuelaContext>(options =>
+builder.Services.AddSingleton<AuthUtils>(new AuthUtils(builder.Configuration));
+
+string connectionStringtest = builder.Configuration.GetConnectionString("ClubLiaConnection");
+Environment.SetEnvironmentVariable("Connection", connectionStringtest);
+builder.Services.AddDbContext<ClubLiaContext>(options =>
 {
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+    options.UseMySql(connectionStringtest, ServerVersion.AutoDetect(connectionStringtest));
 });
 
-var app = builder.Build();
+DependencyRegistry registry = new DependencyRegistry(builder);
 
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -33,6 +42,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors();
+
+app.UseRouting();
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
