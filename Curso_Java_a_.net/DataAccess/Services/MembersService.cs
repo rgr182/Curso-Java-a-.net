@@ -49,7 +49,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             return member;
         }
 
-        public async Task<Members> GetMember(int memberId)
+        public async Task<Members> GetMembers(int memberId)
         {
             try
             {
