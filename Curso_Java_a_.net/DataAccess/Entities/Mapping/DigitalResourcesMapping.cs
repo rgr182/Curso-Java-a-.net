@@ -62,8 +62,6 @@ namespace Curso_Java_a_.net.DataAccess.Entities.Mapping
                 .IsRequired();
             #endregion
             #endregion
-
-
         }
     }
 }

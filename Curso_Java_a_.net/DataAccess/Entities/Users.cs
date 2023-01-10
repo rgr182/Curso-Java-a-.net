@@ -4,7 +4,6 @@ namespace Curso_Java_a_.net.DataAccess.Entities
 {
     public class Users
     {
-        
         [Key]
         public long id { get; set; }
         public int AppUserId { get; set; }

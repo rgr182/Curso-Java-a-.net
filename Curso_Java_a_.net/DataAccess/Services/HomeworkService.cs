@@ -20,7 +20,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             throw new NotImplementedException();
         }
-
         public Task<List<Homework>> GetHomeworks(long UserId, long GroupId, bool isActive, string OrderDate, string Status)
         {
             throw new NotImplementedException();
@@ -34,7 +33,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -43,7 +41,5 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             throw new NotImplementedException();
         }
-
-        
     }
 }
