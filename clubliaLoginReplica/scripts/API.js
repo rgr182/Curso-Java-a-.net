@@ -69,10 +69,73 @@ export async function getAvatars() {
 
 export async function getTareasPendientes() {
     const token = JSON.parse(localStorage.getItem('jwt_access_token'));
-
+    const today = new Date();
     try {
+        
 
-        const resultado = await fetch(`http://127.0.0.1:8000/api/tareas?status=No+entregado&today=2023-01-05+22:45`, {
+        const resultado = await fetch(`http://127.0.0.1:8000/api/tareas?status=No+entregado&today=${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}+${today.getHours()}:${today.getMinutes()}`, {
+            headers: {
+                "Authorization": `Bearer ${token.toString()}`
+            }
+        }).then(response => {
+            if (response.status === 200) {
+                return response.json();
+            }
+            return "error";
+        }).then(data => {
+            if (data !== "error") {
+                //En espera de hacer algo
+                return data.data;
+               
+            } 
+            return 'error';
+        });
+
+        return resultado;
+
+    } catch (error) {
+        return 'error';
+    }
+}
+
+export async function getTareasEntregadas() {
+    const token = JSON.parse(localStorage.getItem('jwt_access_token'));
+    const today = new Date();
+    try {
+        
+
+        const resultado = await fetch(`http://127.0.0.1:8000/api/tareas?status=Entregado&today=${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}+${today.getHours()}:${today.getMinutes()}`, {
+            headers: {
+                "Authorization": `Bearer ${token.toString()}`
+            }
+        }).then(response => {
+            if (response.status === 200) {
+                return response.json();
+            }
+            return "error";
+        }).then(data => {
+            if (data !== "error") {
+                //En espera de hacer algo
+                return data.data;
+               
+            } 
+            return 'error';
+        });
+
+        return resultado;
+
+    } catch (error) {
+        return 'error';
+    }
+}
+
+export async function getTareasCalificadas() {
+    const token = JSON.parse(localStorage.getItem('jwt_access_token'));
+    const today = new Date();
+    try {
+        
+
+        const resultado = await fetch(`http://127.0.0.1:8000/api/tareas?status=Calificado&today=${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}+${today.getHours()}:${today.getMinutes()}`, {
             headers: {
                 "Authorization": `Bearer ${token.toString()}`
             }

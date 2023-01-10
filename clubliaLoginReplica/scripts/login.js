@@ -19,7 +19,6 @@
         }, 3000)
     }
 
-
     formulario.addEventListener('submit', async (e) => {
         e.preventDefault();
 
@@ -43,6 +42,18 @@
 
         if(respuesta.user.data.role === 'preescolar'){
             location.href = "../home.html";
+        }
+
+        if((respuesta.user.data.role === 'alumno') && (respuesta.user.data.grade < 4 ) ){
+            location.href = "../homePB.html";
+        }
+
+        if((respuesta.user.data.role === 'alumno') && (respuesta.user.data.grade > 3 )){
+            location.href = "../homePA.html";
+        }
+
+        if(respuesta.user.data.role === 'alumno_secundaria'){
+            location.href = "../homeS.html";
         }
         
     });
