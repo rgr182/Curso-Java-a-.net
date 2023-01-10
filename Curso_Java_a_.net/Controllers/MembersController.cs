@@ -47,12 +47,24 @@ namespace Curso_Java_a_.net.Controllers
 
        [HttpPost]
         [Route("/PostMember")]
-        public async Task<ActionResult<Members>> PostMembers([FromBody] Members m)
+        public async Task<ActionResult<Members>> PostMembers([FromBody] MembersDTO m)
         {
             try
             {
-                var member = await _memberService.PostMembers(m);               
-                return Ok(member);
+                Members member = new Members() {
+                    MembersId = 0,
+                    Name = m.Name,
+                    FirstName = m.Name,
+                    SecondName = m.LastName,
+                    MemberRegistratior = DateTime.UtcNow,
+                    CurrentLocationId=1,
+                    Email = m.Email,
+                    User = m.Name,
+                    Password = m.Password
+                };
+                
+                var member2 = await _memberService.PostMembers(member);               
+                return Ok(member2);
             }
             catch (Exception)
             {

@@ -6,6 +6,7 @@ using Curso_Java_a_.net.DataAccess.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Curso_Java_a_.net.DataAccess.DTO;
 using Microsoft.AspNetCore.Components;
+using System.Security.Claims;
 
 namespace Curso_Java_a_.net.Controllers
 {
@@ -24,6 +25,27 @@ namespace Curso_Java_a_.net.Controllers
             _sessionService = securityService;
             _logger = logger;
             _membersService = membersService;
+        }
+
+        [HttpGet]
+        [Route("/auth")]
+        public async Task<ActionResult<Session>> Auth()
+        {
+            try
+            {
+                var r = ((ClaimsIdentity)User.Identity).FindFirst("Id");
+                var session = await _sessionService.GetSession(int.Parse(r.Value));
+
+                return Ok(session);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                return Unauthorized("User and password does not match");
+            }
+            catch (Exception)
+            {
+                return Problem("Some error happened please contact Sys Admin");
+            }
         }
 
         [HttpPost]

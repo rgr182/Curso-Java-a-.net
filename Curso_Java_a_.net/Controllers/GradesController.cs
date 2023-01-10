@@ -4,6 +4,7 @@ using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace Curso_Java_a_.net.Controllers
 {
@@ -31,11 +32,12 @@ namespace Curso_Java_a_.net.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("/GetGrades")]
-        public async Task<ActionResult<Members>> GetGrades(int UserId, string period)
+        public async Task<ActionResult<Members>> GetGrades(string period)
         {
             try
             {
-                var grades =  await _gradesService.GetGradesByMembersByIdAndPeriod(UserId, period);
+                int userId = int.Parse(((ClaimsIdentity)User.Identity).FindFirst("Id").Value);
+                var grades =  await _gradesService.GetGradesByMembersByIdAndPeriod(userId, period);
                 return Ok(grades);
             }
             catch (UnauthorizedAccessException)
