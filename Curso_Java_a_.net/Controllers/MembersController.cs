@@ -21,17 +21,15 @@ namespace Curso_Java_a_.net.Controllers
         readonly IMembersService _memberService;
         
         internal SchoolSystemContext _context;
-        public MembersController(SchoolSystemContext context)
-        {
-            _context = context;
-
-        }
+        
         public ILogger<MembersController> _logger;
         
-        public MembersController(IMembersService memberService, ILogger<MembersController> logger)
+        public MembersController(IMembersService memberService, ILogger<MembersController> 
+            logger, SchoolSystemContext context)
         {
             _memberService = memberService;
             _logger = logger;
+            _context = context;
 
         }
 
