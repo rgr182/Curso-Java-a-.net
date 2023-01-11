@@ -10,17 +10,15 @@ namespace Curso_Java_a_.net.DataAccess.Services
     public class MembersService : IMembersService
     {
         readonly ILogger<MembersService> _logger;
-        IMembersRepository _membersRepository;
+        readonly IMembersRepository _membersRepository;
         internal SchoolSystemContext _context;
-        public MembersService(SchoolSystemContext context)
-        {
-            _context = context;
-        }
+        
         public MembersService(IMembersRepository membersRepository,
-                              ILogger<MembersService> logger)
+                              ILogger<MembersService> logger, SchoolSystemContext context)
         {
             _membersRepository = membersRepository;
             _logger = logger;
+            _context = context;
         }      
         
         public async Task<Members> GetMemberByUserAndPassword(string usuario, string pass)
@@ -57,7 +55,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             return member;
         }
 
-        public async Task<Members> GetMembers(int memberId)
+        public async Task<Members> GetMember(int memberId)
         {
             try
             {
@@ -75,11 +73,15 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<Members> DeleteMembers(int id)
+        public async Task<Members> DeleteMembers(int MembersId)
         {
             try
             {
-                Members member = await _membersRepository.DeleteMembers(id);
+                Members member = _context.Members.Find(MembersId);
+                 _context.Members.Remove(member);
+                 _context.SaveChanges();
+                return member;
+                
                 if (member == null)
                 {
                     throw new UnauthorizedAccessException();
@@ -124,9 +126,5 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public Task<Members> GetMember(int memberId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
