@@ -1,4 +1,7 @@
+using Curso_Java_a_.net.DataAccess.DTO;
+using Curso_Java_a_.net.DataAccess.DTO.DTOMapping;
 using Curso_Java_a_.net.DataAccess.Entities;
+using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
 
@@ -8,6 +11,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
     {
         readonly ILogger<MembersService> _logger;
         IMembersRepository _membersRepository;
+        internal SchoolSystemContext _context;
+        public MembersService(SchoolSystemContext context)
+        {
+            _context = context;
+        }
         public MembersService(IMembersRepository membersRepository,
                               ILogger<MembersService> logger)
         {
@@ -99,12 +107,15 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<Members> UpdateMembers(Members members)
+        public async Task<Members> UpdateMembers(MemberDTO member)
         {
             try
             {
-                await _membersRepository.UpdateMembers(members);
-                return members;
+
+                var memberUpdated = member.Map();
+                _context.Members.Update(memberUpdated);
+                await _context.SaveChangesAsync();
+                return memberUpdated;
             }
             catch (Exception ex)
             {

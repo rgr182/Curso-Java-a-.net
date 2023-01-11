@@ -5,6 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.DTO;
 using Microsoft.AspNetCore.Authorization;
+using Curso_Java_a_.net.DataAccess.DTO.DTOMapping;
+using Curso_Java_a_.net.DataAccess.Repository.Context;
+using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
+using Curso_Java_a_.net.DataAccess.Services;
 
 namespace Curso_Java_a_.net.Controllers
 {
@@ -14,14 +18,21 @@ namespace Curso_Java_a_.net.Controllers
     
     public class MembersController : ControllerBase
     {
-        public readonly IMembersService _memberService;
+        readonly IMembersService _memberService;
         
+        internal SchoolSystemContext _context;
+        public MembersController(SchoolSystemContext context)
+        {
+            _context = context;
+
+        }
         public ILogger<MembersController> _logger;
         
         public MembersController(IMembersService memberService, ILogger<MembersController> logger)
         {
             _memberService = memberService;
             _logger = logger;
+
         }
 
 
@@ -74,12 +85,14 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPut]
         [Route("/PutMember")]
-        public async Task<ActionResult<Members>> UpdateMembers([FromBody] Members mem)
+        public async Task<ActionResult<Members>> UpdateMembers([FromBody] MemberDTO member)
         {
             try
             {
-                var member = await _memberService.UpdateMembers(mem);
-                return Ok(member);
+                var memberUpdated = member.Map();
+                _context.Members.Update(memberUpdated);
+                await _context.SaveChangesAsync();
+                return memberUpdated;
             }
             catch (Exception)
             {
