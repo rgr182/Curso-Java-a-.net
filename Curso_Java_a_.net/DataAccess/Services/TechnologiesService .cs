@@ -1,5 +1,6 @@
 using Curso_Java_a_.net.DataAccess.DTO;
 using Curso_Java_a_.net.DataAccess.Entities;
+using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
 
@@ -9,10 +10,13 @@ namespace Curso_Java_a_.net.DataAccess.Services
     {
         readonly ILogger<TechnologiesService> _logger;
         ITechnologiesRepository _TechnologiesRepository;
-        public TechnologiesService(ITechnologiesRepository TechnologieRepository, ILogger<TechnologiesService> logger)
+        internal SchoolSystemContext _context;
+        public TechnologiesService(ITechnologiesRepository TechnologieRepository, 
+            ILogger<TechnologiesService> logger, SchoolSystemContext context)
         {
             _TechnologiesRepository = TechnologieRepository;
             _logger = logger;
+            _context = context;
         }
 
         public async Task<List<Technologies>> GetTechnologiesByName(string Name)
@@ -20,12 +24,15 @@ namespace Curso_Java_a_.net.DataAccess.Services
             return await _TechnologiesRepository.GetTechnologiesByName(Name);
         }
 
-        public bool DeleteTechnologiesByName(int technologyId)
+        public async Task<Technologies> DeleteTechnologiesById(int technologyId)
         {
             try
             {
-               _TechnologiesRepository.DeleteTechnologiesById(technologyId);
-               return true;
+                Technologies tech = await _context.Technologies.FindAsync(technologyId);
+                _context.Technologies.Remove(tech);
+                _context.SaveChanges();
+                return tech;
+                                
             }
             catch (Exception ex)
             {
@@ -34,17 +41,14 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }            
         }     
 
-        public Task PutTechnologiesAsync(Technologies name)
+        public Task<Technologies> PutTechnologiesAsync(TechnologyDTO name)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteTechnologies(Technologies name)
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task PostTechnologiesAsync(TechnologyDTO name)
+
+        public Task<Technologies> PostTechnologiesAsync(TechnologyDTO name)
         {
             throw new NotImplementedException();
         }
