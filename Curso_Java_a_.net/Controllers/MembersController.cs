@@ -74,13 +74,13 @@ namespace Curso_Java_a_.net.Controllers
             }
             catch (Exception)
             {
-                throw;
+                return Problem("Some error happened please contact Sys Admin");
             }
         }
 
         [HttpPut]
         [Route("/PutMember")]
-        public async Task<ActionResult<Members>> UpdateMembers([FromBody] MemberDTO member)
+        public async Task<ActionResult<Members>> UpdateMembers(int memberId,[FromBody] MemberDTO member)
         {
             try
             {
@@ -91,22 +91,23 @@ namespace Curso_Java_a_.net.Controllers
             }
             catch (Exception)
             {
-                throw;
+                return Problem("Some error happened please contact Sys Admin");
             }
         }
 
         [HttpDelete]
-        [Route("/DeleteMembers")]
-        public async Task<ActionResult<Members>> DeleteMembers([FromBody] MemberDTO members)
+        [Route("/DeleteMember")]
+        [AllowAnonymous]
+        public async Task<ActionResult<Members>> DeleteMembers(int memberId)
         {
             try
             {
-                var member = await _memberService.DeleteMembers(members.MembersId);
+                var member = await _memberService.DeleteMembers(memberId);
                 return Ok(member);
             }
             catch (Exception)
             {
-                throw;
+                return Problem("Some error happened please contact Sys Admin");
             }
         }
     }

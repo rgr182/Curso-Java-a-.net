@@ -1,4 +1,4 @@
-﻿using Curso_Java_a_.net.DataAccess.Entities;
+using Curso_Java_a_.net.DataAccess.Entities;
 
 namespace Curso_Java_a_.net.DataAccess.DTO.DTOMapping
 {
@@ -26,7 +26,9 @@ namespace Curso_Java_a_.net.DataAccess.DTO.DTOMapping
                 MemberRegistratior = members.MemberRegistratior,
                 Email = members.Email,
                 User = members.User,
-                Password = members.Password
+                Password = members.Password,
+                PhoneNumber = members.PhoneNumber,
+                CV = members.CV
             };
 
         #endregion

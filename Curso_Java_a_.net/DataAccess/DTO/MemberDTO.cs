@@ -13,6 +13,6 @@ namespace Curso_Java_a_.net.DataAccess.DTO
         public string Password { get; set; }
 
         public string PhoneNumber { get; set; }
-        //public string CV { get; set; }
+        public string CV { get; set; }
     }
 }
