@@ -113,7 +113,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-
                 var memberUpdated = member.Map();
                 _context.Members.Update(memberUpdated);
                 await _context.SaveChangesAsync();
@@ -125,6 +124,5 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw;
             }
         }
-
     }
 }

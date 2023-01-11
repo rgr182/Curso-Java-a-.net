@@ -5,8 +5,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Context
 {
     public class SchoolSystemContext : DbContext
     {
-
-        private static SchoolSystemContext schoolSystemContext = null;
+        private static SchoolSystemContext? schoolSystemContext;
 
         public SchoolSystemContext()
         {
@@ -23,8 +22,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Context
         public DbSet<Grades> Grades { get; set; }
         public DbSet<Members> Members { get; set; }
         public DbSet<Technologies> Technologies { get; set; }
-
-
 
         public  static SchoolSystemContext Create()
         {

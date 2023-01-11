@@ -42,8 +42,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context.Technologies.Update(techUpdated);
             await _context.SaveChangesAsync();
             return techUpdated;
-        }
-
-        
+        }        
     }
 }

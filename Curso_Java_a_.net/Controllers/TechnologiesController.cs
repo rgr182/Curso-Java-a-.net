@@ -13,13 +13,12 @@ namespace Curso_Java_a_.net.Controllers
     [Authorize]
     public class TechnologiesController : ControllerBase
     {
-        public readonly ITechnologiesService _ITechnologiesService;
-        
+        public readonly ITechnologiesService _iTechnologiesService;        
         public ILogger<TechnologiesController> _logger;
 
         public TechnologiesController(ITechnologiesService ITechnologiesService, ILogger<TechnologiesController> logger)
         {
-            _ITechnologiesService = ITechnologiesService;
+            _iTechnologiesService = ITechnologiesService;
             _logger = logger;
         }
 
@@ -29,7 +28,7 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                var technologyName = _ITechnologiesService.GetTechnologiesByName(Name);
+                var technologyName = _iTechnologiesService.GetTechnologiesByName(Name);
                 if (technologyName == null)
                 {
                     return BadRequest("Technology don´t exist");
@@ -40,7 +39,6 @@ namespace Curso_Java_a_.net.Controllers
             {
                 return Problem("Some error happened please contact Sys Admin");
             }
-
         }
 
         [HttpPost]
@@ -49,7 +47,7 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                await _ITechnologiesService.PostTechnologiesAsync(tech);
+                await _iTechnologiesService.PostTechnologiesAsync(tech);
                 return Ok(tech);
             }
             catch (Exception)
@@ -57,7 +55,5 @@ namespace Curso_Java_a_.net.Controllers
                 throw;
             }
         }
-
-
     }
 }

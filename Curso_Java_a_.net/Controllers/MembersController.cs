@@ -28,9 +28,7 @@ namespace Curso_Java_a_.net.Controllers
             _memberService = memberService;
             _logger = logger;
             _context = context;
-
         }
-
 
         [HttpGet]
         [Route("/GetMember")]
@@ -50,7 +48,6 @@ namespace Curso_Java_a_.net.Controllers
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
-
 
        [HttpPost]
         [Route("/PostMember")]
@@ -91,13 +88,10 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var member = await _memberService.DeleteMembers(members.MembersId);
-
                 return Ok(member);
-
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

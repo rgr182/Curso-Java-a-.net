@@ -1,7 +1,6 @@
 using Curso_Java_a_.net.DataAccess.Enumerables;
 using System.ComponentModel.DataAnnotations;
 
-
 namespace Curso_Java_a_.net.DataAccess.Entities
 {
     public class Grades

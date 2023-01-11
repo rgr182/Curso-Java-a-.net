@@ -11,7 +11,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         readonly ILogger<TechnologiesService> _logger;
         ITechnologiesRepository _TechnologiesRepository;
         internal SchoolSystemContext _context;
-        public TechnologiesService(ITechnologiesRepository TechnologieRepository, 
+        public TechnologiesService(ITechnologiesRepository TechnologieRepository,
             ILogger<TechnologiesService> logger, SchoolSystemContext context)
         {
             _TechnologiesRepository = TechnologieRepository;
@@ -32,25 +32,16 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 _context.Technologies.Remove(tech);
                 _context.SaveChanges();
                 return tech;
-                                
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, ex.Message);
                 throw;
-            }            
-        }     
-
-        public Task<Technologies> PutTechnologiesAsync(TechnologyDTO name)
-        {
-            throw new NotImplementedException();
+            }
         }
 
+        public Task<Technologies> PutTechnologiesAsync(TechnologyDTO name) => throw new NotImplementedException();
 
-
-        public Task<Technologies> PostTechnologiesAsync(TechnologyDTO name)
-        {
-            throw new NotImplementedException();
-        }
+        public Task<Technologies> PostTechnologiesAsync(TechnologyDTO name) => throw new NotImplementedException();
     }
 }

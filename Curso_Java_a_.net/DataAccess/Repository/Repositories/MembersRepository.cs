@@ -31,8 +31,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             await _context.SaveChangesAsync();
         }
 
-
-
         public async Task<Members> PostMembers(MemberDTO members)
         {
             var member = members.Map();
@@ -49,10 +47,8 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             return memberUpdated;
         }
 
-
         public async Task<Members> DeleteMembers(int membersId)
         {
-
             Members member = _context.Members.Find(membersId);
             _context.Members.Remove(member);
             _context.SaveChanges();
@@ -60,6 +56,3 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         }
     }
 }
-
-
-

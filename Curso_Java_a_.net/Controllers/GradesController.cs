@@ -13,8 +13,7 @@ namespace Curso_Java_a_.net.Controllers
     [Authorize]
     public class GradesController : ControllerBase
     {
-        public readonly IGradesService _gradesService;
-        
+        public readonly IGradesService _gradesService;        
         public ILogger<GradesController> _logger;
 
         public GradesController(IGradesService gradesService, ILogger<GradesController> logger)
@@ -48,8 +47,6 @@ namespace Curso_Java_a_.net.Controllers
             {
                 return Problem("Some error happened please contact Sys Admin");
             }
-        }
-
-       
+        }       
     }
 }

@@ -5,8 +5,6 @@
         English =1,
         Technical=2,
         SoftSkills=3,
-        ProblemSolving=4,
-
-
+        ProblemSolving=4
     }
 }
