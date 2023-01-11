@@ -33,12 +33,12 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 
 
 
-        public async Task<Members> PostMembers(Members members)
+        public async Task<Members> PostMembers(MemberDTO members)
         {
-            await _context.Members.AddAsync(members);
+            var member = members.Map();
+            await _context.Members.AddAsync(member);
             await _context.SaveChangesAsync();
-            return members;
-
+            return member;
         }
 
         public async Task<Members> UpdateMembers(MemberDTO member)

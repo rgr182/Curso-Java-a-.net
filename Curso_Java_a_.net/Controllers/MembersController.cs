@@ -7,8 +7,6 @@ using Curso_Java_a_.net.DataAccess.DTO;
 using Microsoft.AspNetCore.Authorization;
 using Curso_Java_a_.net.DataAccess.DTO.DTOMapping;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
-using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
-using Curso_Java_a_.net.DataAccess.Services;
 
 namespace Curso_Java_a_.net.Controllers
 {
@@ -59,20 +57,8 @@ namespace Curso_Java_a_.net.Controllers
         public async Task<ActionResult<Members>> PostMembers([FromBody] MemberDTO m)
         {
             try
-            {
-                Members member = new Members() {
-                    MembersId = 0,
-                    Name = m.Name,
-                    FirstName = m.Name,
-                    SecondName = m.SecondName,
-                    MemberRegistratior = DateTime.UtcNow,
-                    CurrentLocationId=1,
-                    Email = m.Email,
-                    User = m.Name,
-                    Password = m.Password
-                };
-                
-                var member2 = await _memberService.PostMembers(member);               
+            {               
+                var member2 = await _memberService.PostMembers(m);               
                 return Ok(member2);
             }
             catch (Exception)

@@ -95,12 +95,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<Members> PostMembers(Members members)
+        public async Task<MemberDTO> PostMembers(MemberDTO member)
         {
             try
             {
-                await _membersRepository.PostMembers(members);
-                return members;
+                await _membersRepository.PostMembers(member);
+                return member;
             }
             catch (Exception ex)
             {
