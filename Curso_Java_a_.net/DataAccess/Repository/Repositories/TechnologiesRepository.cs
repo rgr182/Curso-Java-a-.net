@@ -4,6 +4,7 @@ using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.Metrics;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
@@ -14,15 +15,12 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context = context;
         }
 
-        public async Task DeleteTechnologiesById(int TechnologyId)
+        public async Task<Technologies> DeleteTechnologiesById(int technologyId)
         {
-            var Technology = await _context.Technologies
-                .Where(t => t.TechnologyId == TechnologyId)
-                .FirstOrDefaultAsync();
-
-            _context.Technologies.Remove(Technology);
-
-            _context.SaveChanges();            
+            var tech = await _context.Technologies.FindAsync(technologyId);
+            _context.Technologies.Remove(tech);
+            _context.SaveChanges();
+            return tech;
         }
 
         public Task<List<Technologies>> GetTechnologiesByName(string name)
@@ -46,9 +44,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             return techUpdated;
         }
 
-        bool ITechnologiesRepository.DeleteTechnologiesById(int technologyId)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

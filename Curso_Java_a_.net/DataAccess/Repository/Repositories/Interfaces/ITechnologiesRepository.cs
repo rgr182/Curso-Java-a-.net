@@ -8,6 +8,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces
         public Task<List<Technologies>> GetTechnologiesByName(string name);
         public Task<Technologies> PostTechnologiesAsync(Technologies name);
         public Task<Technologies> UpdateTechnologiesAsync(TechnologyDTO name);
-        public bool DeleteTechnologiesById(int technologyId);
+        public Task<Technologies> DeleteTechnologiesById(int technologyId);
     }
 }
