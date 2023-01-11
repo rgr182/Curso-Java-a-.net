@@ -53,18 +53,18 @@
         <div class="islas">
 
             <a href="#" class="isla">
-                <img src="/assets/misActividades/Misgalaxias.png" class="isla-img" alt="Isla">
-                <h6>Mi Galaxia Lia</h6>
+                <img src="@(Model.FirstIslandImage != null ? Model.FirstIslandImage.Url() : "/assets/misActividades/Misgalaxias.png")" class="isla-img" alt="Isla">
+                <h6>@Model.FirstIslandTitle</h6>
             </a>
 
             <a href="#" class="isla">
-                <img src="/assets/misActividades/MiMundoLIA.png" class="isla-img" alt="Isla">
-                <h6>Mi Mundo Lia</h6>
+                <img src="@(Model.SecondIslandImage != null ? Model.SecondIslandImage.Url() : "/assets/misActividades/MiMundoLIA.png")" class="isla-img" alt="Isla">
+                <h6>@Model.SecondIslandTitle</h6>
             </a>
 
             <a href="#" class="isla">
-                <img src="/assets/misActividades/MisClases.png" class="isla-img" alt="Isla">
-                <h6>Mis Clases</h6>
+                <img src="@(Model.ThirdIslandImage != null ? Model.ThirdIslandImage.Url() : "/assets/misActividades/MisClases.png")" class="isla-img" alt="Isla">
+                <h6>@Model.ThirdIslandTitle</h6>
             </a>
 
         </div>
@@ -73,7 +73,7 @@
 
             <div class="header-contenedor">
                 <div class="header-table">
-                    <h6 class="header-table-title">Mis Tareas Pendientes</h6>
+                    <h6 class="header-table-title">@Model.FirstTableTitle</h6>
                 </div>
             </div>
 
@@ -96,7 +96,7 @@
 
             <div class="header-contenedor">
                 <div class="header-table">
-                    <h6 class="header-table-title">Mis Tareas Entregadas</h6>
+                    <h6 class="header-table-title">@Model.SecondTableTitle</h6>
                 </div>
             </div>
 
@@ -117,7 +117,7 @@
 
             <div class="header-contenedor">
                 <div class="header-table">
-                    <h6 class="header-table-title">Mis Tareas Calificadas</h6>
+                    <h6 class="header-table-title">@Model.ThirdTableTitle</h6>
                 </div>
             </div>
 
@@ -136,7 +136,7 @@
 
             <div class="header-contenedor">
                 <div class="header-table">
-                    <h6 class="header-table-title">Calendario de Tareas</h6>
+                    <h6 class="header-table-title">@Model.FourthTableTitle</h6>
                 </div>
             </div>
 

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../css/home.css">
 </head>
 
-<body style="background-image: url('/assets/home/BackgroundPrimariaBaja.png');">
+<body style="background-image: url('@(Model.BackGroundImage != null ? Model.BackGroundImage.Url() : "/assets/home/BackgroundPrimariaBaja.png")');">
 
 
     <div class="header float-animation">
@@ -31,9 +31,9 @@
             <div class="col-lg-4">
                 <a href="/MisActividadesPB/">
                     <div>
-                        <img src="/assets/home/explorer.png" class="card-img-top" alt="Isla">
+                        <img src="@(Model.FirstIslandImage != null ? Model.FirstIslandImage.Url() : "/assets/home/explorer.png")" class="card-img-top" alt="Isla">
                         <div>
-                            <h5>Mis tareas</h5>
+                            <h5>@Model.FirstIslandTitle</h5>
                         </div>
                     </div>
                 </a>
@@ -42,9 +42,9 @@
             <div class="col-lg-4">
                 <a href="#">
                     <div>
-                        <img src="/assets/home/comunicacion.png" class="card-img-top" alt="Isla" >
+                        <img src="@(Model.SecondIslandImage != null ? Model.SecondIslandImage.Url() : "/assets/home/comunicacion.png")" class="card-img-top" alt="Isla">
                         <div>
-                            <h5>Mi Mundo Lia</h5>
+                            <h5>@Model.SecondIslandTitle</h5>
                         </div>
                     </div>
                 </a>
@@ -54,9 +54,9 @@
             <div class="col-lg-4">
                 <a href="#">
                     <div>
-                        <img src="/assets/home/artes.png" class="card-img-top" alt="Isla">
+                        <img src="@(Model.ThirdIslandImage != null ? Model.ThirdIslandImage.Url() : "/assets/home/artes.png")" class="card-img-top" alt="Isla">
                         <div>
-                            <h5>Mis Clases</h5>
+                            <h5>@Model.ThirdIslandTitle</h5>
                         </div>
                     </div>
                 </a>
