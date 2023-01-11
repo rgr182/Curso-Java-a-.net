@@ -48,8 +48,22 @@ namespace Curso_Java_a_.net.Controllers
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
+        [HttpGet]
+        [Route("/GetMembers")]
+        public async Task<ActionResult<List<Members>>> GetMembers()
+        {
+            try
+            {
+                var members = await _memberService.GetMembers();
+                return Ok(members);
+            }
+            catch (Exception)
+            {
+                return Problem("Some error happened please contact Sys Admin");
+            }
+        }
 
-       [HttpPost]
+        [HttpPost]
         [Route("/PostMember")]
         public async Task<ActionResult<Members>> PostMembers([FromBody] MemberDTO m)
         {

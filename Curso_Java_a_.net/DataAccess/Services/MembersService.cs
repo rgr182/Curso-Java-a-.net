@@ -4,6 +4,7 @@ using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Curso_Java_a_.net.DataAccess.Services
 {
@@ -65,6 +66,19 @@ namespace Curso_Java_a_.net.DataAccess.Services
                     throw new UnauthorizedAccessException();
                 }
                 return member;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Some error happened on Members Service");
+                throw ex;
+            }
+        }
+        public async Task<List<Members>> GetMembers()
+        {
+            try
+            {
+                List<Members> members = await _membersRepository.GetMembers();
+                return members;
             }
             catch (Exception ex)
             {

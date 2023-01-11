@@ -25,6 +25,11 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
                 .Where(x => x.Name == usuario && x.Password == pass)
                 .FirstOrDefaultAsync();
 
+        public async Task<List<Members>> GetMembers()
+        {
+            return await _context.Members.ToListAsync();
+        }
+
         public async Task SaveMemberAsync(Members member)
         {
             await _context.Members.AddAsync(member);
