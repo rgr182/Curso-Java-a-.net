@@ -1,0 +1,79 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePA>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="/bcss/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body style="background-image: url('/assets/home/BackgroundPrimariaAlta.png');">
+
+
+    <div class="header float-animation">
+        <a href="#">
+            <img src="/assets/home/logoutLia.png" class="btn-logout" alt="" id="logout-btn">
+        </a>
+    </div>
+
+    <div class="container text-center mt-4">
+        <div class="row float-animation">
+
+            <div class="col-lg-4">
+                <a href="/MisActividadesPA/">
+                    <div>
+                        <img src="/assets/home/MisTareasPLANETA.png" class="card-img-top" alt="Isla">
+                        <div>
+                            <h5>Mis Tareas</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4">
+                <a href="#">
+                    <div>
+                        <img src="/assets/home/MiMundoLIA.png" class="card-img-top" alt="Isla" >
+                        <div>
+                            <h5>Mi Mundo Lia</h5>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="col-lg-4">
+                <a href="#">
+                    <div>
+                        <img src="/assets/home/MisClases.png" class="card-img-top" alt="Isla">
+                        <div>
+                            <h5>Mis Clases</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container text-center mt-4 mb-4">
+        <input class="btn-dashboard float-animation" type="button" value="Dashboard">
+
+    </div>
+
+
+    <script src="/scripts/home.js" type="module"></script>
+    <script src="/bjs/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
