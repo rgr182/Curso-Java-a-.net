@@ -22,7 +22,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 
         public Task<Members> GetMemberById(string usuario, string pass) =>
               _context.Members
-                .Where(x => x.Name == usuario && x.Password == pass)
+                .Where(x => x.User == usuario && x.Password == pass)
                 .FirstOrDefaultAsync();
 
         public async Task<List<Members>> GetMembers()
