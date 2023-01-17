@@ -6,6 +6,13 @@ using Curso_Java_a_.net.Infraestructure;
 using Curso_Java_a_.net.Utils.Security;
 
 var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+// NLog: setup the path
+var logPath = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
+if (!Directory.Exists(logPath))
+{
+    Directory.CreateDirectory(logPath);
+}
+NLog.GlobalDiagnosticsContext.Set("LogDirectory", logPath);
 logger.Debug("init main");
 
 try
@@ -78,7 +85,6 @@ catch (Exception ex)
     logger.Error(ex, "Stopped program because of exception");
     throw;
 }
-
 finally
 {
     // Ensure to flush and stop internal timers/threads before application exi
