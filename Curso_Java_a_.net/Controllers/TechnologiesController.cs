@@ -23,15 +23,15 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpGet]
-        [Route("/GetTechName")]
+        [Route("/GetTechnologiesByName")]
         public async Task<ActionResult<Technologies>> GetTechnologiesByName(string Name)
         {
             try
             {
-                var technologyName = _iTechnologiesService.GetTechnologiesByName(Name);
+                var technologyName = await _iTechnologiesService.GetTechnologiesByNameAsync(Name);
                 if (technologyName == null)
                 {
-                    return BadRequest("Technology don´t exist");
+                    return NoContent();
                 }
                 return Ok(technologyName);
             }
@@ -43,17 +43,46 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPost]
         [Route("/PostTechnology")]
-        public async Task<ActionResult<Members>> PostMembers([FromBody] TechnologyDTO tech)
+        public async Task<ActionResult<Members>> PostTechnology([FromBody] TechnologyDTO tech)
         {
             try
-            {
-                var postTech = _iTechnologiesService;
+            {                
                 await _iTechnologiesService.PostTechnologiesAsync(tech);
                 return Ok(tech);
             }
             catch (Exception)
             {
-                throw;
+                return Problem("Some error happened please contact Sys Admin");
+            }
+        }
+
+        [HttpPut]
+        [Route("/UpdateTechnology")]
+        public async Task<ActionResult<Members>> UpdateTechnology([FromBody] TechnologyDTO tech)
+        {
+            try
+            {                
+                await _iTechnologiesService.PutTechnologiesAsync(tech);
+                return Ok(tech);
+            }
+            catch (Exception)
+            {
+                return Problem("Some error happened please contact Sys Admin");
+            }
+        }
+
+        [HttpDelete]
+        [Route("/DeleteTechnologyById")]
+        public async Task<ActionResult<Members>> DeleteTechnologyById(int techId)
+        {
+            try
+            {                
+                await _iTechnologiesService.DeleteTechnologyById(techId);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return Problem("Some error happened please contact Sys Admin");
             }
         }
     }

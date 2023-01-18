@@ -4,30 +4,34 @@ using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System.Diagnostics.Metrics;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
     public class TechnologieRepository : ITechnologiesRepository
     {
         internal SchoolSystemContext _context;
-        public TechnologieRepository(SchoolSystemContext context)     {
+        public TechnologieRepository(SchoolSystemContext context)
+        {
             _context = context;
         }
 
-        public async Task<Technologies> DeleteTechnologiesById(int technologyId)
+        public async Task DeleteTechnologiesById(int technologyId)
         {
             var tech = await _context.Technologies.FindAsync(technologyId);
-            _context.Technologies.Remove(tech);
-            _context.SaveChanges();
-            return tech;
+            if (tech != null)
+            {
+                _context.Technologies.Remove(tech);
+            }
+            else
+            {
+                throw new Exception("Member already deleted");
+            }            
+            await _context.SaveChangesAsync();
         }
 
         public Task<List<Technologies>> GetTechnologiesByName(string name)
-        {
-           return  _context.Technologies
-                 .ToListAsync();
-        }
+           => _context.Technologies.Where(x => x.Name.ToLower()
+              .Contains(name.ToLower())).ToListAsync();
 
         public async Task<Technologies> PostTechnologiesAsync(TechnologyDTO name)
         {
@@ -43,6 +47,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context.Technologies.Update(techUpdated);
             await _context.SaveChangesAsync();
             return techUpdated;
-        }        
+        }
     }
 }

@@ -20,12 +20,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
             _context = context;
         }
 
-        public async Task<List<Technologies>> GetTechnologiesByName(string Name)
+        public async Task<List<Technologies>> GetTechnologiesByNameAsync(string Name)
         {
             return await _TechnologiesRepository.GetTechnologiesByName(Name);
         }
 
-        public async Task<Technologies> DeleteTechnologiesById(int technologyId)
+        public async Task<Technologies> DeleteTechnologyById(int technologyId)
         {
             try
             {
