@@ -65,6 +65,7 @@ namespace Curso_Java_a_.net.Controllers
             }
             catch (Exception)
             {
+                _logger.LogError("Some error happened please contact Sys Admin");
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
