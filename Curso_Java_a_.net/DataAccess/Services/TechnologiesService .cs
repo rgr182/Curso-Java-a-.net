@@ -1,4 +1,5 @@
 using Curso_Java_a_.net.DataAccess.DTO;
+using Curso_Java_a_.net.DataAccess.DTO.DTOMapping;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
@@ -42,6 +43,21 @@ namespace Curso_Java_a_.net.DataAccess.Services
 
         public Task<Technologies> PutTechnologiesAsync(TechnologyDTO name) => throw new NotImplementedException();
 
-        public Task<Technologies> PostTechnologiesAsync(TechnologyDTO name) => throw new NotImplementedException();
+        public async Task<Technologies> PostTechnologiesAsync(TechnologyDTO name) 
+        {
+            try
+            {
+                var postTech = name.Map();
+                await _context.Technologies.AddAsync(postTech);
+                await _context.SaveChangesAsync();
+                return postTech;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                throw;
+            }
+
+        } 
     }
 }

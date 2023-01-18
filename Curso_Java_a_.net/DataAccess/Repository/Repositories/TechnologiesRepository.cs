@@ -29,11 +29,12 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
                  .ToListAsync();
         }
 
-        public async Task<Technologies> PostTechnologiesAsync(Technologies name)
+        public async Task<Technologies> PostTechnologiesAsync(TechnologyDTO name)
         {
-            await _context.Technologies.AddAsync(name);
+            var postTech = name.Map();
+            await _context.Technologies.AddAsync(postTech);
             await _context.SaveChangesAsync();
-            return name;
+            return postTech;
         }
 
         public async Task<Technologies> UpdateTechnologiesAsync(TechnologyDTO tech)
