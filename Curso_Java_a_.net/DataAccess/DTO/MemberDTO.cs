@@ -14,5 +14,9 @@ namespace Curso_Java_a_.net.DataAccess.DTO
 
         public string PhoneNumber { get; set; }
         public string CV { get; set; }
+        public int? IsAdmin { get; set; }
+        public int? IsMentor { get; set; }
+
+
     }
 }

@@ -47,6 +47,7 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
+                var postTech = _iTechnologiesService;
                 await _iTechnologiesService.PostTechnologiesAsync(tech);
                 return Ok(tech);
             }
