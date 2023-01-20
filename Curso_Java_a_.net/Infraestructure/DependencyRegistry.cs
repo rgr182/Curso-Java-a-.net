@@ -20,7 +20,7 @@ namespace Curso_Java_a_.net.Infraestructure
             #region Repositories
             builder.Services.AddScoped<ISessionRepository, SessionRepository>();
             builder.Services.AddScoped<IGradesRepository, GradesRepository>();
-            builder.Services.AddScoped<IMembersRepository, MembersRepository>();
+            builder.Services.AddScoped<IMemberRepository, MemberRepository>();
             #endregion
 
             #region Utils

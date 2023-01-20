@@ -37,7 +37,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             return result;
         }
 
-        public async Task<Session> SaveSession(Members user)
+        public async Task<Session> SaveSession(Member user)
         {
             try
             {

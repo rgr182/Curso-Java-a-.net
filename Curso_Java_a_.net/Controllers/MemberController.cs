@@ -14,15 +14,15 @@ namespace Curso_Java_a_.net.Controllers
     [Route("api/[controller]")]
     [ApiController]
     
-    public class MembersController : ControllerBase
+    public class MemberController : ControllerBase
     {
         readonly IMembersService _memberService;
         
         internal SchoolSystemContext _context;
         
-        public ILogger<MembersController> _logger;
+        public ILogger<MemberController> _logger;
         
-        public MembersController(IMembersService memberService, ILogger<MembersController> 
+        public MemberController(IMembersService memberService, ILogger<MemberController> 
             logger, SchoolSystemContext context)
         {
             _memberService = memberService;
@@ -32,7 +32,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpGet]
         [Route("/GetMember")]
-        public async Task<ActionResult<Members>> GetMember([FromBody] int id)
+        public async Task<ActionResult<Member>> GetMember([FromBody] int id)
         {
             try
             {
@@ -49,8 +49,8 @@ namespace Curso_Java_a_.net.Controllers
             }
         }
         [HttpGet]
-        [Route("/GetMembers")]
-        public async Task<ActionResult<List<Members>>> GetMembers()
+        [Route("/GetMember")]
+        public async Task<ActionResult<List<Member>>> GetMembers()
         {
             try
             {
@@ -65,7 +65,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPost]
         [Route("/PostMember")]
-        public async Task<ActionResult<Members>> PostMembers([FromBody] MemberDTO m)
+        public async Task<ActionResult<Member>> PostMembers([FromBody] MemberDTO m)
         {
             try
             {               
@@ -80,12 +80,12 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPut]
         [Route("/PutMember")]
-        public async Task<ActionResult<Members>> UpdateMembers(int memberId,[FromBody] MemberDTO member)
+        public async Task<ActionResult<Member>> UpdateMembers(int memberId,[FromBody] MemberDTO member)
         {
             try
             {
                 var memberUpdated = member.Map();
-                _context.Members.Update(memberUpdated);
+                _context.Member.Update(memberUpdated);
                 await _context.SaveChangesAsync();
                 return memberUpdated;
             }
@@ -98,7 +98,7 @@ namespace Curso_Java_a_.net.Controllers
         [HttpDelete]
         [Route("/DeleteMember")]
         [AllowAnonymous]
-        public async Task<ActionResult<Members>> DeleteMembers(int memberId)
+        public async Task<ActionResult<Member>> DeleteMembers(int memberId)
         {
             try
             {

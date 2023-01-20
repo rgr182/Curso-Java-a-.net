@@ -20,7 +20,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Context
         public DbSet<UsersSubjects> UsersSubjects { get; set; }
         public DbSet<Session> Session { get; set; }
         public DbSet<Grades> Grades { get; set; }
-        public DbSet<Members> Members { get; set; }
+        public DbSet<Member> Member { get; set; }
         public DbSet<Technologies> Technologies { get; set; }
 
         public  static SchoolSystemContext Create()

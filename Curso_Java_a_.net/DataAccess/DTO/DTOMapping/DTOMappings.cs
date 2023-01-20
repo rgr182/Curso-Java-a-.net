@@ -15,8 +15,8 @@ namespace Curso_Java_a_.net.DataAccess.DTO.DTOMapping
 
         #region MembersMapping
 
-        public static Members Map(this MemberDTO members) =>
-            new Members
+        public static Member Map(this MemberDTO members) =>
+            new Member
             {
                 MembersId = members.MembersId,
                 Name = members.Name,

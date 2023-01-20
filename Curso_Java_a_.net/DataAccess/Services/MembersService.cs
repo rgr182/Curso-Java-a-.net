@@ -11,10 +11,10 @@ namespace Curso_Java_a_.net.DataAccess.Services
     public class MembersService : IMembersService
     {
         readonly ILogger<MembersService> _logger;
-        readonly IMembersRepository _membersRepository;
+        readonly IMemberRepository _membersRepository;
         internal SchoolSystemContext _context;
         
-        public MembersService(IMembersRepository membersRepository,
+        public MembersService(IMemberRepository membersRepository,
                               ILogger<MembersService> logger, SchoolSystemContext context)
         {
             _membersRepository = membersRepository;
@@ -22,11 +22,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
             _context = context;
         }      
         
-        public async Task<Members> GetMemberByUserAndPassword(string usuario, string pass)
+        public async Task<Member> GetMemberByUserAndPassword(string usuario, string pass)
         {
             try
             {
-                Members member = await _membersRepository.GetMemberById(usuario,  pass);
+                Member member = await _membersRepository.GetMemberById(usuario,  pass);
                 if (member == null)
                 {
                     throw new UnauthorizedAccessException();
@@ -41,7 +41,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
         
-        public async Task<Members> SaveMembersAsync(Members member)
+        public async Task<Member> SaveMembersAsync(Member member)
         {
             try
             {
@@ -49,18 +49,18 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Members Service");
+                _logger.LogError(ex, "Some error happened on Member Service");
                 throw ex;
             }
 
             return member;
         }
 
-        public async Task<Members> GetMember(int memberId)
+        public async Task<Member> GetMember(int memberId)
         {
             try
             {
-                Members member = await _membersRepository.GetMember(memberId);
+                Member member = await _membersRepository.GetMember(memberId);
                 if (member == null)
                 {
                     throw new UnauthorizedAccessException();
@@ -69,30 +69,30 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Members Service");
+                _logger.LogError(ex, "Some error happened on Member Service");
                 throw ex;
             }
         }
-        public async Task<List<Members>> GetMembers()
+        public async Task<List<Member>> GetMembers()
         {
             try
             {
-                List<Members> members = await _membersRepository.GetMembers();
+                List<Member> members = await _membersRepository.GetMember();
                 return members;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Members Service");
+                _logger.LogError(ex, "Some error happened on Member Service");
                 throw ex;
             }
         }
 
-        public async Task<Members> DeleteMembers(int MembersId)
+        public async Task<Member> DeleteMembers(int MembersId)
         {
             try
             {
-                Members member = _context.Members.Find(MembersId);
-                 _context.Members.Remove(member);
+                Member member = _context.Member.Find(MembersId);
+                 _context.Member.Remove(member);
                  _context.SaveChanges();
                 return member;
                 
@@ -104,7 +104,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Members Service");
+                _logger.LogError(ex, "Some error happened on Member Service");
                 throw ex;
             }
         }
@@ -113,7 +113,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                await _membersRepository.PostMembers(member);
+                await _membersRepository.PostMember(member);
                 return member;
             }
             catch (Exception ex)
@@ -123,12 +123,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<Members> UpdateMembers(MemberDTO member)
+        public async Task<Member> UpdateMembers(MemberDTO member)
         {
             try
             {
                 var memberUpdated = member.Map();
-                _context.Members.Update(memberUpdated);
+                _context.Member.Update(memberUpdated);
                 await _context.SaveChangesAsync();
                 return memberUpdated;
             }

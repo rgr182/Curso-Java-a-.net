@@ -16,7 +16,7 @@ namespace Curso_Java_a_.net.Utils.Security
             _configuration = configuration;
         }
 
-        public string GenerateJWT(Members member)
+        public string GenerateJWT(Member member)
         {            
             var key = Encoding.ASCII.GetBytes(_configuration.GetValue<string>("Jwt:Key"));           
 

@@ -7,55 +7,55 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
-    public class MembersRepository : IMembersRepository
+    public class MemberRepository : IMemberRepository
     {
         internal SchoolSystemContext _context;
-        public MembersRepository(SchoolSystemContext context)
+        public MemberRepository(SchoolSystemContext context)
         {
             _context = context;
         }
 
-        public Task<Members> GetMember(int id) =>
-              _context.Members
+        public Task<Member> GetMember(int id) =>
+              _context.Member
                  .Where(x => x.MembersId == id)
                  .FirstOrDefaultAsync();
 
-        public Task<Members> GetMemberById(string usuario, string pass) =>
-              _context.Members
+        public Task<Member> GetMemberById(string usuario, string pass) =>
+              _context.Member
                 .Where(x => x.User == usuario && x.Password == pass)
                 .FirstOrDefaultAsync();
 
-        public async Task<List<Members>> GetMembers()
+        public async Task<List<Member>> GetMember()
         {
-            return await _context.Members.ToListAsync();
+            return await _context.Member.ToListAsync();
         }
 
-        public async Task SaveMemberAsync(Members member)
+        public async Task SaveMemberAsync(Member member)
         {
-            await _context.Members.AddAsync(member);
+            await _context.Member.AddAsync(member);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Members> PostMembers(MemberDTO members)
+        public async Task<Member> PostMember(MemberDTO members)
         {
             var member = members.Map();
-            await _context.Members.AddAsync(member);
+            await _context.Member.AddAsync(member);
             await _context.SaveChangesAsync();
             return member;
         }
 
-        public async Task<Members> UpdateMembers(MemberDTO member)
+        public async Task<Member> UpdateMember(MemberDTO member)
         {
             var memberUpdated = member.Map();         
-            _context.Members.Update(memberUpdated);
+            _context.Member.Update(memberUpdated);
             await _context.SaveChangesAsync();
             return memberUpdated;
         }
 
-        public async Task<Members> DeleteMembers(int membersId)
+        public async Task<Member> DeleteMember(int membersId)
         {
-            Members member = _context.Members.Find(membersId);
-            _context.Members.Remove(member);
+            Member member = _context.Member.Find(membersId);
+            _context.Member.Remove(member);
             _context.SaveChanges();
             return member;
         }

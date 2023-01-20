@@ -43,7 +43,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPost]
         [Route("/PostTechnology")]
-        public async Task<ActionResult<Members>> PostTechnology([FromBody] TechnologyDTO tech)
+        public async Task<ActionResult<Member>> PostTechnology([FromBody] TechnologyDTO tech)
         {
             try
             {                
@@ -58,7 +58,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPut]
         [Route("/UpdateTechnology")]
-        public async Task<ActionResult<Members>> UpdateTechnology([FromBody] TechnologyDTO tech)
+        public async Task<ActionResult<Member>> UpdateTechnology([FromBody] TechnologyDTO tech)
         {
             try
             {                
@@ -73,7 +73,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpDelete]
         [Route("/DeleteTechnologyById")]
-        public async Task<ActionResult<Members>> DeleteTechnologyById(int techId)
+        public async Task<ActionResult<Member>> DeleteTechnologyById(int techId)
         {
             try
             {                
