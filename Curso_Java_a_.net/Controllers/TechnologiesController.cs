@@ -58,7 +58,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPut]
         [Route("/UpdateTechnology")]
-        public async Task<ActionResult<Members>> UpdateTechnology([FromBody] TechnologyDTO tech)
+        public async Task<ActionResult<Technologies>> UpdateTechnology([FromBody] TechnologyDTO tech)
         {
             try
             {                
