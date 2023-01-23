@@ -4,6 +4,6 @@ namespace Curso_Java_a_.net.Utils.Interfaces
 {
     public interface IAuthUtils
     {
-        string GenerateJWT(Member member);
+        string GenerateJWT(Members member);
     }
 }

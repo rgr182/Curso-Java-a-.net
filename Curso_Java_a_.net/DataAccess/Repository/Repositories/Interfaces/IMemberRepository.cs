@@ -5,12 +5,12 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces
 {
     public interface IMemberRepository
     {
-        public Task<Member> GetMemberById(string user, string pass);
-        public Task SaveMemberAsync(Member member);
-        public Task<Member> GetMember(int id);
-        public Task<List<Member>> GetMember();
-        public Task<Member> PostMember(MemberDTO member);
-        public Task<Member> UpdateMember(MemberDTO member);
-        public Task<Member> DeleteMember(int MemberId);
+        public Task<Members> GetMemberById(string user, string pass);
+        public Task SaveMemberAsync(Members member);
+        public Task<Members> GetMember(int id);
+        public Task<List<Members>> GetMember();
+        public Task<Members> PostMember(MemberDTO member);
+        public Task<Members> UpdateMember(MemberDTO member);
+        public Task<Members> DeleteMember(int MemberId);
     }
 }

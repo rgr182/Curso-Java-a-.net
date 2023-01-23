@@ -20,9 +20,9 @@ namespace Curso_Java_a_.net.DataAccess.Services
             _authUtils = authUtils;
         }
 
-        public async Task<Session> GetSession(int UserId)
+        public async Task<Sessions> GetSession(int UserId)
         {
-            Session result = new Session();
+            Sessions result = new Sessions();
 
             try
             {
@@ -37,11 +37,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
             return result;
         }
 
-        public async Task<Session> SaveSession(Member user)
+        public async Task<Sessions> SaveSession(Members user)
         {
             try
             {
-                var session = new Session()
+                var session = new Sessions()
                 {
                     CreationDate = DateTime.UtcNow,
                     ExpirationDate = DateTime.UtcNow.AddDays(1),

@@ -5,7 +5,7 @@ namespace Curso_Java_a_.net.DataAccess.DTO
         public int MemberId { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
-        public string SecondName { get; set; }
+        public string SecondLastName { get; set; }
         public string Email { get; set; }
         public int CurrentLocationId { get; set; }
         public DateTime MemberRegistration { get; set; }

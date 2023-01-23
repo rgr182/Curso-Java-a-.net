@@ -15,13 +15,13 @@ namespace Curso_Java_a_.net.DataAccess.DTO.DTOMapping
 
         #region MembersMapping
 
-        public static Member Map(this MemberDTO members) =>
-            new Member
+        public static Members Map(this MemberDTO members) =>
+            new Members
             {
                 MemberId = members.MemberId,
                 Name = members.Name,
                 LastName = members.LastName,
-                SecondName = members.SecondName,
+                SecondLastName = members.SecondLastName,
                 CurrentLocationId = members.CurrentLocationId,
                 MemberRegistration = members.MemberRegistration,
                 Email = members.Email,

@@ -15,17 +15,17 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context = context;
         }
 
-        public Task<Session> GetSession(int UserId)
+        public Task<Sessions> GetSession(int UserId)
         {
-            return _context.Session
+            return _context.Sessions
                 .Where(u => u.MemberId == UserId)
                 .OrderBy(x => x.MemberId)
                 .LastAsync();
         }
 
-        public async Task AddSession(Session session)
+        public async Task AddSession(Sessions session)
         {
-             await _context.Session.AddAsync(session);
+             await _context.Sessions.AddAsync(session);
              await _context.SaveChangesAsync();
         }      
     }

@@ -31,7 +31,7 @@ namespace Curso_Java_a_.net.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("/GetGrades")]
-        public async Task<ActionResult<Member>> GetGrades(string period)
+        public async Task<ActionResult<Members>> GetGrades(string period)
         {
             try
             {

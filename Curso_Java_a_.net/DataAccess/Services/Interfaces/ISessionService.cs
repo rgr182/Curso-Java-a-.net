@@ -4,8 +4,8 @@ namespace Curso_Java_a_.net.DataAccess.Services.Interfaces
 {
     public interface ISessionService
     {
-        public Task<Session> SaveSession(Member member);
+        public Task<Sessions> SaveSession(Members member);
 
-        public Task<Session> GetSession(int MemberId);     
+        public Task<Sessions> GetSession(int MemberId);     
     }
 }

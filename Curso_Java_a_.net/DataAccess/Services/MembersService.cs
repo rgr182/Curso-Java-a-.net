@@ -22,11 +22,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
             _context = context;
         }      
         
-        public async Task<Member> GetMemberByUserAndPassword(string usuario, string pass)
+        public async Task<Members> GetMemberByUserAndPassword(string usuario, string pass)
         {
             try
             {
-                Member member = await _membersRepository.GetMemberById(usuario,  pass);
+                Members member = await _membersRepository.GetMemberById(usuario,  pass);
                 if (member == null)
                 {
                     throw new UnauthorizedAccessException();
@@ -41,7 +41,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
         
-        public async Task<Member> SaveMembersAsync(Member member)
+        public async Task<Members> SaveMembersAsync(Members member)
         {
             try
             {
@@ -56,11 +56,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
             return member;
         }
 
-        public async Task<Member> GetMember(int memberId)
+        public async Task<Members> GetMember(int memberId)
         {
             try
             {
-                Member member = await _membersRepository.GetMember(memberId);
+                Members member = await _membersRepository.GetMember(memberId);
                 if (member == null)
                 {
                     throw new UnauthorizedAccessException();
@@ -73,11 +73,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw ex;
             }
         }
-        public async Task<List<Member>> GetMembers()
+        public async Task<List<Members>> GetMembers()
         {
             try
             {
-                List<Member> members = await _membersRepository.GetMember();
+                List<Members> members = await _membersRepository.GetMember();
                 return members;
             }
             catch (Exception ex)
@@ -87,12 +87,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<Member> DeleteMembers(int MemberId)
+        public async Task<Members> DeleteMembers(int MemberId)
         {
             try
             {
-                Member member = _context.Member.Find(MemberId);
-                 _context.Member.Remove(member);
+                Members member = _context.Members.Find(MemberId);
+                 _context.Members.Remove(member);
                  _context.SaveChanges();
                 return member;
                 
@@ -123,12 +123,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<Member> UpdateMembers(MemberDTO member)
+        public async Task<Members> UpdateMembers(MemberDTO member)
         {
             try
             {
                 var memberUpdated = member.Map();
-                _context.Member.Update(memberUpdated);
+                _context.Members.Update(memberUpdated);
                 await _context.SaveChangesAsync();
                 return memberUpdated;
             }

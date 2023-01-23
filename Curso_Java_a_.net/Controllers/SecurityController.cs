@@ -28,7 +28,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpGet]
         [Route("/auth")]
-        public async Task<ActionResult<Session>> Auth()
+        public async Task<ActionResult<Sessions>> Auth()
         {
             try
             {
@@ -50,7 +50,7 @@ namespace Curso_Java_a_.net.Controllers
         [HttpPost]
         [Route("/Login")]
         [AllowAnonymous]
-        public async Task<ActionResult<Session>> Login([FromBody] UserDTO user)
+        public async Task<ActionResult<Sessions>> Login([FromBody] UserDTO user)
         {
             try
             {

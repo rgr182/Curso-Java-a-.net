@@ -15,47 +15,47 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context = context;
         }
 
-        public Task<Member> GetMember(int id) =>
-              _context.Member
+        public Task<Members> GetMember(int id) =>
+              _context.Members
                  .Where(x => x.MemberId == id)
                  .FirstOrDefaultAsync();
 
-        public Task<Member> GetMemberById(string usuario, string pass) =>
-              _context.Member
+        public Task<Members> GetMemberById(string usuario, string pass) =>
+              _context.Members
                 .Where(x => x.User == usuario && x.Password == pass)
                 .FirstOrDefaultAsync();
 
-        public async Task<List<Member>> GetMember()
+        public async Task<List<Members>> GetMember()
         {
-            return await _context.Member.ToListAsync();
+            return await _context.Members.ToListAsync();
         }
 
-        public async Task SaveMemberAsync(Member member)
+        public async Task SaveMemberAsync(Members member)
         {
-            await _context.Member.AddAsync(member);
+            await _context.Members.AddAsync(member);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Member> PostMember(MemberDTO members)
+        public async Task<Members> PostMember(MemberDTO members)
         {
             var member = members.Map();
-            await _context.Member.AddAsync(member);
+            await _context.Members.AddAsync(member);
             await _context.SaveChangesAsync();
             return member;
         }
 
-        public async Task<Member> UpdateMember(MemberDTO member)
+        public async Task<Members> UpdateMember(MemberDTO member)
         {
             var memberUpdated = member.Map();         
-            _context.Member.Update(memberUpdated);
+            _context.Members.Update(memberUpdated);
             await _context.SaveChangesAsync();
             return memberUpdated;
         }
 
-        public async Task<Member> DeleteMember(int memberId)
+        public async Task<Members> DeleteMember(int memberId)
         {
-            Member member = _context.Member.Find(memberId);
-            _context.Member.Remove(member);
+            Members member = _context.Members.Find(memberId);
+            _context.Members.Remove(member);
             _context.SaveChanges();
             return member;
         }

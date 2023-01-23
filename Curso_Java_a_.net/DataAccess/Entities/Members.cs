@@ -2,13 +2,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Curso_Java_a_.net.DataAccess.Entities
 {
-    public class Member
+    public class Members
     {
         [Key]
         public int MemberId { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
-        public string SecondName { get; set; }
+        public string SecondLastName { get; set; }
         public int CurrentLocationId { get; set; }
         public DateTime MemberRegistration { get; set; } = DateTime.UtcNow;
         public string Email { get; set; }
