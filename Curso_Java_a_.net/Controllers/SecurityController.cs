@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Curso_Java_a_.net.DataAccess.DTO;
-using Microsoft.AspNetCore.Components;
 using System.Security.Claims;
 
 namespace Curso_Java_a_.net.Controllers
@@ -15,20 +14,20 @@ namespace Curso_Java_a_.net.Controllers
     public class SecurityController : ControllerBase
     {
         public readonly ISessionService _sessionService;
-        public readonly IUsersService _usersService;
+        public readonly IMembersService _membersService;
         public ILogger<SecurityController> _logger;
 
         public SecurityController(ISessionService securityService,
                                   ILogger<SecurityController> logger,
-                                  IUsersService usersService)
+                                  IMembersService membersService)
         {
             _sessionService = securityService;
             _logger = logger;
-            _usersService = usersService;
+            _membersService = membersService;
         }
 
         [HttpGet]
-        [Route("/Auth")]
+        [Route("/auth")]
         public async Task<ActionResult<Session>> Auth()
         {
             try
@@ -49,13 +48,13 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpPost]
-        [Route("/api/login")]
+        [Route("/Login")]
         [AllowAnonymous]
         public async Task<ActionResult<Session>> Login([FromBody] UserDTO user)
         {
             try
             {
-                var userD = await _usersService.LoginUser(user.User, user.Password);
+                var userD = await _membersService.GetMemberByUserAndPassword(user.User, user.Password);
                 var session = await _sessionService.SaveSession(userD);                
 
                 return Ok(session);
@@ -66,6 +65,7 @@ namespace Curso_Java_a_.net.Controllers
             }
             catch (Exception)
             {
+                _logger.LogError("Some error happened please contact Sys Admin");
                 return Problem("Some error happened please contact Sys Admin");
             }
         }

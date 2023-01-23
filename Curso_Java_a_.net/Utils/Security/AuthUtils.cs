@@ -16,7 +16,7 @@ namespace Curso_Java_a_.net.Utils.Security
             _configuration = configuration;
         }
 
-        public string GenerateJWT(Users user)
+        public string GenerateJWT(Members member)
         {            
             var key = Encoding.ASCII.GetBytes(_configuration.GetValue<string>("Jwt:Key"));           
 
@@ -24,9 +24,9 @@ namespace Curso_Java_a_.net.Utils.Security
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                new Claim("Id", user.id.ToString()),
-                new Claim(JwtRegisteredClaimNames.Name, user.Name),
-                new Claim(JwtRegisteredClaimNames.Exp, user.Grade.ToString()),
+                new Claim("Id", member.MembersId.ToString()),
+                new Claim(JwtRegisteredClaimNames.Sub, member.User),
+                new Claim(JwtRegisteredClaimNames.Email, member.Name),
                 new Claim(JwtRegisteredClaimNames.Jti,
                 Guid.NewGuid().ToString()),
             }),

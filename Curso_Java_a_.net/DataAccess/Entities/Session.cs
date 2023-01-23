@@ -4,8 +4,10 @@ namespace Curso_Java_a_.net.DataAccess.Entities
 {
     public partial class Session
     {
-        [Key]        
-        public long UserId { get; set; }
+        [Key]
+        public int SessionId { get; set; }
+
+        public int MemberId { get; set; }
 
         [Required]
 
@@ -14,5 +16,6 @@ namespace Curso_Java_a_.net.DataAccess.Entities
         public DateTime CreationDate { get; set; } = DateTime.UtcNow;
 
         public DateTime ExpirationDate { get; set; }
+        //public string UserType { get; set; }
     }
 }
