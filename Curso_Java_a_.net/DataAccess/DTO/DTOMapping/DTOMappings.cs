@@ -18,12 +18,12 @@ namespace Curso_Java_a_.net.DataAccess.DTO.DTOMapping
         public static Member Map(this MemberDTO members) =>
             new Member
             {
-                MembersId = members.MembersId,
+                MemberId = members.MemberId,
                 Name = members.Name,
-                FirstName = members.FirstName,
+                LastName = members.LastName,
                 SecondName = members.SecondName,
                 CurrentLocationId = members.CurrentLocationId,
-                MemberRegistratior = members.MemberRegistratior,
+                MemberRegistration = members.MemberRegistration,
                 Email = members.Email,
                 User = members.User,
                 Password = members.Password,

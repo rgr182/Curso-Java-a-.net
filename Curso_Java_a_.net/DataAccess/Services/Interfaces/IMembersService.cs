@@ -11,6 +11,6 @@ namespace Curso_Java_a_.net.DataAccess.Services.Interfaces
         public Task<List<Member>> GetMembers();
         public Task<MemberDTO> PostMembers(MemberDTO member);
         public Task<Member> UpdateMembers(MemberDTO member);
-        public Task<Member> DeleteMembers(int MembersId);
+        public Task<Member> DeleteMembers(int MemberId);
     }
 }

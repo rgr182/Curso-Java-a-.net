@@ -45,7 +45,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 {
                     CreationDate = DateTime.UtcNow,
                     ExpirationDate = DateTime.UtcNow.AddDays(1),
-                    MemberId = user.MembersId,
+                    MemberId = user.MemberId,
                     UserToken = _authUtils.GenerateJWT(user)
                 }; 
 

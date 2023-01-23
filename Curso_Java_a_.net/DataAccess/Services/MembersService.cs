@@ -87,11 +87,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<Member> DeleteMembers(int MembersId)
+        public async Task<Member> DeleteMembers(int MemberId)
         {
             try
             {
-                Member member = _context.Member.Find(MembersId);
+                Member member = _context.Member.Find(MemberId);
                  _context.Member.Remove(member);
                  _context.SaveChanges();
                 return member;

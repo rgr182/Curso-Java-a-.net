@@ -11,7 +11,7 @@ namespace Curso_Java_a_.net.DataAccess.Entities
         public int Grade { get; set; }
         public GradesEnumerable GradesE{ get; set; }
         public int EvaluationId { get; set; }
-        public int MembersId { get; set; }
+        public int MemberId { get; set; }
         public DateTime GradeDate { get; set; } = DateTime.UtcNow;        
     }
 }

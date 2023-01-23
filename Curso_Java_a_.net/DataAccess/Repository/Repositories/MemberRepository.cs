@@ -17,7 +17,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 
         public Task<Member> GetMember(int id) =>
               _context.Member
-                 .Where(x => x.MembersId == id)
+                 .Where(x => x.MemberId == id)
                  .FirstOrDefaultAsync();
 
         public Task<Member> GetMemberById(string usuario, string pass) =>
@@ -52,9 +52,9 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             return memberUpdated;
         }
 
-        public async Task<Member> DeleteMember(int membersId)
+        public async Task<Member> DeleteMember(int memberId)
         {
-            Member member = _context.Member.Find(membersId);
+            Member member = _context.Member.Find(memberId);
             _context.Member.Remove(member);
             _context.SaveChanges();
             return member;

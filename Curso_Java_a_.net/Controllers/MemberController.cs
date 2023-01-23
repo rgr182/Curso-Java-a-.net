@@ -49,7 +49,7 @@ namespace Curso_Java_a_.net.Controllers
             }
         }
         [HttpGet]
-        [Route("/GetMember")]
+        [Route("/GetMembers")]
         public async Task<ActionResult<List<Member>>> GetMembers()
         {
             try
