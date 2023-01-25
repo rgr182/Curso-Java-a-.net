@@ -13,7 +13,7 @@ namespace Curso_Java_a_.net.DataAccess.DTO
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
         public string CV { get; set; }
-        public int? IsAdmin { get; set; }
-        public int? IsMentor { get; set; }
+        public int? isAdmin { get; set; }
+        public int? isMentor { get; set; }
     }
 }
