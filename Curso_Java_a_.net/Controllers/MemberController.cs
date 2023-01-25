@@ -32,7 +32,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpGet]
         [Route("/GetMember")]
-        public async Task<ActionResult<Members>> GetMember([FromBody] int id)
+        public async Task<ActionResult<Members>> GetMember(int id)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPut]
         [Route("/PutMember")]
-        public async Task<ActionResult<Members>> UpdateMembers(int memberId,[FromBody] MemberDTO member)
+        public async Task<ActionResult<Members>> UpdateMembers([FromBody] MemberDTO member)
         {
             try
             {

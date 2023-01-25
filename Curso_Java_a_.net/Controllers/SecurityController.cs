@@ -55,7 +55,7 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var userD = await _membersService.GetMemberByUserAndPassword(user.User, user.Password);
-                var session = await _sessionService.SaveSession(userD);                
+                var session = await _sessionService.SaveSession(userD);
 
                 return Ok(session);
             }
@@ -69,5 +69,5 @@ namespace Curso_Java_a_.net.Controllers
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
-    }
+    } 
 }
