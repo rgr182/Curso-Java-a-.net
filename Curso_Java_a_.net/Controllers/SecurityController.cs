@@ -39,7 +39,11 @@ namespace Curso_Java_a_.net.Controllers
             }
             catch (UnauthorizedAccessException)
             {
-                return Unauthorized("User and password does not match");
+                return Unauthorized("Session Expired");
+            }
+            catch (NullReferenceException)
+            {
+                return Unauthorized("Session Expired");
             }
             catch (Exception)
             {

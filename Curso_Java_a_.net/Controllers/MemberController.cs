@@ -55,6 +55,10 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var members = await _memberService.GetMembers();
+                if (members == null)
+                {
+                    return NoContent();
+                }
                 return Ok(members);
             }
             catch (Exception)
@@ -72,9 +76,12 @@ namespace Curso_Java_a_.net.Controllers
                 var member2 = await _memberService.PostMembers(m);               
                 return Ok(member2);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return Problem("Some error happened please contact Sys Admin");
+                if (ex.Message.ToLower().Contains("duplicate"))
+                    return BadRequest("User already exist");
+                else
+                    return Problem("Some error happened please contact Sys Admin");
             }
         }
 
@@ -103,6 +110,10 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var member = await _memberService.DeleteMembers(memberId);
+                if (member == null)
+                {
+                    return BadRequest("User don´t exist");
+                }
                 return Ok(member);
             }
             catch (Exception)
