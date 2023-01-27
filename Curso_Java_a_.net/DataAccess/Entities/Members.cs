@@ -14,9 +14,10 @@ namespace Curso_Java_a_.net.DataAccess.Entities
         public string Email { get; set; }
         public string User { get; set; }
         public string Password { get; set; }
-        public int? isAdmin { get; set; }
-        public int? isMentor { get; set; }
+        public bool? isAdmin { get; set; }
+        public bool? isMentor { get; set; }
         public string? PhoneNumber { get; set; }
         public string? CV { get; set; }
+        public string? Feedback { get; set; }
     }
 }
