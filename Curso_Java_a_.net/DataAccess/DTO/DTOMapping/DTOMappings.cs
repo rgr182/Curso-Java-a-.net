@@ -23,13 +23,15 @@ namespace Curso_Java_a_.net.DataAccess.DTO.DTOMapping
                 LastName = members.LastName,
                 SecondLastName = members.SecondLastName,
                 CurrentLocationId = members.CurrentLocationId,
-                MemberRegistration = members.MemberRegistration,
+                MemberRegistration = DateTime.Today,
                 Email = members.Email,
                 User = members.User,
                 Password = members.Password,
                 PhoneNumber = members.PhoneNumber,
-                CV = members.CV
-
+                CV = members.CV,
+                isAdmin = members.isAdmin,
+                isMentor = members.isMentor,
+                Feedback = members.Feedback
             };
 
         #endregion
