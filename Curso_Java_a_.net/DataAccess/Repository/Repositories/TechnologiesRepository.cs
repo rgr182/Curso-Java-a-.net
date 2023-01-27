@@ -30,6 +30,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         }
 
         public Task<List<Technologies>> GetTechnologiesByName(string name)
+
            => _context.Technologies.Where(x => x.Name.ToLower()
               .Contains(name.ToLower())).ToListAsync();
 

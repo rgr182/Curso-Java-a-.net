@@ -62,7 +62,7 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {                
-                await _iTechnologiesService.PutTechnologiesAsync(tech);
+                await _iTechnologiesService.UpdateTechnologiesAsync(tech);
                 return Ok(tech);
             }
             catch (Exception)
@@ -77,7 +77,7 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {                
-                await _iTechnologiesService.DeleteTechnologyById(techId);
+                await _iTechnologiesService.DeleteTechnologiesById(techId);
                 return Ok();
             }
             catch (Exception)

@@ -10,7 +10,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
     public class TechnologiesService : ITechnologiesService
     {
         readonly ILogger<TechnologiesService> _logger;
-        ITechnologiesRepository _TechnologiesRepository;
+        readonly ITechnologiesRepository _TechnologiesRepository;
         internal SchoolSystemContext _context;
         public TechnologiesService(ITechnologiesRepository TechnologieRepository,
             ILogger<TechnologiesService> logger, SchoolSystemContext context)
@@ -25,14 +25,14 @@ namespace Curso_Java_a_.net.DataAccess.Services
             return await _TechnologiesRepository.GetTechnologiesByName(Name);
         }
 
-        public async Task<Technologies> DeleteTechnologyById(int technologyId)
+        public async Task DeleteTechnologiesById(int technologyId)
         {
             try
             {
                 Technologies tech = await _context.Technologies.FindAsync(technologyId);
                 _context.Technologies.Remove(tech);
                 _context.SaveChanges();
-                return tech;
+                return;
             }
             catch (Exception ex)
             {
@@ -41,7 +41,24 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public Task<Technologies> PutTechnologiesAsync(TechnologyDTO name) => throw new NotImplementedException();
+        public async Task<Technologies> UpdateTechnologiesAsync(TechnologyDTO name)
+        {
+            try
+            {
+                var techUpdated = name.Map();
+                _context.Technologies.Update(techUpdated);
+                await _context.SaveChangesAsync();
+                return techUpdated;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                throw;
+            }
+        }
+
+          
+
 
         public async Task<Technologies> PostTechnologiesAsync(TechnologyDTO name) 
         {

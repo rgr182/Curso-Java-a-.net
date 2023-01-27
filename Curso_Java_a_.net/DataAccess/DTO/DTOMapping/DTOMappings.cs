@@ -31,7 +31,8 @@ namespace Curso_Java_a_.net.DataAccess.DTO.DTOMapping
                 CV = members.CV,
                 isAdmin = members.isAdmin,
                 isMentor = members.isMentor,
-                Feedback = members.Feedback
+                Feedback = members.Feedback,
+                StatusId = members.StatusId
             };
 
         #endregion
