@@ -26,7 +26,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                Members member = await _membersRepository.GetMemberById(usuario,  pass);
+                Members member = await _membersRepository.GetMemberByUserAndPassword(usuario,  pass);
                 if (member == null)
                 {
                     throw new UnauthorizedAccessException();

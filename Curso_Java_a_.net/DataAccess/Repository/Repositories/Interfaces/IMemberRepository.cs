@@ -5,7 +5,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces
 {
     public interface IMemberRepository
     {
-        public Task<Members> GetMemberById(string user, string pass);
+        public Task<Members> GetMemberByUserAndPassword(string user, string pass);
         public Task SaveMemberAsync(Members member);
         public Task<Members> GetMember(int id);
         public Task<List<Members>> GetMember();

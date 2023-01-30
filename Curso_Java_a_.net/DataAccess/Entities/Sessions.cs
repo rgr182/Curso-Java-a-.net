@@ -16,6 +16,6 @@ namespace Curso_Java_a_.net.DataAccess.Entities
         public DateTime CreationDate { get; set; } = DateTime.UtcNow;
 
         public DateTime ExpirationDate { get; set; }
-        //public string UserType { get; set; }
+        public bool isAdmin { get; set; }
     }
 }
