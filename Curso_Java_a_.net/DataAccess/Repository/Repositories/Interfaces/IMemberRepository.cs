@@ -8,7 +8,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces
         public Task<Members> GetMemberByUserAndPassword(string user, string pass);
         public Task SaveMemberAsync(Members member);
         public Task<Members> GetMember(int id);
-        public Task<List<Members>> GetMember();
+        public Task<List<Members>> GetMembers();
         public Task<Members> PostMember(MemberDTO member);
         public Task<Members> UpdateMember(MemberDTO member);
         public Task<Members> DeleteMember(int MemberId);

@@ -8,14 +8,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Curso_Java_a_.net.DataAccess.Services
 {
-    public class MembersService : IMembersService
+    public class MemberService : IMemberService
     {
-        readonly ILogger<MembersService> _logger;
+        readonly ILogger<MemberService> _logger;
         readonly IMemberRepository _membersRepository;
         internal SchoolSystemContext _context;
         
-        public MembersService(IMemberRepository membersRepository,
-                              ILogger<MembersService> logger, SchoolSystemContext context)
+        public MemberService(IMemberRepository membersRepository,
+                              ILogger<MemberService> logger, SchoolSystemContext context)
         {
             _membersRepository = membersRepository;
             _logger = logger;
