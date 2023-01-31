@@ -15,6 +15,7 @@ namespace Curso_Java_a_.net.Infraestructure
             builder.Services.AddScoped<ISessionService, SessionService>();
             builder.Services.AddScoped<IGradesService, GradesService>();
             builder.Services.AddScoped<IMembersService, MembersService>();
+            builder.Services.AddScoped<IBootCampersService, BootCampersService>();
             builder.Services.AddScoped<ITechnologiesService, TechnologiesService>();
             #endregion
 
@@ -22,6 +23,7 @@ namespace Curso_Java_a_.net.Infraestructure
             builder.Services.AddScoped<ISessionRepository, SessionRepository>();
             builder.Services.AddScoped<IGradesRepository, GradesRepository>();
             builder.Services.AddScoped<IMemberRepository, MemberRepository>();
+            builder.Services.AddScoped<IBootCampersRepository, BootCampersRepository>();
             builder.Services.AddScoped<ITechnologiesRepository, TechnologieRepository>();
             #endregion
 
