@@ -15,20 +15,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context = context;
         }
 
-        public async Task DeleteTechnologiesById(int technologyId)
-        {
-            var tech = await _context.Technologies.FindAsync(technologyId);
-            if (tech != null)
-            {
-                _context.Technologies.Remove(tech);
-            }
-            else
-            {
-                throw new Exception("Member already deleted");
-            }            
-            await _context.SaveChangesAsync();
-        }
-
         public Task<List<Technologies>> GetTechnologiesByName(string name)
 
            => _context.Technologies.Where(x => x.Name.ToLower()
@@ -48,6 +34,14 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context.Technologies.Update(techUpdated);
             await _context.SaveChangesAsync();
             return techUpdated;
+        }
+        public async Task<Technologies> DeleteTechnologiesById(int technologyId)
+        {
+
+            Technologies tech = await _context.Technologies.FindAsync(technologyId);
+            _context.Technologies.Remove(tech);
+            _context.SaveChanges();
+            return tech;
         }
     }
 }

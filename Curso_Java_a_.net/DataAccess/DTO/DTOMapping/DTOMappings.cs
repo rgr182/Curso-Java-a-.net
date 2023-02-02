@@ -37,25 +37,19 @@ namespace Curso_Java_a_.net.DataAccess.DTO.DTOMapping
 
         #endregion
 
-        #region BootCampersMapping
-        public static BootCampers Map(this BootCamperDTO bootCamper) =>
-            new BootCampers
+        #region BootcampCandidatesMapping
+        public static BootcampCandidates Map(this BootcampCandidatesDTO BootcampCandidates) =>
+            new BootcampCandidates
             {
-                BootCamperId = bootCamper.BootCamperId,
-                Name = bootCamper.Name,
-                LastName = bootCamper.LastName,
-                SecondLastName = bootCamper.SecondLastName,
-                CurrentLocationId = bootCamper.CurrentLocationId,
-                BootCamperRegistration = DateTime.Today,
-                Email = bootCamper.Email,
-                User = bootCamper.User,
-                Password = bootCamper.Password,
-                PhoneNumber = bootCamper.PhoneNumber,
-                CV = bootCamper.CV,
-                isAdmin = bootCamper.isAdmin,
-                isMentor = bootCamper.isMentor,
-                Feedback = bootCamper.Feedback,
-                StatusId = bootCamper.StatusId
+                BootcampCandidateId = BootcampCandidates.BootcampCandidateId,
+                Name = BootcampCandidates.Name,
+                Email = BootcampCandidates.Email,
+                PhoneNumber = BootcampCandidates.PhoneNumber,
+                StatusId = BootcampCandidates.StatusId,
+                Feedback = BootcampCandidates.Feedback,
+                BootcampId = BootcampCandidates.BootcampId,
+
+
             };
 
         #endregion
