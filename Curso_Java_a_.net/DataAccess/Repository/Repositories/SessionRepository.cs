@@ -19,7 +19,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         {
             return _context.Sessions
                 .Where(u => u.MemberId == UserId)
-                .OrderBy(x => x.MemberId)
+                .OrderBy(x => x.CreationDate)
                 .LastAsync();
         }
 
