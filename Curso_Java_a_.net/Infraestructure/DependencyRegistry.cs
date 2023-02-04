@@ -24,7 +24,7 @@ namespace Curso_Java_a_.net.Infraestructure
             builder.Services.AddScoped<IGradesRepository, GradesRepository>();
             builder.Services.AddScoped<IMemberRepository, MemberRepository>();
             builder.Services.AddScoped<IBootcampCandidatesRepository, BootCampCandidatesRepository>();
-            builder.Services.AddScoped<ITechnologiesRepository, TechnologieRepository>();
+            builder.Services.AddScoped<ITechnologiesRepository, TechnologiesRepository>();
             #endregion
 
             #region Utils

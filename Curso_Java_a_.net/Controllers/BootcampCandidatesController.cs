@@ -32,7 +32,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpGet]
-        [Route("/GetBootCamper")]
+        [Route("/BootCamper")]
         public async Task<ActionResult<BootcampCandidates>> GetBootcampCandidate(int bootcampCandidateId)
         {
             try
@@ -52,8 +52,31 @@ namespace Curso_Java_a_.net.Controllers
             }
 
         }
+
+        [HttpGet]
+        [Route("/BootCampers")]
+        public async Task<ActionResult<List<BootcampCandidates>>> GetBootcampCandidates()
+        {
+            try
+            {
+                var getBootcampCandidates = await _bootcampCandidatesService.GetBootcampCandidates();
+
+
+                if (getBootcampCandidates == null)
+                {
+                    return BadRequest("User don´t exist");
+                }
+                return Ok(getBootcampCandidates);
+            }
+            catch (Exception)
+            {
+                return Problem("Some error happened please contact Sys Admin");
+            }
+
+        }
+
         [HttpPost]
-        [Route("/PostBootCamper")]
+        [Route("/BootCamper")]
         public async Task<ActionResult<BootcampCandidates>> PostBootcampCandidate(BootcampCandidatesDTO name)
         {
             {
@@ -71,44 +94,44 @@ namespace Curso_Java_a_.net.Controllers
                 }
             }
         }
-            [HttpPut]
-            [Route("/PutBootCamper")]
-            public async Task<ActionResult<BootcampCandidates>> UpdateBootcampCandidate(BootcampCandidatesDTO name)
+        [HttpPut]
+        [Route("/BootCamper")]
+        public async Task<ActionResult<BootcampCandidates>> UpdateBootcampCandidate(BootcampCandidatesDTO name)
+        {
+            try
             {
-                try
-                {
                 var updatedBootcampCandidate = name.Map();
                 await _context.BootcampCandidates.AddAsync(updatedBootcampCandidate);
                 await _context.SaveChangesAsync();
                 return updatedBootcampCandidate;
             }
-                catch (Exception)
-                {
-                    return Problem("Some error happened please contact Sys Admin");
-                }
-            }
-
-            [HttpDelete]
-            [Route("/DeleteBootCamper")]
-            [AllowAnonymous]
-            public async Task<ActionResult<BootcampCandidates>> DeleteBootcampCandidate(int bootcampCandidateId)
+            catch (Exception)
             {
-                try
-                {
-                    BootcampCandidates bootcampCandidate = _context.BootcampCandidates.Find(bootcampCandidateId);
-                    _context.BootcampCandidates.Remove(bootcampCandidate);
-                    _context.SaveChanges();
-                    return bootcampCandidate;
+                return Problem("Some error happened please contact Sys Admin");
+            }
+        }
+
+        [HttpDelete]
+        [Route("/BootCamper")]
+        [AllowAnonymous]
+        public async Task<ActionResult<BootcampCandidates>> DeleteBootcampCandidate(int bootcampCandidateId)
+        {
+            try
+            {
+                BootcampCandidates bootcampCandidate = _context.BootcampCandidates.Find(bootcampCandidateId);
+                _context.BootcampCandidates.Remove(bootcampCandidate);
+                _context.SaveChanges();
+                return bootcampCandidate;
                 if (bootcampCandidate == null)
-                    {
-                        return BadRequest("User don´t exist");
-                    }
-                    return Ok(bootcampCandidate);
-                }
-                catch (Exception)
                 {
-                    return Problem("Some error happened please contact Sys Admin");
+                    return BadRequest("User don´t exist");
                 }
+                return Ok(bootcampCandidate);
+            }
+            catch (Exception)
+            {
+                return Problem("Some error happened please contact Sys Admin");
             }
         }
     }
+}

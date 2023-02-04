@@ -15,11 +15,16 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         {
             _context = context;
         }
-        public async Task<List<BootcampCandidates>> GetBootcampCandidate(int bootcampCandidateId)
+        public async Task<List<BootcampCandidates>> GetBootcampCandidates()
         {
             return await _context.BootcampCandidates.ToListAsync();
         }
 
+        public async Task<BootcampCandidates> GetBootcampCandidate(int bootcampCandidateId) =>
+          
+            await _context.BootcampCandidates
+           .Where(x => x.BootcampCandidateId == bootcampCandidateId)
+              .FirstOrDefaultAsync();
 
         public async Task<BootcampCandidates> PostBootcampCandidate(BootcampCandidatesDTO name)
         {
