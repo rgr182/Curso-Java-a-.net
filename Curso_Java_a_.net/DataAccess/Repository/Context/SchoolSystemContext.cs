@@ -23,6 +23,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Context
         public DbSet<Members> Members { get; set; }
         public DbSet<Technologies> Technologies { get; set; }
         public DbSet<BootcampCandidates> BootcampCandidates { get; set; }
+        public DbSet<Bootcamps> Bootcamps { get; set; }
 
 
 

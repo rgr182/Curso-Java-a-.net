@@ -37,7 +37,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Technologies Service");
+                _logger.LogError(ex, "Some error happened on Bootcamp Candidates Service");
                 throw ex;
             }
         }
@@ -50,7 +50,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Member Service");
+                _logger.LogError(ex, "Some error happened on Bootcamp Candidates  Service");
                 throw ex;
             }
         }
