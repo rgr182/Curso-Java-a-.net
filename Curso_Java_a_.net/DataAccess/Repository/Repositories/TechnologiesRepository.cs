@@ -4,30 +4,33 @@ using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Data.Entity;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
-    public class TechnologieRepository : ITechnologiesRepository
+    public class TechnologiesRepository : ITechnologiesRepository
     {
         internal SchoolSystemContext _context;
-        public TechnologieRepository(SchoolSystemContext context)
+        public TechnologiesRepository(SchoolSystemContext context)
         {
             _context = context;
         }
+        public async Task<Technologies> GetTechnologyAsync(int technologyId) => 
+           await _context.Technologies
+           .Where(x => x.TechnologyId == technologyId)
+              .FirstOrDefaultAsync();
 
-        public Task<List<Technologies>> GetTechnologiesByName(string name)
-
-           => _context.Technologies.Where(x => x.Name.ToLower()
-              .Contains(name.ToLower())).ToListAsync();
-
-        public async Task<Technologies> PostTechnologiesAsync(TechnologyDTO name)
+        public async Task<List<Technologies>> GetTechnologiesAsync()
         {
-            var postTech = name.Map();
+            return await _context.Technologies.ToListAsync();
+        }
+        public async Task<Technologies> PostTechnologiesAsync(TechnologyDTO tech)
+        {
+            var postTech = tech.Map();
             await _context.Technologies.AddAsync(postTech);
             await _context.SaveChangesAsync();
             return postTech;
         }
-
         public async Task<Technologies> UpdateTechnologiesAsync(TechnologyDTO tech)
         {
             var techUpdated = tech.Map();
@@ -37,7 +40,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         }
         public async Task<Technologies> DeleteTechnologiesById(int technologyId)
         {
-
             Technologies tech = await _context.Technologies.FindAsync(technologyId);
             _context.Technologies.Remove(tech);
             _context.SaveChanges();

@@ -5,6 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Curso_Java_a_.net.DataAccess.DTO;
+using Curso_Java_a_.net.DataAccess.Repository.Context;
+using System.Data.Entity;
+using System.Diagnostics.Metrics;
+using Curso_Java_a_.net.DataAccess.DTO.DTOMapping;
 
 namespace Curso_Java_a_.net.Controllers
 {
@@ -13,27 +17,49 @@ namespace Curso_Java_a_.net.Controllers
     [Authorize]
     public class TechnologiesController : ControllerBase
     {
-        public readonly ITechnologiesService _iTechnologiesService;        
+        public readonly ITechnologiesService _iTechnologiesService;
         public ILogger<TechnologiesController> _logger;
+        internal SchoolSystemContext _context;
 
-        public TechnologiesController(ITechnologiesService ITechnologiesService, ILogger<TechnologiesController> logger)
+        public TechnologiesController(ITechnologiesService ITechnologiesService, ILogger<TechnologiesController> logger, SchoolSystemContext context)
         {
             _iTechnologiesService = ITechnologiesService;
             _logger = logger;
+            _context = context;
         }
 
         [HttpGet]
-        [Route("/GetTechnologiesByName")]
-        public async Task<ActionResult<Technologies>> GetTechnologiesByName(string Name)
+        [Route("/GetTechnology")]
+        public async Task<ActionResult<Technologies>> GetTechnologyAsync(int technologyId)
         {
             try
             {
-                var technologyName = await _iTechnologiesService.GetTechnologiesByNameAsync(Name);
-                if (technologyName == null)
+                var technology = await _iTechnologiesService.GetTechnologyAsync(technologyId);
+                if (technology == null)
                 {
                     return NoContent();
                 }
-                return Ok(technologyName);
+                return Ok(technology);
+            }
+            catch (Exception)
+            {
+                return Problem("Some error happened please contact Sys Admin");
+            }
+        }
+
+        [HttpGet]
+        [Route("/GetTechnologies")]
+        public async Task<ActionResult<List<Technologies>>> GetTechnologiesAsync()
+        {
+            try
+            {
+                var tech = await _context.Technologies.ToListAsync();
+
+                if (tech == null)
+                {
+                    return NoContent();
+                }
+                return Ok(tech);
             }
             catch (Exception)
             {
@@ -46,24 +72,29 @@ namespace Curso_Java_a_.net.Controllers
         public async Task<ActionResult<Members>> PostTechnology([FromBody] TechnologyDTO tech)
         {
             try
-            {                
-                await _iTechnologiesService.PostTechnologiesAsync(tech);
-                return Ok(tech);
-            }
-            catch (Exception)
             {
-                return Problem("Some error happened please contact Sys Admin");
+                var postTech = await _iTechnologiesService.PostTechnologiesAsync(tech);
+                return Ok(postTech);
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.ToLower().Contains("duplicate"))
+                    return BadRequest("Technology already exist");
+                else
+                    return Problem("Some error happened please contact Sys Admin");
             }
         }
 
         [HttpPut]
         [Route("/UpdateTechnology")]
-        public async Task<ActionResult<Technologies>> UpdateTechnology([FromBody] TechnologyDTO tech)
+        public async Task<ActionResult<Technologies>> UpdateTechnologiesAsync([FromBody] TechnologyDTO tech)
         {
             try
-            {                
-                await _iTechnologiesService.UpdateTechnologiesAsync(tech);
-                return Ok(tech);
+            {
+                var techUpdate = tech.Map();
+                _context.Technologies.Update(techUpdate);
+                await _context.SaveChangesAsync();
+                return techUpdate;
             }
             catch (Exception)
             {
@@ -73,11 +104,12 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpDelete]
         [Route("/DeleteTechnologyById")]
-        public async Task<ActionResult<Members>> DeleteTechnologyById(int techId)
+        public async Task<ActionResult<Technologies>> DeleteTechnologyById(int techId)
         {
             try
-            {                
+            {
                 await _iTechnologiesService.DeleteTechnologiesById(techId);
+
                 return Ok();
             }
             catch (Exception)

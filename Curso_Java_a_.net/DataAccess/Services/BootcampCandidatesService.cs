@@ -14,7 +14,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         readonly ILogger<BootcampCandidatesService> _logger;
         readonly IBootcampCandidatesRepository _BootcampCandidatesRepository;
         internal SchoolSystemContext _context;
-        
+
         public BootcampCandidatesService(IBootcampCandidatesRepository bootcampCandidatesRepository,
                               ILogger<BootcampCandidatesService> logger, SchoolSystemContext context)
         {
@@ -24,15 +24,33 @@ namespace Curso_Java_a_.net.DataAccess.Services
         }
 
 
-        public async Task<List<BootcampCandidates>> GetBootcampCandidate(int bootcampCandidateId)
+        public async Task<BootcampCandidates> GetBootcampCandidate(int bootcampCandidateId)
         {
             try
             {
-               return _context.BootcampCandidates.ToList();
-    }
+                BootcampCandidates bootcamper = await _BootcampCandidatesRepository.GetBootcampCandidate(bootcampCandidateId);
+                if (bootcamper == null)
+                {
+                    throw new UnauthorizedAccessException();
+                }
+                return bootcamper;
+            }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Member Service");
+                _logger.LogError(ex, "Some error happened on Bootcamp Candidates Service");
+                throw ex;
+            }
+        }
+
+        public async Task<List<BootcampCandidates>> GetBootcampCandidates()
+        {
+            try
+            {
+                return _context.BootcampCandidates.ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Some error happened on Bootcamp Candidates  Service");
                 throw ex;
             }
         }
@@ -41,10 +59,10 @@ namespace Curso_Java_a_.net.DataAccess.Services
             try
             {
                 BootcampCandidates bootcampCandidate = _context.BootcampCandidates.Find(bootcampCandidateId);
-                 _context.BootcampCandidates.Remove(bootcampCandidate);
-                 _context.SaveChanges();
+                _context.BootcampCandidates.Remove(bootcampCandidate);
+                _context.SaveChanges();
                 return bootcampCandidate;
-                
+
                 if (bootcampCandidate == null)
                 {
                     throw new UnauthorizedAccessException();
