@@ -22,7 +22,6 @@ namespace Curso_Java_a_.net.Controllers
         internal SchoolSystemContext _context;
 
         public ILogger<BootcampsController> _logger;
-
         public BootcampsController(IBootcampsService bootcampsService, ILogger<BootcampsController>
             logger, SchoolSystemContext context)
         {
@@ -38,8 +37,6 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var getBootcamp = await _bootcampsService.GetBootcamps(bootcampId);
-
-
                 if (getBootcamp == null)
                 {
                     return BadRequest("Bootcamp don´t exist");
@@ -50,7 +47,6 @@ namespace Curso_Java_a_.net.Controllers
             {
                 return Problem("Some error happened please contact Sys Admin");
             }
-
         }
 
         [HttpGet]
@@ -60,8 +56,6 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var getBootcamps = await _bootcampsService.GetBootcamps();
-
-
                 if (getBootcamps == null)
                 {
                     return BadRequest("Bootcamps don´t exist");
@@ -72,7 +66,6 @@ namespace Curso_Java_a_.net.Controllers
             {
                 return Problem("Some error happened please contact Sys Admin");
             }
-
         }
 
         [HttpPost]

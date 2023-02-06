@@ -70,6 +70,5 @@ namespace Curso_Java_a_.net.DataAccess.DTO.DTOMapping
                 CurrentLocationId = bootcamps.CurrentLocationId,
             };
         #endregion
-
     }
 }

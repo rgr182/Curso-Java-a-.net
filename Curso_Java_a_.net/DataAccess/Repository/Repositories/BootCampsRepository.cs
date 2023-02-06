@@ -49,6 +49,5 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context.SaveChanges();
             return deleteBootcamp;
         }
-        
     }
 }

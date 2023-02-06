@@ -60,8 +60,6 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var getBootcampCandidates = await _bootcampCandidatesService.GetBootcampCandidates();
-
-
                 if (getBootcampCandidates == null)
                 {
                     return BadRequest("User don´t exist");
@@ -72,7 +70,6 @@ namespace Curso_Java_a_.net.Controllers
             {
                 return Problem("Some error happened please contact Sys Admin");
             }
-
         }
 
         [HttpPost]

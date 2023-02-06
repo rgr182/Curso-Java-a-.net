@@ -44,7 +44,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         }
         public async Task<Technologies> DeleteTechnologiesById(int technologyId)
         {
-
             Technologies tech = await _context.Technologies.FindAsync(technologyId);
             _context.Technologies.Remove(tech);
             _context.SaveChanges();

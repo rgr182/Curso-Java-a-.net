@@ -17,7 +17,7 @@ namespace Curso_Java_a_.net.Controllers
     [Authorize]
     public class TechnologiesController : ControllerBase
     {
-        public readonly ITechnologiesService _iTechnologiesService;        
+        public readonly ITechnologiesService _iTechnologiesService;
         public ILogger<TechnologiesController> _logger;
         internal SchoolSystemContext _context;
 
@@ -67,15 +67,13 @@ namespace Curso_Java_a_.net.Controllers
             }
         }
 
-
-
         [HttpPost]
         [Route("/PostTechnology")]
         public async Task<ActionResult<Members>> PostTechnology([FromBody] TechnologyDTO tech)
         {
             try
-            {                
-                var postTech =  await _iTechnologiesService.PostTechnologiesAsync(tech);
+            {
+                var postTech = await _iTechnologiesService.PostTechnologiesAsync(tech);
                 return Ok(postTech);
             }
             catch (Exception ex)
@@ -92,7 +90,7 @@ namespace Curso_Java_a_.net.Controllers
         public async Task<ActionResult<Technologies>> UpdateTechnologiesAsync([FromBody] TechnologyDTO tech)
         {
             try
-            {                
+            {
                 var techUpdate = tech.Map();
                 _context.Technologies.Update(techUpdate);
                 await _context.SaveChangesAsync();
@@ -111,7 +109,7 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 await _iTechnologiesService.DeleteTechnologiesById(techId);
-               
+
                 return Ok();
             }
             catch (Exception)
