@@ -22,8 +22,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
             _logger = logger;
             _context = context;
         }
-
-
         public async Task<Bootcamps> GetBootcamps(int bootcampId)
         {
             try
@@ -41,7 +39,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw ex;
             }
         }
-
         public async Task<List<Bootcamps>> GetBootcamps()
         {
             try

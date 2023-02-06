@@ -15,7 +15,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         {
             _context = context;
         }
-
         public async Task<Technologies> GetTechnologyAsync(int technologyId) => 
            await _context.Technologies
            .Where(x => x.TechnologyId == technologyId)
@@ -25,8 +24,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         {
             return await _context.Technologies.ToListAsync();
         }
-        
-
         public async Task<Technologies> PostTechnologiesAsync(TechnologyDTO tech)
         {
             var postTech = tech.Map();
@@ -34,7 +31,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             await _context.SaveChangesAsync();
             return postTech;
         }
-
         public async Task<Technologies> UpdateTechnologiesAsync(TechnologyDTO tech)
         {
             var techUpdated = tech.Map();
