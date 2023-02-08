@@ -15,33 +15,33 @@ namespace Curso_Java_a_.net.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    public class BootcampsController : ControllerBase
+    public class ProjectsController : ControllerBase
     {
-        readonly IBootcampsService _bootcampsService;
+        readonly IProjectsService _ProjectsService;
 
         internal SchoolSystemContext _context;
 
-        public ILogger<BootcampsController> _logger;
-        public BootcampsController(IBootcampsService bootcampsService, ILogger<BootcampsController>
+        public ILogger<ProjectsController> _logger;
+        public ProjectsController(IProjectsService projectsService, ILogger<ProjectsController>
             logger, SchoolSystemContext context)
         {
-            _bootcampsService = bootcampsService;
+            _ProjectsService = projectsService;
             _logger = logger;
             _context = context;
         }
 
         [HttpGet]
-        [Route("/BootCamp")]
-        public async Task<ActionResult<Bootcamps>> GetBootcamps(int bootcampId)
+        [Route("/Project")]
+        public async Task<ActionResult<Projects>> GetProject(int projectId)
         {
             try
             {
-                var getBootcamp = await _bootcampsService.GetBootcamps(bootcampId);
-                if (getBootcamp == null)
+                var getProject = await _ProjectsService.GetProject(projectId);
+                if (getProject == null)
                 {
                     return BadRequest("Bootcamp don´t exist");
                 }
-                return Ok(getBootcamp);
+                return Ok(getProject);
             }
             catch (Exception)
             {
@@ -50,17 +50,17 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpGet]
-        [Route("/BootCamps")]
-        public async Task<ActionResult<List<Bootcamps>>> GetBootcamps()
+        [Route("/Projects")]
+        public async Task<ActionResult<List<Projects>>> GetProjects()
         {
             try
             {
-                var getBootcamps = await _bootcampsService.GetBootcamps();
-                if (getBootcamps == null)
+                var getProjects = await _ProjectsService.GetProjects();
+                if (getProjects == null)
                 {
                     return BadRequest("Bootcamps don´t exist");
                 }
-                return Ok(getBootcamps);
+                return Ok(getProjects);
             }
             catch (Exception)
             {
@@ -69,32 +69,34 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpPost]
-        [Route("/BootCamp")]
-        public async Task<ActionResult<Bootcamps>> PostBootcamps(BootcampsDTO name)
+        [Route("/Project")]
+        public async Task<ActionResult<Projects>> PostProject(ProjectsDTO name)
         {
             {
                 try
                 {
-                    var postBootcamp = await _bootcampsService.PostBootcamps(name);
-                    return Ok(postBootcamp);
+                    var postProjects = await _ProjectsService.PostProject(name);
+                    return Ok(postProjects);
                 }
                 catch (Exception ex)
                 {
                     if (ex.Message.ToLower().Contains("duplicate"))
-                        return BadRequest("Bootcamps already exist");
+                        return BadRequest("Project already exist");
                     else
                         return Problem("Some error happened please contact Sys Admin");
                 }
             }
         }
         [HttpPut]
-        [Route("/BootCamp")]
-        public async Task<ActionResult<Bootcamps>> UpdateBootcamps(BootcampsDTO name)
+        [Route("/Project")]
+        public async Task<ActionResult<Projects>> UpdateProject(ProjectsDTO name)
         {
             try
             {
-                var updatedBootcamp = await _bootcampsService.UpdateBootcamps(name);
-                return updatedBootcamp;
+                Projects updateProject = name.Map();
+                await _context.Projects.AddAsync(updateProject);
+                await _context.SaveChangesAsync();
+                return updateProject;
             }
             catch (Exception)
             {
@@ -103,19 +105,21 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpDelete]
-        [Route("/BootCamp")]
+        [Route("/Project")]
         [AllowAnonymous]
-        public async Task<ActionResult<Bootcamps>> DeleteBootcamps(int bootcampId)
+        public async Task<ActionResult<Projects>> DeleteProject(int projectId)
         {
             try
             {
-                Bootcamps bootcamp = await _bootcampsService.DeleteBootcamps(bootcampId);
-                return bootcamp;
-                if (bootcamp == null)
+                Projects projects = _context.Projects.Find(projectId);
+                _context.Projects.Remove(projects);
+                _context.SaveChanges();
+                return projects;
+                if (projects == null)
                 {
-                    return BadRequest("Bootcamps don´t exist");
+                    return BadRequest("projects don´t exist");
                 }
-                return Ok(bootcamp);
+                return Ok(projects);
             }
             catch (Exception)
             {

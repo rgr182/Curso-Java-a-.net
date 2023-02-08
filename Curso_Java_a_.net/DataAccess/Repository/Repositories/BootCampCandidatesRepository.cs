@@ -15,10 +15,12 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         {
             _context = context;
         }
+
         public async Task<List<BootcampCandidates>> GetBootcampCandidates()
         {
             return await _context.BootcampCandidates.ToListAsync();
         }
+
         public async Task<BootcampCandidates> GetBootcampCandidate(int bootcampCandidateId) =>
 
             await _context.BootcampCandidates
@@ -32,6 +34,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             await _context.SaveChangesAsync();
             return postBootcampCandidate;
         }
+
         public async Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidatesDTO name)
         {
             var updatedBootcampCandidate = name.Map();

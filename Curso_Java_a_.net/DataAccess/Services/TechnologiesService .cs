@@ -57,9 +57,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                Technologies tech = await _context.Technologies.FindAsync(technologyId);
-                _context.Technologies.Remove(tech);
-                _context.SaveChanges();
+                Technologies tech = await _TechnologiesRepository.DeleteTechnologiesById(technologyId);
                 return;
             }
             catch (Exception ex)
@@ -73,10 +71,8 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                var techUpdated = name.Map();
-                _context.Technologies.Update(techUpdated);
-                await _context.SaveChangesAsync();
-                return techUpdated;
+                Technologies tech = await _TechnologiesRepository.UpdateTechnologiesAsync(name);
+                return tech;
             }
             catch (Exception ex)
             {
@@ -85,17 +81,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-          
-
-
         public async Task<Technologies> PostTechnologiesAsync(TechnologyDTO name) 
         {
             try
             {
-                var postTech = name.Map();
-                await _context.Technologies.AddAsync(postTech);
-                await _context.SaveChangesAsync();
-                return postTech;
+                Technologies tech = await _TechnologiesRepository.PostTechnologiesAsync(name);
+                return tech;
             }
             catch (Exception ex)
             {

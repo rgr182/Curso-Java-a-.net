@@ -9,58 +9,62 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Curso_Java_a_.net.DataAccess.Services
 {
-    public class BootcampsService : IBootcampsService
+    public class ProjectsService : IProjectsService
     {
-        readonly ILogger<BootcampsService> _logger;
-        readonly IBootcampsRepository _BootcampsRepository;
-        public BootcampsService(IBootcampsRepository bootcampsRepository,
-                              ILogger<BootcampsService> logger)
-        {
-            _BootcampsRepository = bootcampsRepository;
-            _logger = logger;
-        }
-        public async Task<Bootcamps> GetBootcamps(int bootcampId)
-        {
-            try
-            {
-                Bootcamps bootcamp = await _BootcampsRepository.GetBootcamps(bootcampId);
-                if (bootcamp == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
-                return bootcamp;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Some error happened on Bootcamps Service");
-                throw ex;
-            }
-        }
-        public async Task<List<Bootcamps>> GetBootcamps()
-        {
-            try
-            {
-                List<Bootcamps> bootcamp = await _BootcampsRepository.GetBootcamps();
-                return bootcamp;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Some error happened on Bootcamps Service");
-                throw ex;
-            }
-        }
-        public async Task<Bootcamps> DeleteBootcamps(int bootcampId)
-        {
-            try
-            {
-                Bootcamps bootcamp = await _BootcampsRepository.DeleteBootcamps(bootcampId);
-                return bootcamp;
+        readonly ILogger<ProjectsService> _logger;
+        readonly IProjectsRepository _ProjectsRepository;
+        internal SchoolSystemContext _context;
 
-                if (bootcamp == null)
+        public ProjectsService(IProjectsRepository projectsRepository,
+                              ILogger<ProjectsService> logger, SchoolSystemContext context)
+        {
+            _ProjectsRepository = projectsRepository;
+            _logger = logger;
+            _context = context;
+        }
+        public async Task<Projects> GetProject(int projectId)
+        {
+            try
+            {
+                Projects getProject = await _ProjectsRepository.GetProject(projectId);
+                if (getProject == null)
                 {
                     throw new UnauthorizedAccessException();
                 }
-                return bootcamp;
+                return getProject;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Some error happened on Projects Service");
+                throw ex;
+            }
+        }
+        public async Task<List<Projects>> GetProjects()
+        {
+            try
+            {
+                return _context.Projects.ToList();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Some error happened on Bootcamps Service");
+                throw ex;
+            }
+        }
+        public async Task<Projects> DeleteProject(int projectId)
+        {
+            try
+            {
+                Projects project = _context.Projects.Find(projectId);
+                _context.Projects.Remove(project);
+                _context.SaveChanges();
+                return project;
+
+                if (project == null)
+                {
+                    throw new UnauthorizedAccessException();
+                }
+                return project;
             }
             catch (Exception ex)
             {
@@ -69,12 +73,14 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<Bootcamps> PostBootcamps(BootcampsDTO name)
+        public async Task<Projects> PostProject(ProjectsDTO name)
         {
             try
             {
-                var postBootcamp = await _BootcampsRepository.PostBootcamps(name);
-                return postBootcamp;
+                var postProject = name.Map();
+                await _context.Projects.AddAsync(postProject);
+                await _context.SaveChangesAsync();
+                return postProject;
             }
             catch (Exception ex)
             {
@@ -83,12 +89,14 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<Bootcamps> UpdateBootcamps(BootcampsDTO name)
+        public async Task<Projects> UpdateProject(ProjectsDTO name)
         {
             try
             {
-                var updatedBootcamp = await _BootcampsRepository.UpdateBootcamps(name);
-                return updatedBootcamp;
+                var updatedProject = name.Map();
+                await _context.Projects.AddAsync(updatedProject);
+                await _context.SaveChangesAsync();
+                return updatedProject;
             }
             catch (Exception ex)
             {
