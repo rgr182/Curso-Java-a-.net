@@ -6,6 +6,7 @@ using Curso_Java_a_.net.DataAccess.Repository.Repositories;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace Curso_Java_a_.net.DataAccess.Services
 {
@@ -13,14 +14,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
     {
         readonly ILogger<BootcampCandidatesService> _logger;
         readonly IBootcampCandidatesRepository _BootcampCandidatesRepository;
-        internal SchoolSystemContext _context;
 
         public BootcampCandidatesService(IBootcampCandidatesRepository bootcampCandidatesRepository,
-                              ILogger<BootcampCandidatesService> logger, SchoolSystemContext context)
+                              ILogger<BootcampCandidatesService> logger)
         {
             _BootcampCandidatesRepository = bootcampCandidatesRepository;
             _logger = logger;
-            _context = context;
         }
 
 
@@ -46,7 +45,8 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                return _context.BootcampCandidates.ToList();
+                List<BootcampCandidates> grades = await _BootcampCandidatesRepository.GetBootcampCandidates();
+                return grades;
             }
             catch (Exception ex)
             {
@@ -58,9 +58,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                BootcampCandidates bootcampCandidate = _context.BootcampCandidates.Find(bootcampCandidateId);
-                _context.BootcampCandidates.Remove(bootcampCandidate);
-                _context.SaveChanges();
+                BootcampCandidates bootcampCandidate = await _BootcampCandidatesRepository.DeleteBootcampCandidate(bootcampCandidateId);
                 return bootcampCandidate;
 
                 if (bootcampCandidate == null)
@@ -80,10 +78,8 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                var postBootcampCandidate = name.Map();
-                await _context.BootcampCandidates.AddAsync(postBootcampCandidate);
-                await _context.SaveChangesAsync();
-                return postBootcampCandidate;
+                BootcampCandidates bootcampCandidate = await _BootcampCandidatesRepository.PostBootcampCandidate(name);
+                return bootcampCandidate;
             }
             catch (Exception ex)
             {
@@ -96,10 +92,8 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                var updatedBootcampCandidate = name.Map();
-                await _context.BootcampCandidates.AddAsync(updatedBootcampCandidate);
-                await _context.SaveChangesAsync();
-                return updatedBootcampCandidate;
+                BootcampCandidates bootcampCandidate = await _BootcampCandidatesRepository.UpdateBootcampCandidate(name);
+                return bootcampCandidate;
             }
             catch (Exception ex)
             {

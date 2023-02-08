@@ -24,6 +24,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Context
         public DbSet<Technologies> Technologies { get; set; }
         public DbSet<BootcampCandidates> BootcampCandidates { get; set; }
         public DbSet<Bootcamps> Bootcamps { get; set; }
+        public DbSet<Projects> Projects { get; set; }
 
 
 
