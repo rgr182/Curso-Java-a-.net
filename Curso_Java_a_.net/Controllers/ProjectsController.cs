@@ -31,7 +31,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpGet]
-        [Route("/Projects")]
+        [Route("/Project")]
         public async Task<ActionResult<Projects>> GetProject(int projectId)
         {
             try
@@ -69,7 +69,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpPost]
-        [Route("/Projects")]
+        [Route("/Project")]
         public async Task<ActionResult<Projects>> PostProject(ProjectsDTO name)
         {
             {
@@ -88,7 +88,7 @@ namespace Curso_Java_a_.net.Controllers
             }
         }
         [HttpPut]
-        [Route("/Projects")]
+        [Route("/Project")]
         public async Task<ActionResult<Projects>> UpdateProject(ProjectsDTO name)
         {
             try
@@ -105,7 +105,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpDelete]
-        [Route("/Projects")]
+        [Route("/Project")]
         [AllowAnonymous]
         public async Task<ActionResult<Projects>> DeleteProject(int projectId)
         {

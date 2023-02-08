@@ -13,14 +13,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
     {
         readonly ILogger<BootcampsService> _logger;
         readonly IBootcampsRepository _BootcampsRepository;
-        internal SchoolSystemContext _context;
-
         public BootcampsService(IBootcampsRepository bootcampsRepository,
-                              ILogger<BootcampsService> logger, SchoolSystemContext context)
+                              ILogger<BootcampsService> logger)
         {
             _BootcampsRepository = bootcampsRepository;
             _logger = logger;
-            _context = context;
         }
         public async Task<Bootcamps> GetBootcamps(int bootcampId)
         {
@@ -43,7 +40,8 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                return _context.Bootcamps.ToList();
+                List<Bootcamps> bootcamp = await _BootcampsRepository.GetBootcamps();
+                return bootcamp;
             }
             catch (Exception ex)
             {
@@ -55,9 +53,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                Bootcamps bootcamp = _context.Bootcamps.Find(bootcampId);
-                _context.Bootcamps.Remove(bootcamp);
-                _context.SaveChanges();
+                Bootcamps bootcamp = await _BootcampsRepository.DeleteBootcamps(bootcampId);
                 return bootcamp;
 
                 if (bootcamp == null)
@@ -77,9 +73,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                var postBootcamp = name.Map();
-                await _context.Bootcamps.AddAsync(postBootcamp);
-                await _context.SaveChangesAsync();
+                var postBootcamp = await _BootcampsRepository.PostBootcamps(name);
                 return postBootcamp;
             }
             catch (Exception ex)
@@ -93,9 +87,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                var updatedBootcamp = name.Map();
-                await _context.Bootcamps.AddAsync(updatedBootcamp);
-                await _context.SaveChangesAsync();
+                var updatedBootcamp = await _BootcampsRepository.UpdateBootcamps(name);
                 return updatedBootcamp;
             }
             catch (Exception ex)

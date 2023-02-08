@@ -91,9 +91,7 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                var memberUpdated = member.Map();
-                _context.Members.Update(memberUpdated);
-                await _context.SaveChangesAsync();
+                var memberUpdated = await _memberService.UpdateMembers(member);
                 return memberUpdated;
             }
             catch (Exception)
