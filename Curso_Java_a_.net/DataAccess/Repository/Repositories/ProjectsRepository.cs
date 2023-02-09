@@ -4,7 +4,6 @@ using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System.Data.Entity;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
@@ -37,7 +36,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<Projects> UpdateProject(ProjectsDTO name)
         { 
             var updatedProject = name.Map();
-            await _context.Projects.AddAsync(updatedProject);
+            _context.Projects.Update(updatedProject);
             await _context.SaveChangesAsync();
             return updatedProject;
         }

@@ -35,10 +35,9 @@ namespace Curso_Java_a_.net.Controllers
             {
                 var getBootcampCandidate = await _bootcampCandidatesService.GetBootcampCandidate(bootcampCandidateId);
 
-
                 if (getBootcampCandidate == null)
                 {
-                    return BadRequest("User don´t exist");
+                    return NoContent();
                 }
                 return Ok(getBootcampCandidate);
             }
@@ -94,7 +93,7 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var updatedBootcampCandidate = _bootcampCandidatesService.UpdateBootcampCandidate(name);
-                return Ok();
+                return Ok(updatedBootcampCandidate);
             }
             catch (Exception)
             {

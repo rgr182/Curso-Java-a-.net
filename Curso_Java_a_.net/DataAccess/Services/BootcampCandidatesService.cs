@@ -28,10 +28,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             try
             {
                 BootcampCandidates bootcamper = await _BootcampCandidatesRepository.GetBootcampCandidate(bootcampCandidateId);
-                if (bootcamper == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
+
                 return bootcamper;
             }
             catch (Exception ex)

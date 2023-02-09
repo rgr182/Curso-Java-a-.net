@@ -6,6 +6,7 @@ using Curso_Java_a_.net.DataAccess.Services;
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.Metrics;
 using HttpGetAttribute = Microsoft.AspNetCore.Mvc.HttpGetAttribute;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
@@ -39,7 +40,7 @@ namespace Curso_Java_a_.net.Controllers
                 var getProject = await _ProjectsService.GetProject(projectId);
                 if (getProject == null)
                 {
-                    return BadRequest("Bootcamp don´t exist");
+                    return NoContent();
                 }
                 return Ok(getProject);
             }
@@ -70,12 +71,12 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPost]
         [Route("/Project")]
-        public async Task<ActionResult<Projects>> PostProject(ProjectsDTO name)
+        public async Task<ActionResult<Projects>> PostProject(ProjectsDTO project)
         {
             {
                 try
                 {
-                    var postProjects = await _ProjectsService.PostProject(name);
+                    var postProjects = await _ProjectsService.PostProject(project);
                     return Ok(postProjects);
                 }
                 catch (Exception ex)
@@ -89,21 +90,19 @@ namespace Curso_Java_a_.net.Controllers
         }
         [HttpPut]
         [Route("/Project")]
-        public async Task<ActionResult<Projects>> UpdateProject(ProjectsDTO name)
+        public async Task<ActionResult<Projects>> UpdateProject(ProjectsDTO project)
         {
             try
             {
-                Projects updateProject = name.Map();
-                await _context.Projects.AddAsync(updateProject);
-                await _context.SaveChangesAsync();
-                return updateProject;
+                var projectUpdated = await _ProjectsService.UpdateProject(project);
+                return projectUpdated;
             }
             catch (Exception)
             {
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
-
+        
         [HttpDelete]
         [Route("/Project")]
         [AllowAnonymous]
@@ -111,15 +110,12 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                Projects projects = _context.Projects.Find(projectId);
-                _context.Projects.Remove(projects);
-                _context.SaveChanges();
-                return projects;
-                if (projects == null)
+                var projectDeleted = await _ProjectsService.DeleteProject(projectId);
+                if (projectDeleted == null)
                 {
                     return BadRequest("projects don´t exist");
                 }
-                return Ok(projects);
+                return Ok(projectDeleted);
             }
             catch (Exception)
             {

@@ -88,7 +88,7 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var gradeUpdate = _gradesService.UpdateGradesAsync(memberId);
-                return memberId;
+                return Ok(memberId);
             }
             catch (Exception)
             {
@@ -106,7 +106,7 @@ namespace Curso_Java_a_.net.Controllers
                 var gradeUpdate = _gradesService.DeleteGrades(memberId);
                 if (memberId == null)
                 {
-                    return BadRequest("User don´t exist");
+                    return BadRequest("User donÂ´t exist");
                 }
                 return Ok(memberId);
             }

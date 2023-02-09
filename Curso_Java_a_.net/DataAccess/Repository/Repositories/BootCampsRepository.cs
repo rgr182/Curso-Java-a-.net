@@ -4,7 +4,6 @@ using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System.Data.Entity;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
@@ -29,7 +28,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<Bootcamps> PostBootcamps(BootcampsDTO name)
         {
             var postBootcamp = name.Map();
-            await _context.Bootcamps.AddAsync(postBootcamp);
+            _context.Bootcamps.Update(postBootcamp);
             await _context.SaveChangesAsync();
             return postBootcamp;
         }
@@ -37,7 +36,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<Bootcamps> UpdateBootcamps(BootcampsDTO name)
         { 
             var updatedBootcamp = name.Map();
-            await _context.Bootcamps.AddAsync(updatedBootcamp);
+            _context.Bootcamps.Update(updatedBootcamp);
             await _context.SaveChangesAsync();
             return updatedBootcamp;
         }

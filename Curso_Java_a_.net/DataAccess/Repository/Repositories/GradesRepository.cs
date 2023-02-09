@@ -1,8 +1,9 @@
+using Curso_Java_a_.net.DataAccess.DTO;
+using Curso_Java_a_.net.DataAccess.DTO.DTOMapping;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
@@ -36,7 +37,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<Grades> UpdateGradesAsync(Grades memberId)
         {
             Grades grades = _context.Grades.Find(memberId);
-            _context.Grades.Remove(grades);
+            _context.Grades.Update(grades);
             _context.SaveChanges();
             return grades;
         }

@@ -15,9 +15,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Context
             : base(options) 
         {
         }
-        
-        public DbSet<Subjects> Subjects { get; set; }
-        public DbSet<UsersSubjects> UsersSubjects { get; set; }
         public DbSet<Sessions> Sessions { get; set; }
         public DbSet<Grades> Grades { get; set; }
         public DbSet<Members> Members { get; set; }

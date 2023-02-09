@@ -4,7 +4,6 @@ using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System.Data.Entity;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
@@ -21,9 +20,8 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             return await _context.BootcampCandidates.ToListAsync();
         }
 
-        public async Task<BootcampCandidates> GetBootcampCandidate(int bootcampCandidateId) =>
-
-            await _context.BootcampCandidates
+        public Task<BootcampCandidates> GetBootcampCandidate(int bootcampCandidateId) =>
+            _context.BootcampCandidates
            .Where(x => x.BootcampCandidateId == bootcampCandidateId)
               .FirstOrDefaultAsync();
 
@@ -38,7 +36,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidatesDTO name)
         {
             var updatedBootcampCandidate = name.Map();
-            await _context.BootcampCandidates.AddAsync(updatedBootcampCandidate);
+            _context.BootcampCandidates.Update(updatedBootcampCandidate);
             await _context.SaveChangesAsync();
             return updatedBootcampCandidate;
         }
