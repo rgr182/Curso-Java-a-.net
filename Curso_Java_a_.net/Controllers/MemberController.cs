@@ -31,7 +31,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpGet]
-        [Route("/GetMember")]
+        [Route("/Member")]
         public async Task<ActionResult<Members>> GetMember(int id)
         {
             try
@@ -49,7 +49,7 @@ namespace Curso_Java_a_.net.Controllers
             }
         }
         [HttpGet]
-        [Route("/GetMembers")]
+        [Route("/Members")]
         public async Task<ActionResult<List<Members>>> GetMembers()
         {
             try
@@ -68,7 +68,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpPost]
-        [Route("/PostMember")]
+        [Route("/Member")]
         public async Task<ActionResult<Members>> PostMembers([FromBody] MemberDTO m)
         {
             try
@@ -86,14 +86,12 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpPut]
-        [Route("/PutMember")]
+        [Route("/Member")]
         public async Task<ActionResult<Members>> UpdateMembers([FromBody] MemberDTO member)
         {
             try
             {
-                var memberUpdated = member.Map();
-                _context.Members.Update(memberUpdated);
-                await _context.SaveChangesAsync();
+                var memberUpdated = await _memberService.UpdateMembers(member);
                 return memberUpdated;
             }
             catch (Exception)
@@ -103,7 +101,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpDelete]
-        [Route("/DeleteMember")]
+        [Route("/Member")]
         [AllowAnonymous]
         public async Task<ActionResult<Members>> DeleteMembers(int memberId)
         {

@@ -4,7 +4,6 @@ using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System.Data.Entity;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {

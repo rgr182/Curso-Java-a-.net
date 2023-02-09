@@ -53,7 +53,7 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                var tech = await _context.Technologies.ToListAsync();
+                var tech = await _iTechnologiesService.GetTechnologiesAsync();
 
                 if (tech == null)
                 {
@@ -91,10 +91,8 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                var techUpdate = tech.Map();
-                _context.Technologies.Update(techUpdate);
-                await _context.SaveChangesAsync();
-                return techUpdate;
+                await _iTechnologiesService.UpdateTechnologiesAsync(tech);
+                return Ok();
             }
             catch (Exception)
             {

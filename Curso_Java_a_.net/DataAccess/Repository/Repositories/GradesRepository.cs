@@ -1,3 +1,5 @@
+using Curso_Java_a_.net.DataAccess.DTO;
+using Curso_Java_a_.net.DataAccess.DTO.DTOMapping;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
@@ -8,34 +10,36 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
     public class GradesRepository : IGradesRepository
     {
         internal SchoolSystemContext _context;
-        public GradesRepository(SchoolSystemContext context)     {
+        public GradesRepository(SchoolSystemContext context)
+        {
             _context = context;
         }
-
-        public void DeleteGrades(int id)
+        public async Task<Grades> DeleteGrades(int memberId)
         {
-            throw new NotImplementedException();
+            Grades grades = _context.Grades.Find(memberId);
+            _context.Grades.Remove(grades);
+            _context.SaveChanges();
+            return grades;
         }
+        public Task<Grades> GetGrade(int memberId) =>
+                  _context.Grades
+                  .Where(g => g.MemberId == memberId)
+                       .FirstOrDefaultAsync();
+        public async Task<List<Grades>> GetGrades() =>
+            await _context.Grades.ToListAsync();
 
-        public Task<List<Grades>>GetGradesByMembersByIdAndPeriod(int MemberId, string Period)
+        public async Task<Grades> PostGradesAsync(Grades memberId)
         {
-           return  _context.Grades
-                  .Where(g => g.MemberId == MemberId &
-                       g.Period.ToLower() == Period.ToLower())
-                       .ToListAsync();
-        }
-
-        public async Task PostGradesAsync(Grades grade)
-        {
-            await _context.Grades.AddAsync(grade);
+            await _context.Grades.AddAsync(memberId);
             await _context.SaveChangesAsync();
+            return memberId;
         }
-
-        public async Task PutGradesAsync(Grades grade)
+        public async Task<Grades> UpdateGradesAsync(Grades memberId)
         {
-            _context.Grades.Attach(grade);
-            _context.Entry(grade).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            Grades grades = _context.Grades.Find(memberId);
+            _context.Grades.Update(grades);
+            _context.SaveChanges();
+            return grades;
         }
     }
 }

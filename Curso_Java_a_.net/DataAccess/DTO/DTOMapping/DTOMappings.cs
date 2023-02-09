@@ -70,5 +70,19 @@ namespace Curso_Java_a_.net.DataAccess.DTO.DTOMapping
                 CurrentLocationId = bootcamps.CurrentLocationId,
             };
         #endregion
+
+        #region ProjectsMapping
+
+        public static Projects Map(this ProjectsDTO projects) =>
+            new Projects
+            {
+                ProjectId = projects.ProjectId,
+                Name = projects.Name,
+                StartDate = projects.StartDate,
+                EndDate = projects.EndDate,
+                StatusId = projects.StatusId,
+                CurrentLocationId = projects.CurrentLocationId,
+            };
+        #endregion
     }
 }

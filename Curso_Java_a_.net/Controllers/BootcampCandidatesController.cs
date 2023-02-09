@@ -18,17 +18,13 @@ namespace Curso_Java_a_.net.Controllers
     public class BootcampCandidatesController : ControllerBase
     {
         readonly IBootcampCandidatesService _bootcampCandidatesService;
-
-        internal SchoolSystemContext _context;
-
         public ILogger<BootcampCandidatesController> _logger;
 
         public BootcampCandidatesController(IBootcampCandidatesService bootcampCandidatesService, ILogger<BootcampCandidatesController>
-            logger, SchoolSystemContext context)
+            logger)
         {
             _bootcampCandidatesService = bootcampCandidatesService;
             _logger = logger;
-            _context = context;
         }
 
         [HttpGet]
@@ -39,10 +35,9 @@ namespace Curso_Java_a_.net.Controllers
             {
                 var getBootcampCandidate = await _bootcampCandidatesService.GetBootcampCandidate(bootcampCandidateId);
 
-
                 if (getBootcampCandidate == null)
                 {
-                    return BadRequest("User don´t exist");
+                    return NoContent();
                 }
                 return Ok(getBootcampCandidate);
             }
@@ -97,10 +92,8 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                var updatedBootcampCandidate = name.Map();
-                await _context.BootcampCandidates.AddAsync(updatedBootcampCandidate);
-                await _context.SaveChangesAsync();
-                return updatedBootcampCandidate;
+                var updatedBootcampCandidate = _bootcampCandidatesService.UpdateBootcampCandidate(name);
+                return Ok(updatedBootcampCandidate);
             }
             catch (Exception)
             {
@@ -115,10 +108,8 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                BootcampCandidates bootcampCandidate = _context.BootcampCandidates.Find(bootcampCandidateId);
-                _context.BootcampCandidates.Remove(bootcampCandidate);
-                _context.SaveChanges();
-                return bootcampCandidate;
+                BootcampCandidates bootcampCandidate = await _bootcampCandidatesService.DeleteBootcampCandidate(bootcampCandidateId);
+                return Ok();
                 if (bootcampCandidate == null)
                 {
                     return BadRequest("User don´t exist");
