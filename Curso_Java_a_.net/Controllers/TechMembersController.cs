@@ -26,7 +26,6 @@ namespace Curso_Java_a_.net.Controllers
         {
             _TechMembersService = techMembersService;
             _logger = logger;
-        
         }
 
         [HttpGet]
