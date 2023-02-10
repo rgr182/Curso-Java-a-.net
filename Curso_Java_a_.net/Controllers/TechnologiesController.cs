@@ -19,13 +19,10 @@ namespace Curso_Java_a_.net.Controllers
     {
         public readonly ITechnologiesService _iTechnologiesService;
         public ILogger<TechnologiesController> _logger;
-        internal SchoolSystemContext _context;
-
         public TechnologiesController(ITechnologiesService ITechnologiesService, ILogger<TechnologiesController> logger, SchoolSystemContext context)
         {
             _iTechnologiesService = ITechnologiesService;
             _logger = logger;
-            _context = context;
         }
 
         [HttpGet]
@@ -102,11 +99,11 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpDelete]
         [Route("/DeleteTechnologyById")]
-        public async Task<ActionResult<Technologies>> DeleteTechnologyById(int techId)
+        public async Task<ActionResult<Technologies>> DeleteTechnologiesById(int technologyId)
         {
             try
             {
-                await _iTechnologiesService.DeleteTechnologiesById(techId);
+                await _iTechnologiesService.DeleteTechnologiesById(technologyId);
 
                 return Ok();
             }

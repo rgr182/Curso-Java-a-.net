@@ -91,9 +91,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                Members member = _context.Members.Find(MemberId);
-                 _context.Members.Remove(member);
-                 _context.SaveChanges();
+                Members member = await _membersRepository.DeleteMember(MemberId);
                 return member;
                 
                 if (member == null)
