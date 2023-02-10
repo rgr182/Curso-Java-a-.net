@@ -12,14 +12,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
     {
         readonly ILogger<MembersService> _logger;
         readonly IMemberRepository _membersRepository;
-        internal SchoolSystemContext _context;
-        
         public MembersService(IMemberRepository membersRepository,
-                              ILogger<MembersService> logger, SchoolSystemContext context)
+                              ILogger<MembersService> logger)
         {
             _membersRepository = membersRepository;
             _logger = logger;
-            _context = context;
         }      
         
         public async Task<Members> GetMemberByUserAndPassword(string usuario, string pass)

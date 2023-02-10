@@ -14,15 +14,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
     {
         readonly ILogger<BootcampCandidatesService> _logger;
         readonly IBootcampCandidatesRepository _BootcampCandidatesRepository;
-
         public BootcampCandidatesService(IBootcampCandidatesRepository bootcampCandidatesRepository,
                               ILogger<BootcampCandidatesService> logger)
         {
             _BootcampCandidatesRepository = bootcampCandidatesRepository;
             _logger = logger;
         }
-
-
         public async Task<BootcampCandidates> GetBootcampCandidate(int bootcampCandidateId)
         {
             try
@@ -71,12 +68,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<BootcampCandidates> PostBootcampCandidate(BootcampCandidatesDTO name)
+        public async Task<BootcampCandidates> PostBootcampCandidate(BootcampCandidates bootcampCandidateId)
         {
             try
             {
-                BootcampCandidates bootcampCandidate = await _BootcampCandidatesRepository.PostBootcampCandidate(name);
-                return bootcampCandidate;
+                await _BootcampCandidatesRepository.PostBootcampCandidate(bootcampCandidateId);
+                return bootcampCandidateId;
             }
             catch (Exception ex)
             {
@@ -85,12 +82,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidatesDTO name)
+        public async Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidates bootcampCandidateId)
         {
             try
             {
-                BootcampCandidates bootcampCandidate = await _BootcampCandidatesRepository.UpdateBootcampCandidate(name);
-                return bootcampCandidate;
+                await _BootcampCandidatesRepository.UpdateBootcampCandidate(bootcampCandidateId);
+                return bootcampCandidateId;
             }
             catch (Exception ex)
             {

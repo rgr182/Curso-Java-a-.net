@@ -43,7 +43,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 
         public async Task<Bootcamps> DeleteBootcamps(int bootcampId)
         {
-            Bootcamps deleteBootcamp = await _context.Bootcamps.FindAsync(bootcampId);
+            Bootcamps deleteBootcamp = _context.Bootcamps.Find(bootcampId);
             _context.Bootcamps.Remove(deleteBootcamp);
             _context.SaveChanges();
             return deleteBootcamp;

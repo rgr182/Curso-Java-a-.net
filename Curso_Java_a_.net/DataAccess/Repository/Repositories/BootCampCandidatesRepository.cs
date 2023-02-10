@@ -25,25 +25,24 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
            .Where(x => x.BootcampCandidateId == bootcampCandidateId)
               .FirstOrDefaultAsync();
 
-        public async Task<BootcampCandidates> PostBootcampCandidate(BootcampCandidatesDTO name)
+        public async Task<BootcampCandidates> PostBootcampCandidate(BootcampCandidates bootcampCandidateId)
         {
-            var postBootcampCandidate = name.Map();
-            await _context.BootcampCandidates.AddAsync(postBootcampCandidate);
+            await _context.BootcampCandidates.AddAsync(bootcampCandidateId);
             await _context.SaveChangesAsync();
-            return postBootcampCandidate;
+            return bootcampCandidateId;
         }
 
-        public async Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidatesDTO name)
+        public async Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidates bootcampCandidateId)
         {
-            var updatedBootcampCandidate = name.Map();
-            _context.BootcampCandidates.Update(updatedBootcampCandidate);
+            await _context.BootcampCandidates.FindAsync(bootcampCandidateId);
+            _context.BootcampCandidates.Update(bootcampCandidateId);
             await _context.SaveChangesAsync();
-            return updatedBootcampCandidate;
+            return bootcampCandidateId;
         }
 
         public async Task<BootcampCandidates> DeleteBootcampCandidate(int bootcampCandidateId)
         {
-            BootcampCandidates deleteBootcampCandidate = await _context.BootcampCandidates.FindAsync(bootcampCandidateId);
+            BootcampCandidates deleteBootcampCandidate = _context.BootcampCandidates.Find(bootcampCandidateId);
             _context.BootcampCandidates.Remove(deleteBootcampCandidate);
             _context.SaveChanges();
             return deleteBootcampCandidate;
