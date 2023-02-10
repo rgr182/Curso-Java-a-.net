@@ -19,7 +19,6 @@ namespace Curso_Java_a_.net.Controllers
     {
         readonly IBootcampCandidatesService _bootcampCandidatesService;
         public ILogger<BootcampCandidatesController> _logger;
-
         public BootcampCandidatesController(IBootcampCandidatesService bootcampCandidatesService, ILogger<BootcampCandidatesController>
             logger)
         {
@@ -69,13 +68,13 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPost]
         [Route("/BootCamper")]
-        public async Task<ActionResult<BootcampCandidates>> PostBootcampCandidate(BootcampCandidatesDTO name)
+        public async Task<ActionResult<BootcampCandidates>> PostBootcampCandidate(BootcampCandidates bootcampCandidateId)
         {
             {
                 try
                 {
-                    var postBootcampCandidate = await _bootcampCandidatesService.PostBootcampCandidate(name);
-                    return Ok(postBootcampCandidate);
+                    await _bootcampCandidatesService.PostBootcampCandidate(bootcampCandidateId);
+                    return Ok(bootcampCandidateId);
                 }
                 catch (Exception ex)
                 {
@@ -88,12 +87,12 @@ namespace Curso_Java_a_.net.Controllers
         }
         [HttpPut]
         [Route("/BootCamper")]
-        public async Task<ActionResult<BootcampCandidates>> UpdateBootcampCandidate(BootcampCandidatesDTO name)
+        public async Task<ActionResult<BootcampCandidates>> UpdateBootcampCandidate(BootcampCandidates bootcampCandidateId)
         {
             try
             {
-                var updatedBootcampCandidate = _bootcampCandidatesService.UpdateBootcampCandidate(name);
-                return Ok(updatedBootcampCandidate);
+                await _bootcampCandidatesService.UpdateBootcampCandidate(bootcampCandidateId);
+                return Ok(bootcampCandidateId);
             }
             catch (Exception)
             {
@@ -108,11 +107,11 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                BootcampCandidates bootcampCandidate = await _bootcampCandidatesService.DeleteBootcampCandidate(bootcampCandidateId);
+                var bootcampCandidate = _bootcampCandidatesService.DeleteBootcampCandidate(bootcampCandidateId);
                 return Ok();
                 if (bootcampCandidate == null)
                 {
-                    return BadRequest("User don´t exist");
+                    return BadRequest("BootcampCandidate don´t exist");
                 }
                 return Ok(bootcampCandidate);
             }

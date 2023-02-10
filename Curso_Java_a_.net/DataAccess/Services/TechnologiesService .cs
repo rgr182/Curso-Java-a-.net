@@ -12,13 +12,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
     {
         readonly ILogger<TechnologiesService> _logger;
         readonly ITechnologiesRepository _TechnologiesRepository;
-        internal SchoolSystemContext _context;
         public TechnologiesService(ITechnologiesRepository TechnologieRepository,
-            ILogger<TechnologiesService> logger, SchoolSystemContext context)
+            ILogger<TechnologiesService> logger)
         {
             _TechnologiesRepository = TechnologieRepository;
             _logger = logger;
-            _context = context;
         }
 
         public async Task<Technologies> GetTechnologyAsync(int technologyId)

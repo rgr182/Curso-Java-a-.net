@@ -6,30 +6,25 @@ using Curso_Java_a_.net.DataAccess.Repository.Repositories;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 
 namespace Curso_Java_a_.net.DataAccess.Services
 {
-    public class ProjectsService : IProjectsService
+    public class ProjectsMembersService : IProjectsMembersService
     {
-        readonly ILogger<ProjectsService> _logger;
-        readonly IProjectsRepository _ProjectsRepository;
-        public ProjectsService(IProjectsRepository projectsRepository,
-                              ILogger<ProjectsService> logger)
+        readonly ILogger<ProjectsMembersService> _logger;
+        readonly IProjectsMembersRepository _IProjectsMembersRepository;
+        public ProjectsMembersService(IProjectsMembersRepository projectsMembersRepository,
+                              ILogger<ProjectsMembersService> logger)
         {
-            _ProjectsRepository = projectsRepository;
+            _IProjectsMembersRepository = projectsMembersRepository;
             _logger = logger;
         }
-        public async Task<Projects> GetProject(int projectId)
+        public async Task<ProjectsMembers> GetProjectMemberAsync(int projectMemberId)
         {
             try
             {
-                Projects getProject = await _ProjectsRepository.GetProject(projectId);
-                if (getProject == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
-                return getProject;
+                ProjectsMembers projectsMember = await _IProjectsMembersRepository.GetProjectMemberAsync(projectMemberId);
+                return projectsMember;
             }
             catch (Exception ex)
             {
@@ -37,12 +32,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw ex;
             }
         }
-        public async Task<List<Projects>> GetProjects()
+        public async Task<List<ProjectsMembers>> GetProjectMembersAsync()
         {
             try
             {
-                List<Projects> project = await _ProjectsRepository.GetProjects();
-                return project;
+                return await _IProjectsMembersRepository.GetProjectMembersAsync();
             }
             catch (Exception ex)
             {
@@ -50,18 +44,17 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw ex;
             }
         }
-        public async Task<Projects> DeleteProject(int projectId)
+        public async Task<ProjectsMembers> DeleteProjectMemberId(int projectMemberId)
         {
             try
             {
-                Projects project = await _ProjectsRepository.DeleteProject(projectId);
-                return project;
+                ProjectsMembers projectsMember = await _IProjectsMembersRepository.DeleteProjectMemberId(projectMemberId);
 
-                if (project == null)
+                if (projectsMember == null)
                 {
                     throw new UnauthorizedAccessException();
                 }
-                return project;
+                return projectsMember;
             }
             catch (Exception ex)
             {
@@ -69,12 +62,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw ex;
             }
         }
-        public async Task<ProjectsDTO> PostProject(ProjectsDTO name)
+        public async Task<ProjectsMembers> PostProjectMemberAsync(ProjectsMembers projectMemberId)
         {
             try
             {
-                await _ProjectsRepository.PostProject(name);    
-                return name;
+                ProjectsMembers projectsMember = await _IProjectsMembersRepository.PostProjectMemberAsync(projectMemberId);
+                return projectsMember;
             }
             catch (Exception ex)
             {
@@ -82,12 +75,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw;
             }
         }
-        public async Task<ProjectsDTO> UpdateProject(ProjectsDTO name)
+        public async Task<ProjectsMembers> UpdateProjectMemberAsync(ProjectsMembers projectMemberId)
         {
             try
             {
-                await _ProjectsRepository.UpdateProject(name);
-                return name;
+                return await _IProjectsMembersRepository.UpdateProjectMemberAsync(projectMemberId);
             }
             catch (Exception ex)
             {

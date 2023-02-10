@@ -20,6 +20,7 @@ namespace Curso_Java_a_.net.Infraestructure
             builder.Services.AddScoped<IBootcampsService, BootcampsService>();
             builder.Services.AddScoped<IProjectsService, ProjectsService>();
             builder.Services.AddScoped<ITechMembersService, TechMembersService>();
+            builder.Services.AddScoped<IProjectsMembersService, ProjectsMembersService>();
             #endregion
 
             #region Repositories
@@ -31,6 +32,7 @@ namespace Curso_Java_a_.net.Infraestructure
             builder.Services.AddScoped<IBootcampsRepository, BootCampsRepository>();
             builder.Services.AddScoped<IProjectsRepository, ProjectsRepository>();
             builder.Services.AddScoped<ITechMembersRepository, TechMembersRepository>();
+            builder.Services.AddScoped<IProjectsMembersRepository, ProjectsMembersRepository>();
             #endregion
 
             #region Utils

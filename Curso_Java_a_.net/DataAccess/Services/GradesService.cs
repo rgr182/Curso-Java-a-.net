@@ -11,13 +11,10 @@ namespace Curso_Java_a_.net.DataAccess.Services
     {
         readonly ILogger<GradesService> _logger;
         readonly IGradesRepository _gradesRepository;
-        internal SchoolSystemContext _context;
-
-        public GradesService(IGradesRepository gradesRepository, ILogger<GradesService> logger, SchoolSystemContext context)
+        public GradesService(IGradesRepository gradesRepository, ILogger<GradesService> logger)
         {
             _gradesRepository = gradesRepository;
             _logger = logger;
-            _context = context;
         }
         public async Task<Grades> GetGrade(int memberId)
         {

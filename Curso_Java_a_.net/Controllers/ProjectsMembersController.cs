@@ -2,6 +2,7 @@ using Curso_Java_a_.net.DataAccess.DTO;
 using Curso_Java_a_.net.DataAccess.DTO.DTOMapping;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
+using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Curso_Java_a_.net.DataAccess.Services;
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -16,29 +17,28 @@ namespace Curso_Java_a_.net.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    public class ProjectsController : ControllerBase
+    public class ProjectsMembersController : ControllerBase
     {
-        readonly IProjectsService _ProjectsService;
-        public ILogger<ProjectsController> _logger;
-        public ProjectsController(IProjectsService projectsService, ILogger<ProjectsController>
+        readonly IProjectsMembersService _ProjectsMembersService;
+        public ILogger<ProjectsMembersController> _logger;
+        public ProjectsMembersController(IProjectsMembersService projectsMembersService, ILogger<ProjectsMembersController>
             logger)
         {
-            _ProjectsService = projectsService;
+            _ProjectsMembersService = projectsMembersService;
             _logger = logger;
         }
-
         [HttpGet]
-        [Route("/Project")]
-        public async Task<ActionResult<Projects>> GetProject(int projectId)
+        [Route("/ProjectMember")]
+        public async Task<ActionResult<ProjectsMembers>> GetProjectMemberAsync(int projectMemberId)
         {
             try
             {
-                var getProject = await _ProjectsService.GetProject(projectId);
-                if (getProject == null)
+                ProjectsMembers projectsMembers = await _ProjectsMembersService.GetProjectMemberAsync(projectMemberId);
+                if (projectsMembers == null)
                 {
                     return NoContent();
                 }
-                return Ok(getProject);
+                return Ok(projectsMembers);
             }
             catch (Exception)
             {
@@ -47,17 +47,17 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpGet]
-        [Route("/Projects")]
-        public async Task<ActionResult<List<Projects>>> GetProjects()
+        [Route("/ProjectsMembers")]
+        public async Task<ActionResult<List<ProjectsMembers>>> GetProjectMembersAsync()
         {
             try
             {
-                var getProjects = await _ProjectsService.GetProjects();
-                if (getProjects == null)
+                var projectsMembers = await _ProjectsMembersService.GetProjectMembersAsync();
+                if (projectsMembers == null)
                 {
                     return BadRequest("Bootcamps don´t exist");
                 }
-                return Ok(getProjects);
+                return Ok(projectsMembers);
             }
             catch (Exception)
             {
@@ -66,14 +66,14 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpPost]
-        [Route("/Project")]
-        public async Task<ActionResult<ProjectsDTO>> PostProject(ProjectsDTO name)
+        [Route("/ProjectMember")]
+        public async Task<ActionResult<ProjectsMembers>> PostProjectMemberAsync(ProjectsMembers projectMemberId)
         {
             {
                 try
                 {
-                    await _ProjectsService.PostProject(name);
-                    return Ok(name);
+                    ProjectsMembers projectsMembers = await _ProjectsMembersService.PostProjectMemberAsync(projectMemberId);
+                    return Ok(projectsMembers);
                 }
                 catch (Exception ex)
                 {
@@ -85,13 +85,13 @@ namespace Curso_Java_a_.net.Controllers
             }
         }
         [HttpPut]
-        [Route("/Project")]
-        public async Task<ActionResult<ProjectsDTO>> UpdateProject(ProjectsDTO name)
+        [Route("/ProjectMember")]
+        public async Task<ActionResult<ProjectsMembers>> UpdateProjectMemberAsync(ProjectsMembers projectMemberId)
         {
             try
             {
-                await _ProjectsService.UpdateProject(name);
-                return name;
+                ProjectsMembers projectsMembers = await _ProjectsMembersService.UpdateProjectMemberAsync(projectMemberId);
+                return projectsMembers;
             }
             catch (Exception)
             {
@@ -100,18 +100,18 @@ namespace Curso_Java_a_.net.Controllers
         }
         
         [HttpDelete]
-        [Route("/Project")]
+        [Route("/ProjectMember")]
         [AllowAnonymous]
-        public async Task<ActionResult<Projects>> DeleteProject(int projectId)
+        public async Task<ActionResult<ProjectsMembers>> DeleteProjectMemberId(int projectMemberId)
         {
             try
             {
-                var projectDeleted = await _ProjectsService.DeleteProject(projectId);
-                if (projectDeleted == null)
+                ProjectsMembers projectsMembers = await _ProjectsMembersService.DeleteProjectMemberId(projectMemberId);
+                if (projectsMembers == null)
                 {
                     return BadRequest("projects don´t exist");
                 }
-                return Ok(projectDeleted);
+                return Ok(projectsMembers);
             }
             catch (Exception)
             {
