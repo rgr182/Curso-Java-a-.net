@@ -68,7 +68,7 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpPost]
         [Route("/BootCamper")]
-        public async Task<ActionResult<BootcampCandidates>> PostBootcampCandidate(BootcampCandidates bootcampCandidateId)
+        public async Task<ActionResult<BootcampCandidates>> PostBootcampCandidate(BootcampCandidatesDTO bootcampCandidateId)
         {
             {
                 try
@@ -87,7 +87,7 @@ namespace Curso_Java_a_.net.Controllers
         }
         [HttpPut]
         [Route("/BootCamper")]
-        public async Task<ActionResult<BootcampCandidates>> UpdateBootcampCandidate(BootcampCandidates bootcampCandidateId)
+        public async Task<ActionResult<BootcampCandidatesDTO>> UpdateBootcampCandidate(BootcampCandidatesDTO bootcampCandidateId)
         {
             try
             {
@@ -102,12 +102,11 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpDelete]
         [Route("/BootCamper")]
-        [AllowAnonymous]
         public async Task<ActionResult<BootcampCandidates>> DeleteBootcampCandidate(int bootcampCandidateId)
         {
             try
             {
-                var bootcampCandidate = _bootcampCandidatesService.DeleteBootcampCandidate(bootcampCandidateId);
+                var bootcampCandidate = await _bootcampCandidatesService.DeleteBootcampCandidate(bootcampCandidateId);
                 return Ok();
                 if (bootcampCandidate == null)
                 {

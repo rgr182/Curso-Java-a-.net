@@ -68,12 +68,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<BootcampCandidates> PostBootcampCandidate(BootcampCandidates bootcampCandidateId)
+        public async Task<BootcampCandidates> PostBootcampCandidate(BootcampCandidatesDTO bootcampCandidateId)
         {
             try
             {
-                await _BootcampCandidatesRepository.PostBootcampCandidate(bootcampCandidateId);
-                return bootcampCandidateId;
+                var bootCampCandidate = await _BootcampCandidatesRepository.PostBootcampCandidate(bootcampCandidateId);
+                return bootCampCandidate;
             }
             catch (Exception ex)
             {
@@ -82,12 +82,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidates bootcampCandidateId)
+        public async Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidatesDTO bootcampCandidateId)
         {
             try
             {
-                await _BootcampCandidatesRepository.UpdateBootcampCandidate(bootcampCandidateId);
-                return bootcampCandidateId;
+                var bootCampCandidate = await _BootcampCandidatesRepository.UpdateBootcampCandidate(bootcampCandidateId);
+                return bootCampCandidate;
             }
             catch (Exception ex)
             {

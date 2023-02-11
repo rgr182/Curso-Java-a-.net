@@ -25,27 +25,28 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
            .Where(x => x.BootcampCandidateId == bootcampCandidateId)
               .FirstOrDefaultAsync();
 
-        public async Task<BootcampCandidates> PostBootcampCandidate(BootcampCandidates bootcampCandidateId)
+        public async Task<BootcampCandidates> PostBootcampCandidate(BootcampCandidatesDTO bootcampCandidateId)
         {
-            await _context.BootcampCandidates.AddAsync(bootcampCandidateId);
+            var bootcampCandidate = bootcampCandidateId.Map();
+            _context.BootcampCandidates.Add(bootcampCandidate);
             await _context.SaveChangesAsync();
-            return bootcampCandidateId;
+            return bootcampCandidate;
         }
 
-        public async Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidates bootcampCandidateId)
+        public async Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidatesDTO bootcampCandidateId)
         {
-            await _context.BootcampCandidates.FindAsync(bootcampCandidateId);
-            _context.BootcampCandidates.Update(bootcampCandidateId);
+            var bootcampCandidate = bootcampCandidateId.Map();
+            _context.BootcampCandidates.Update(bootcampCandidate);
             await _context.SaveChangesAsync();
-            return bootcampCandidateId;
+            return bootcampCandidate;
         }
 
         public async Task<BootcampCandidates> DeleteBootcampCandidate(int bootcampCandidateId)
         {
-            BootcampCandidates deleteBootcampCandidate = _context.BootcampCandidates.Find(bootcampCandidateId);
-            _context.BootcampCandidates.Remove(deleteBootcampCandidate);
+            BootcampCandidates bootcampCandidate = await _context.BootcampCandidates.FindAsync(bootcampCandidateId);
+            _context.BootcampCandidates.Remove(bootcampCandidate);
             _context.SaveChanges();
-            return deleteBootcampCandidate;
+            return bootcampCandidate;
         }
     }
 }
