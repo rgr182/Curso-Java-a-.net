@@ -96,7 +96,7 @@ namespace Curso_Java_a_.net.Controllers
                 {
                     return BadRequest("TechMember don´t exist");
                 }
-                return techMembers;
+                return Ok(techMembers);
             }
             catch (Exception)
             {

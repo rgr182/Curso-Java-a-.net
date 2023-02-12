@@ -73,8 +73,8 @@ namespace Curso_Java_a_.net.Controllers
             {
                 try
                 {
-                    await _bootcampCandidatesService.PostBootcampCandidate(bootcampCandidateId);
-                    return Ok(bootcampCandidateId);
+                    var bootcampCandidate= await _bootcampCandidatesService.PostBootcampCandidate(bootcampCandidateId);
+                    return Ok(bootcampCandidate);
                 }
                 catch (Exception ex)
                 {
@@ -96,7 +96,7 @@ namespace Curso_Java_a_.net.Controllers
                 {
                     return BadRequest("BootcampCandidate don´t exist");
                 }
-                return Ok(bootcampCandidateId);
+                return Ok(bootcampCandidate);
             }
             catch (Exception)
             {

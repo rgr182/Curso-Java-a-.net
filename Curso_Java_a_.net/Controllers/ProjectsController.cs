@@ -72,8 +72,8 @@ namespace Curso_Java_a_.net.Controllers
             {
                 try
                 {
-                    await _ProjectsService.PostProject(name);
-                    return Ok(name);
+                    var project =await _ProjectsService.PostProject(name);
+                    return Ok(project);
                 }
                 catch (Exception ex)
                 {

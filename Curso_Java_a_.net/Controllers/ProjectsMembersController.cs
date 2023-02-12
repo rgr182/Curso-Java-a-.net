@@ -95,7 +95,7 @@ namespace Curso_Java_a_.net.Controllers
                 {
                     return BadRequest("projects don´t exist");
                 }
-                return projectsMembers;
+                return Ok(projectsMembers);
             }
             catch (Exception)
             {

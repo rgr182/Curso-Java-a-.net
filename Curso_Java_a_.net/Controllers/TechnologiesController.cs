@@ -51,7 +51,6 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var tech = await _iTechnologiesService.GetTechnologiesAsync();
-
                 if (tech == null)
                 {
                     return NoContent();
@@ -88,8 +87,12 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                await _iTechnologiesService.UpdateTechnologiesAsync(tech);
-                return Ok();
+                var technology = await _iTechnologiesService.UpdateTechnologiesAsync(tech);
+                if (technology == null)
+                {
+                    return NoContent();
+                }
+                return Ok(technology);
             }
             catch (Exception)
             {
@@ -103,9 +106,12 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                await _iTechnologiesService.DeleteTechnologiesById(technologyId);
-
-                return Ok();
+                var technology = await _iTechnologiesService.DeleteTechnologiesById(technologyId);
+                if (technology == null)
+                {
+                    return NoContent();
+                }
+                return Ok(technology);
             }
             catch (Exception)
             {

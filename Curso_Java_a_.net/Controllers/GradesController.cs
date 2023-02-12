@@ -34,6 +34,10 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var grade = await _gradesService.GetGrade(memberId);
+                if (grade == null)
+                {
+                    return NoContent();
+                }
                 return Ok(grade);
             }
             catch (UnauthorizedAccessException)
@@ -52,6 +56,10 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var grades = await _gradesService.GetGrades();
+                if (grades == null)
+                {
+                    return NoContent();
+                }
                 return Ok(grades);
             }
             catch (UnauthorizedAccessException)
@@ -88,7 +96,11 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var gradeUpdate = _gradesService.UpdateGradesAsync(memberId);
-                return Ok(memberId);
+                if (gradeUpdate == null)
+                {
+                    return BadRequest("Grade don´t exist");
+                }
+                return Ok(gradeUpdate);
             }
             catch (Exception)
             {
@@ -104,11 +116,11 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var gradeUpdate = _gradesService.DeleteGrades(memberId);
-                if (memberId == null)
+                if (gradeUpdate == null)
                 {
-                    return BadRequest("User don´t exist");
+                    return BadRequest("Grade don´t exist");
                 }
-                return Ok(memberId);
+                return Ok(gradeUpdate);
             }
             catch (Exception)
             {

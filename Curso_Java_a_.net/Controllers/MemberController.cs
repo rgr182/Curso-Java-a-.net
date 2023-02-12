@@ -96,7 +96,7 @@ namespace Curso_Java_a_.net.Controllers
                 {
                     return BadRequest("Member not found");
                 }
-                return memberUpdated;
+                return Ok(memberUpdated);
             }
             catch (Exception)
             {
