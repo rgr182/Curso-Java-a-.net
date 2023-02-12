@@ -20,15 +20,15 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             return await _context.BootcampCandidates.ToListAsync();
         }
 
-        public Task<BootcampCandidates> GetBootcampCandidate(int bootcampCandidateId) =>
-            _context.BootcampCandidates
+        public async Task<BootcampCandidates> GetBootcampCandidate(int bootcampCandidateId) =>
+            await _context.BootcampCandidates
            .Where(x => x.BootcampCandidateId == bootcampCandidateId)
               .FirstOrDefaultAsync();
 
         public async Task<BootcampCandidates> PostBootcampCandidate(BootcampCandidatesDTO bootcampCandidateId)
         {
             var bootcampCandidate = bootcampCandidateId.Map();
-            _context.BootcampCandidates.Add(bootcampCandidate);
+            await _context.BootcampCandidates.AddAsync(bootcampCandidate);
             await _context.SaveChangesAsync();
             return bootcampCandidate;
         }
@@ -36,6 +36,11 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidatesDTO bootcampCandidateId)
         {
             var bootcampCandidate = bootcampCandidateId.Map();
+            var bootcampCandidateToUpdate = await _context.BootcampCandidates.FindAsync(bootcampCandidate.BootcampCandidateId);
+            if (bootcampCandidateToUpdate == null)
+            {
+                return null;
+            }
             _context.BootcampCandidates.Update(bootcampCandidate);
             await _context.SaveChangesAsync();
             return bootcampCandidate;
@@ -44,8 +49,12 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<BootcampCandidates> DeleteBootcampCandidate(int bootcampCandidateId)
         {
             BootcampCandidates bootcampCandidate = await _context.BootcampCandidates.FindAsync(bootcampCandidateId);
+            if (bootcampCandidate == null)
+            {
+                return null;
+            }
             _context.BootcampCandidates.Remove(bootcampCandidate);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return bootcampCandidate;
         }
     }

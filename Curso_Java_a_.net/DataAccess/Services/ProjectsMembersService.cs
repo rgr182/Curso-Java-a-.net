@@ -12,18 +12,18 @@ namespace Curso_Java_a_.net.DataAccess.Services
     public class ProjectsMembersService : IProjectsMembersService
     {
         readonly ILogger<ProjectsMembersService> _logger;
-        readonly IProjectsMembersRepository _IProjectsMembersRepository;
+        readonly IProjectsMembersRepository _projectsMembersRepository;
         public ProjectsMembersService(IProjectsMembersRepository projectsMembersRepository,
                               ILogger<ProjectsMembersService> logger)
         {
-            _IProjectsMembersRepository = projectsMembersRepository;
+            _projectsMembersRepository = projectsMembersRepository;
             _logger = logger;
         }
         public async Task<ProjectsMembers> GetProjectMemberAsync(int projectMemberId)
         {
             try
             {
-                ProjectsMembers projectsMember = await _IProjectsMembersRepository.GetProjectMemberAsync(projectMemberId);
+                ProjectsMembers projectsMember = await _projectsMembersRepository.GetProjectMemberAsync(projectMemberId);
                 return projectsMember;
             }
             catch (Exception ex)
@@ -36,11 +36,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                return await _IProjectsMembersRepository.GetProjectMembersAsync();
+                List<ProjectsMembers> projectsMembers= await _projectsMembersRepository.GetProjectMembersAsync();
+                return projectsMembers;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Bootcamps Service");
+                _logger.LogError(ex, "Some error happened on Projects Service");
                 throw ex;
             }
         }
@@ -48,17 +49,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                ProjectsMembers projectsMember = await _IProjectsMembersRepository.DeleteProjectMemberId(projectMemberId);
-
-                if (projectsMember == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
+                ProjectsMembers projectsMember = await _projectsMembersRepository.DeleteProjectMemberId(projectMemberId);
                 return projectsMember;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on bootcamps Service");
+                _logger.LogError(ex, "Some error happened on Projects Service");
                 throw ex;
             }
         }
@@ -66,12 +62,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                ProjectsMembers projectsMember = await _IProjectsMembersRepository.PostProjectMemberAsync(projectMemberId);
+                ProjectsMembers projectsMember = await _projectsMembersRepository.PostProjectMemberAsync(projectMemberId);
                 return projectsMember;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex, "Some error happened on Projects Service");
                 throw;
             }
         }
@@ -79,11 +75,12 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                return await _IProjectsMembersRepository.UpdateProjectMemberAsync(projectMemberId);
+                var projectMember = await _projectsMembersRepository.UpdateProjectMemberAsync(projectMemberId);
+                return projectMember;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex, "Some error happened on Projects Service");
                 throw;
             }
         }

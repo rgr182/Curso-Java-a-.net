@@ -12,13 +12,13 @@ namespace Curso_Java_a_.net.DataAccess.Services
     public class TechMembersService : ITechMembersService
     {
         readonly ILogger<TechMembersService> _logger;
-        readonly ITechMembersRepository _ITechMembersRepository;
+        readonly ITechMembersRepository _techMembersRepository;
         internal SchoolSystemContext _context;
 
         public TechMembersService(ITechMembersRepository techMembersRepository,
                               ILogger<TechMembersService> logger, SchoolSystemContext context)
         {
-            _ITechMembersRepository = techMembersRepository;
+            _techMembersRepository = techMembersRepository;
             _logger = logger;
             _context = context;
         }
@@ -26,7 +26,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                TechMembers techMember = await _ITechMembersRepository.GetTechMemberAsync(techMembersId);
+                TechMembers techMember = await _techMembersRepository.GetTechMemberAsync(techMembersId);
                 return techMember;
             }
             catch (Exception ex)
@@ -39,7 +39,8 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                return await _ITechMembersRepository.GetTechMembersAsync();
+                List<TechMembers> techMembers = await _techMembersRepository.GetTechMembersAsync();
+                return techMembers;
             }
             catch (Exception ex)
             {
@@ -51,12 +52,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                TechMembers techMembers = await _ITechMembersRepository.DeleteTechMemberById(techMembersId);
-
-                if (techMembers == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
+                TechMembers techMembers = await _techMembersRepository.DeleteTechMemberById(techMembersId);
                 return techMembers;
             }
             catch (Exception ex)
@@ -70,7 +66,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                TechMembers techMembers = await _ITechMembersRepository.PostTechMemberAsync(techMembersId);
+                TechMembers techMembers = await _techMembersRepository.PostTechMemberAsync(techMembersId);
                 return techMembers;
             }
             catch (Exception ex)
@@ -84,7 +80,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                return await _ITechMembersRepository.UpdateTechMemberAsync(techMembersId);
+                return await _techMembersRepository.UpdateTechMemberAsync(techMembersId);
             }
             catch (Exception ex)
             {

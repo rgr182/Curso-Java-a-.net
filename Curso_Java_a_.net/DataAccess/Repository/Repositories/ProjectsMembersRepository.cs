@@ -26,26 +26,34 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
            .Where(x => x.ProjectMemberId == projectMemberId)
               .FirstOrDefaultAsync();
 
-        public async Task<ProjectsMembers> PostProjectMemberAsync(ProjectsMembers projectMemberId)
+        public async Task<ProjectsMembers> PostProjectMemberAsync(ProjectsMembers projectMember)
         {
-            await _context.ProjectsMembers.AddAsync(projectMemberId);
-            _context.SaveChanges();
-            return projectMemberId;
+            await _context.ProjectsMembers.AddAsync(projectMember);
+            await _context.SaveChangesAsync();
+            return projectMember;
         }
 
-        public async Task<ProjectsMembers> UpdateProjectMemberAsync(ProjectsMembers projectMemberId)
+        public async Task<ProjectsMembers> UpdateProjectMemberAsync(ProjectsMembers projectMember)
         {
-            ProjectsMembers projectMembers = _context.ProjectsMembers.Find(projectMemberId);
+            ProjectsMembers projectMembers = await _context.ProjectsMembers.FindAsync(projectMember.ProjectMemberId);
+            if (projectMembers == null)
+            {
+                return null;
+            }
             _context.ProjectsMembers.Update(projectMembers);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return projectMembers;
         }
 
         public async Task<ProjectsMembers> DeleteProjectMemberId(int projectMemberId)
         {
             ProjectsMembers projectMembers = await _context.ProjectsMembers.FindAsync(projectMemberId);
+            if (projectMembers == null)
+            {
+                return null;
+            }
             _context.ProjectsMembers.Remove(projectMembers);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return projectMembers;
         }
     }

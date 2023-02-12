@@ -24,10 +24,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
             try
             {
                 Bootcamps bootcamp = await _BootcampsRepository.GetBootcamps(bootcampId);
-                if (bootcamp == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
                 return bootcamp;
             }
             catch (Exception ex)
@@ -55,12 +51,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
             {
                 Bootcamps bootcamp = await _BootcampsRepository.DeleteBootcamps(bootcampId);
                 return bootcamp;
-
-                if (bootcamp == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
-                return bootcamp;
             }
             catch (Exception ex)
             {
@@ -78,7 +68,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex, "Some error happened on Bootcamps Service");
                 throw;
             }
         }
@@ -92,7 +82,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex, "Some error happened on Bootcamps Service");
                 throw;
             }
         }

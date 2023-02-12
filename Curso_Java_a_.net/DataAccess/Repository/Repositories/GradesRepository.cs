@@ -14,31 +14,39 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         {
             _context = context;
         }
-        public async Task<Grades> DeleteGrades(int memberId)
+        public async Task<Grades> DeleteGrades(int gradeId)
         {
-            Grades grades = _context.Grades.Find(memberId);
-            _context.Grades.Remove(grades);
-            _context.SaveChanges();
+            Grades grades = await _context.Grades.FindAsync(gradeId);
+            if (grades == null)
+            {
+                return null;
+            }
+                _context.Grades.Remove(grades);
+            await _context.SaveChangesAsync();
             return grades;
         }
-        public Task<Grades> GetGrade(int memberId) =>
-                  _context.Grades
+        public async Task<Grades> GetGrade(int memberId) =>
+                  await _context.Grades
                   .Where(g => g.MemberId == memberId)
                        .FirstOrDefaultAsync();
         public async Task<List<Grades>> GetGrades() =>
             await _context.Grades.ToListAsync();
 
-        public async Task<Grades> PostGradesAsync(Grades memberId)
+        public async Task<Grades> PostGradesAsync(Grades grade)
         {
-            await _context.Grades.AddAsync(memberId);
+            await _context.Grades.AddAsync(grade);
             await _context.SaveChangesAsync();
-            return memberId;
+            return grade;
         }
-        public async Task<Grades> UpdateGradesAsync(Grades memberId)
+        public async Task<Grades> UpdateGradesAsync(Grades grade)
         {
-            Grades grades = _context.Grades.Find(memberId);
+            Grades grades = await _context.Grades.FindAsync(grade.GradesId);
+            if (grades == null)
+            {
+                return null;
+            }
             _context.Grades.Update(grades);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return grades;
         }
     }

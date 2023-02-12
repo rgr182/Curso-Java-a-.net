@@ -55,7 +55,7 @@ namespace Curso_Java_a_.net.Controllers
                 var getProjects = await _ProjectsService.GetProjects();
                 if (getProjects == null)
                 {
-                    return BadRequest("Bootcamps don´t exist");
+                    return NoContent();
                 }
                 return Ok(getProjects);
             }
@@ -86,12 +86,16 @@ namespace Curso_Java_a_.net.Controllers
         }
         [HttpPut]
         [Route("/Project")]
-        public async Task<ActionResult<ProjectsDTO>> UpdateProject(ProjectsDTO name)
+        public async Task<ActionResult<Projects>> UpdateProject(ProjectsDTO name)
         {
             try
             {
-                await _ProjectsService.UpdateProject(name);
-                return name;
+                var project = await _ProjectsService.UpdateProject(name);
+                if (project == null)
+                {
+                    return BadRequest("projects don´t exist");
+                }
+                return Ok(project);
             }
             catch (Exception)
             {

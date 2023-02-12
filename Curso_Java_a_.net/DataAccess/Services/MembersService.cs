@@ -33,35 +33,15 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error in MemberService");
+                _logger.LogError(ex, "Error in Member Service");
                 throw ex;
             }
         }
-        
-        public async Task<Members> SaveMembersAsync(Members member)
-        {
-            try
-            {
-               await _membersRepository.SaveMemberAsync(member);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Some error happened on Member Service");
-                throw ex;
-            }
-
-            return member;
-        }
-
         public async Task<Members> GetMember(int memberId)
         {
             try
             {
                 Members member = await _membersRepository.GetMember(memberId);
-                if (member == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
                 return member;
             }
             catch (Exception ex)
@@ -90,12 +70,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
             {
                 Members member = await _membersRepository.DeleteMember(MemberId);
                 return member;
-                
-                if (member == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
-                return member;
             }
             catch (Exception ex)
             {
@@ -113,7 +87,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex, "Some error happened on Member Service");
                 throw;
             }
         }
@@ -127,7 +101,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex.InnerException, "Some error happened on Member Service");
                 throw;
             }
         }

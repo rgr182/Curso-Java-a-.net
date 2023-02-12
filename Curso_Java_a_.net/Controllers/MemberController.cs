@@ -39,7 +39,7 @@ namespace Curso_Java_a_.net.Controllers
                 var memberD = await _memberService.GetMember(id);
                 if (memberD == null)
                 {
-                    return BadRequest("User don´t exist");
+                    return NoContent();
                 }
                 return Ok(memberD);
             }
@@ -92,6 +92,10 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var memberUpdated = await _memberService.UpdateMembers(member);
+                if (memberUpdated == null)
+                {
+                    return BadRequest("Member not found");
+                }
                 return memberUpdated;
             }
             catch (Exception)
@@ -110,7 +114,7 @@ namespace Curso_Java_a_.net.Controllers
                 var member = await _memberService.DeleteMembers(memberId);
                 if (member == null)
                 {
-                    return BadRequest("User don´t exist");
+                    return BadRequest("Member not found");
                 }
                 return Ok(member);
             }

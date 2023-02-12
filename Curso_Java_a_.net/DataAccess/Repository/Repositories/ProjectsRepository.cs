@@ -25,17 +25,22 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
            .Where(x => x.ProjectId == projectId)
               .FirstOrDefaultAsync();
 
-        public async Task<Projects> PostProject(ProjectsDTO name)
+        public async Task<Projects> PostProject(ProjectsDTO project)
         {
-            var postProject = name.Map();
+            var postProject = project.Map();
             await _context.Projects.AddAsync(postProject);
             await _context.SaveChangesAsync();
             return postProject;
         }
 
-        public async Task<Projects> UpdateProject(ProjectsDTO name)
+        public async Task<Projects> UpdateProject(ProjectsDTO project)
         { 
-            var updatedProject = name.Map();
+            var updatedProject = project.Map();
+            var projectToUpdate = await _context.Projects.FindAsync(updatedProject.ProjectId);
+            if (projectToUpdate == null)
+            {
+                return null;
+            }
             _context.Projects.Update(updatedProject);
             await _context.SaveChangesAsync();
             return updatedProject;
@@ -44,8 +49,12 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<Projects> DeleteProject(int projectId)
         {
             Projects deleteProject = await _context.Projects.FindAsync(projectId);
+            if (deleteProject == null)
+            {
+                return null;
+            }
             _context.Projects.Remove(deleteProject);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return deleteProject;
         }
     }

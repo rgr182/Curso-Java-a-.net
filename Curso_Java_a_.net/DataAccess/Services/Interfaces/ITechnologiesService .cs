@@ -9,6 +9,6 @@ namespace Curso_Java_a_.net.DataAccess.Services.Interfaces
         public Task<List<Technologies>> GetTechnologiesAsync();
         public Task<Technologies> PostTechnologiesAsync(TechnologyDTO name);
         public Task<Technologies> UpdateTechnologiesAsync(TechnologyDTO name);
-        public Task DeleteTechnologiesById(int technologyId);
+        public Task<Technologies> DeleteTechnologiesById(int technologyId);
     }
 }

@@ -15,13 +15,13 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context = context;
         }
 
-        public Task<Members> GetMember(int id) =>
-              _context.Members
+        public async Task<Members> GetMember(int id) =>
+              await _context.Members
                  .Where(x => x.MemberId == id)
                  .FirstOrDefaultAsync();
 
-        public Task<Members> GetMemberByUserAndPassword(string usuario, string pass) =>
-              _context.Members
+        public async Task<Members> GetMemberByUserAndPassword(string usuario, string pass) =>
+              await _context.Members
                 .Where(x => x.User == usuario && x.Password == pass)
                 .FirstOrDefaultAsync();
 
@@ -46,7 +46,12 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 
         public async Task<Members> UpdateMember(MemberDTO member)
         {
-            var memberUpdated = member.Map();         
+            var memberUpdated = member.Map();
+            var memberToUpdate = await _context.Members.FindAsync(member.MemberId);
+            if (memberToUpdate == null)
+            {
+                return null;
+            }
             _context.Members.Update(memberUpdated);
             await _context.SaveChangesAsync();
             return memberUpdated;
@@ -54,9 +59,13 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 
         public async Task<Members> DeleteMember(int memberId)
         {
-            Members member = _context.Members.Find(memberId);
+            Members member = await _context.Members.FindAsync(memberId);
+            if (member == null)
+            {
+                return null;
+            }
             _context.Members.Remove(member);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return member;
         }
     }

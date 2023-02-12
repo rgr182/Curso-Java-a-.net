@@ -55,7 +55,7 @@ namespace Curso_Java_a_.net.Controllers
                 var projectsMembers = await _ProjectsMembersService.GetProjectMembersAsync();
                 if (projectsMembers == null)
                 {
-                    return BadRequest("Bootcamps don´t exist");
+                    return NoContent();
                 }
                 return Ok(projectsMembers);
             }
@@ -78,7 +78,7 @@ namespace Curso_Java_a_.net.Controllers
                 catch (Exception ex)
                 {
                     if (ex.Message.ToLower().Contains("duplicate"))
-                        return BadRequest("Project already exist");
+                        return BadRequest("ProjectMember already exist");
                     else
                         return Problem("Some error happened please contact Sys Admin");
                 }
@@ -91,6 +91,10 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 ProjectsMembers projectsMembers = await _ProjectsMembersService.UpdateProjectMemberAsync(projectMemberId);
+                if (projectsMembers == null)
+                {
+                    return BadRequest("projects don´t exist");
+                }
                 return projectsMembers;
             }
             catch (Exception)

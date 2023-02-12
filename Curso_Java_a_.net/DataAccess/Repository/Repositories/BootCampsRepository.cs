@@ -28,7 +28,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<Bootcamps> PostBootcamps(BootcampsDTO name)
         {
             var postBootcamp = name.Map();
-            _context.Bootcamps.Update(postBootcamp);
+            await _context.Bootcamps.AddAsync(postBootcamp);
             await _context.SaveChangesAsync();
             return postBootcamp;
         }
@@ -36,6 +36,11 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<Bootcamps> UpdateBootcamps(BootcampsDTO name)
         { 
             var updatedBootcamp = name.Map();
+            Bootcamps deleteBootcamp = await _context.Bootcamps.FindAsync(name.BootcampId);
+            if (deleteBootcamp == null)
+            {
+                return null;
+            }
             _context.Bootcamps.Update(updatedBootcamp);
             await _context.SaveChangesAsync();
             return updatedBootcamp;
@@ -43,9 +48,13 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 
         public async Task<Bootcamps> DeleteBootcamps(int bootcampId)
         {
-            Bootcamps deleteBootcamp = _context.Bootcamps.Find(bootcampId);
+            Bootcamps deleteBootcamp = await _context.Bootcamps.FindAsync(bootcampId);
+            if (deleteBootcamp == null)
+            {
+                return null;
+            }
             _context.Bootcamps.Remove(deleteBootcamp);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return deleteBootcamp;
         }
     }

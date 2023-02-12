@@ -58,7 +58,7 @@ namespace Curso_Java_a_.net.Controllers
                 var getBootcamps = await _bootcampsService.GetBootcamps();
                 if (getBootcamps == null)
                 {
-                    return new NoContentResult();
+                    return NoContent();
                 }
                 return Ok(getBootcamps);
             }
@@ -94,6 +94,10 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var updatedBootcamp = await _bootcampsService.UpdateBootcamps(name);
+                if (updatedBootcamp == null)
+                {
+                    return BadRequest("Bootcamp don´t exist");
+                }
                 return Ok(updatedBootcamp);
             }
             catch (Exception)
@@ -110,10 +114,9 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 Bootcamps bootcamp = await _bootcampsService.DeleteBootcamps(bootcampId);
-                return bootcamp;
                 if (bootcamp == null)
                 {
-                    return BadRequest("Bootcamps don´t exist");
+                    return BadRequest("Bootcamp don´t exist");
                 }
                 return Ok(bootcamp);
             }

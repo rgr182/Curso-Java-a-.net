@@ -25,10 +25,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
             try
             {
                 Projects getProject = await _ProjectsRepository.GetProject(projectId);
-                if (getProject == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
                 return getProject;
             }
             catch (Exception ex)
@@ -46,7 +42,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Bootcamps Service");
+                _logger.LogError(ex, "Some error happened on Projects  Service");
                 throw ex;
             }
         }
@@ -54,44 +50,38 @@ namespace Curso_Java_a_.net.DataAccess.Services
         {
             try
             {
-                Projects project = await _ProjectsRepository.DeleteProject(projectId);
-                return project;
-
-                if (project == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
+                var project = await _ProjectsRepository.DeleteProject(projectId);
                 return project;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on bootcamps Service");
+                _logger.LogError(ex, "Some error happened on Projects Service");
                 throw ex;
             }
         }
-        public async Task<ProjectsDTO> PostProject(ProjectsDTO name)
+        public async Task<Projects> PostProject(ProjectsDTO name)
         {
             try
             {
-                await _ProjectsRepository.PostProject(name);    
-                return name;
+                var project = await _ProjectsRepository.PostProject(name);
+                return project;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex, "Some error happened on Projects Service");
                 throw;
             }
         }
-        public async Task<ProjectsDTO> UpdateProject(ProjectsDTO name)
+        public async Task<Projects> UpdateProject(ProjectsDTO name)
         {
             try
             {
-                await _ProjectsRepository.UpdateProject(name);
-                return name;
+                var project = await _ProjectsRepository.UpdateProject(name);
+                return project;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex, "Some error happened on Projects Service");
                 throw;
             }
         }

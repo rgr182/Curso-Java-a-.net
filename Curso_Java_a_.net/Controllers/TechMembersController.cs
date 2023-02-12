@@ -56,7 +56,7 @@ namespace Curso_Java_a_.net.Controllers
                 var techMembers = await _TechMembersService.GetTechMembersAsync();
                 if (techMembers == null)
                 {
-                    return BadRequest("Bootcamps don´t exist");
+                    return NoContent();
                 }
                 return Ok(techMembers);
             }
@@ -79,7 +79,7 @@ namespace Curso_Java_a_.net.Controllers
                 catch (Exception ex)
                 {
                     if (ex.Message.ToLower().Contains("duplicate"))
-                        return BadRequest("Project already exist");
+                        return BadRequest("TechMember already exist");
                     else
                         return Problem("Some error happened please contact Sys Admin");
                 }
@@ -92,6 +92,10 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 TechMembers techMembers = await _TechMembersService.UpdateTechMemberAsync(techMembersId);
+                if (techMembers == null)
+                {
+                    return BadRequest("TechMember don´t exist");
+                }
                 return techMembers;
             }
             catch (Exception)
@@ -110,7 +114,7 @@ namespace Curso_Java_a_.net.Controllers
                 TechMembers techMembers = await _TechMembersService.DeleteTechMemberById(techMembersId);
                 if (techMembers == null)
                 {
-                    return BadRequest("projects don´t exist");
+                    return BadRequest("TechMember don´t exist");
                 }
                 return Ok(techMembers);
             }

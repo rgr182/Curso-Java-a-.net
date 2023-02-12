@@ -26,26 +26,34 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
            .Where(x => x.TechMemberId == techMembersId)
               .FirstOrDefaultAsync();
 
-        public async Task<TechMembers> PostTechMemberAsync(TechMembers techMembersId)
+        public async Task<TechMembers> PostTechMemberAsync(TechMembers techMembers)
         {
-            await _context.TechMembers.AddAsync(techMembersId);
-            _context.SaveChanges();
-            return techMembersId;
+            await _context.TechMembers.AddAsync(techMembers);
+            await _context.SaveChangesAsync();
+            return techMembers;
         }
 
-        public async Task<TechMembers> UpdateTechMemberAsync(TechMembers techMembersId)
+        public async Task<TechMembers> UpdateTechMemberAsync(TechMembers techMember)
         {
-            TechMembers techMembers = _context.TechMembers.Find(techMembersId);
+            TechMembers techMembers = await _context.TechMembers.FindAsync(techMember.TechMemberId);
+            if (techMembers == null)
+            {
+                return null;
+            }
             _context.TechMembers.Update(techMembers);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return techMembers;
         }
 
         public async Task<TechMembers> DeleteTechMemberById(int techMembersId)
         {
             TechMembers techMembers = await _context.TechMembers.FindAsync(techMembersId);
+            if (techMembers == null)
+            {
+                return null;
+            }
             _context.TechMembers.Remove(techMembers);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return techMembers;
         }
     }

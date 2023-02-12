@@ -24,10 +24,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
             try
             {
                 Technologies tech = await _TechnologiesRepository.GetTechnologyAsync(technologyId);
-                if (tech == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
                 return tech;
             }
             catch (Exception ex)
@@ -51,16 +47,16 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
         }
 
-        public async Task DeleteTechnologiesById(int technologyId)
+        public async Task<Technologies> DeleteTechnologiesById(int technologyId)
         {
             try
             {
                 Technologies tech = await _TechnologiesRepository.DeleteTechnologiesById(technologyId);
-                return;
+                return tech;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex, "Some error happened on Technologies Service");
                 throw;
             }
         }
@@ -74,7 +70,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex, "Some error happened on Technologies Service");
                 throw;
             }
         }
@@ -88,7 +84,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex, "Some error happened on Technologies Service");
                 throw;
             }
 

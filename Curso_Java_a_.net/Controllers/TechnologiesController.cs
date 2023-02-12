@@ -26,7 +26,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpGet]
-        [Route("/GetTechnology")]
+        [Route("/Technology")]
         public async Task<ActionResult<Technologies>> GetTechnologyAsync(int technologyId)
         {
             try
@@ -45,7 +45,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpGet]
-        [Route("/GetTechnologies")]
+        [Route("/Technologies")]
         public async Task<ActionResult<List<Technologies>>> GetTechnologiesAsync()
         {
             try
@@ -65,7 +65,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpPost]
-        [Route("/PostTechnology")]
+        [Route("/Technology")]
         public async Task<ActionResult<Members>> PostTechnology([FromBody] TechnologyDTO tech)
         {
             try
@@ -83,7 +83,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpPut]
-        [Route("/UpdateTechnology")]
+        [Route("/Technology")]
         public async Task<ActionResult<Technologies>> UpdateTechnologiesAsync([FromBody] TechnologyDTO tech)
         {
             try
@@ -98,7 +98,7 @@ namespace Curso_Java_a_.net.Controllers
         }
 
         [HttpDelete]
-        [Route("/DeleteTechnologyById")]
+        [Route("/Technology")]
         public async Task<ActionResult<Technologies>> DeleteTechnologiesById(int technologyId)
         {
             try

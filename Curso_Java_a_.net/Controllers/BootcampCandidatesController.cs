@@ -56,7 +56,7 @@ namespace Curso_Java_a_.net.Controllers
                 var getBootcampCandidates = await _bootcampCandidatesService.GetBootcampCandidates();
                 if (getBootcampCandidates == null)
                 {
-                    return BadRequest("User don´t exist");
+                    return NoContent();
                 }
                 return Ok(getBootcampCandidates);
             }
@@ -79,7 +79,7 @@ namespace Curso_Java_a_.net.Controllers
                 catch (Exception ex)
                 {
                     if (ex.Message.ToLower().Contains("duplicate"))
-                        return BadRequest("User already exist");
+                        return BadRequest("Bootcamper already exist");
                     else
                         return Problem("Some error happened please contact Sys Admin");
                 }
@@ -91,7 +91,11 @@ namespace Curso_Java_a_.net.Controllers
         {
             try
             {
-                await _bootcampCandidatesService.UpdateBootcampCandidate(bootcampCandidateId);
+                var bootcampCandidate = await _bootcampCandidatesService.UpdateBootcampCandidate(bootcampCandidateId);
+                if (bootcampCandidate == null)
+                {
+                    return BadRequest("BootcampCandidate don´t exist");
+                }
                 return Ok(bootcampCandidateId);
             }
             catch (Exception)
@@ -107,7 +111,6 @@ namespace Curso_Java_a_.net.Controllers
             try
             {
                 var bootcampCandidate = await _bootcampCandidatesService.DeleteBootcampCandidate(bootcampCandidateId);
-                return Ok();
                 if (bootcampCandidate == null)
                 {
                     return BadRequest("BootcampCandidate don´t exist");

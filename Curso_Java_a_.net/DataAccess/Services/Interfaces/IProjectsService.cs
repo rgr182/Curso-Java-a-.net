@@ -7,8 +7,8 @@ namespace Curso_Java_a_.net.DataAccess.Services.Interfaces
     {
         public Task<Projects> GetProject(int projectId);
         public Task<List<Projects>> GetProjects();
-        public Task<ProjectsDTO> PostProject(ProjectsDTO name);
-        public Task<ProjectsDTO> UpdateProject(ProjectsDTO name);
+        public Task<Projects> PostProject(ProjectsDTO name);
+        public Task<Projects> UpdateProject(ProjectsDTO name);
         public Task<Projects> DeleteProject(int projectId);
     }
 }

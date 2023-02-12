@@ -1,10 +1,12 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Curso_Java_a_.net.DataAccess.Entities
 {
     public class Members
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int MemberId { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }

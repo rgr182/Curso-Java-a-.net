@@ -21,11 +21,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
             try
             {
                 var member = await _gradesRepository.GetGrade(memberId);
-                if (member == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
-
                 return member;
             }
             catch (Exception ex)
@@ -82,12 +77,6 @@ namespace Curso_Java_a_.net.DataAccess.Services
             try
             {
                 var member = await _gradesRepository.DeleteGrades(memberId);
-                return member;
-
-                if (member == null)
-                {
-                    throw new UnauthorizedAccessException();
-                }
                 return member;
             }
             catch (Exception ex)
