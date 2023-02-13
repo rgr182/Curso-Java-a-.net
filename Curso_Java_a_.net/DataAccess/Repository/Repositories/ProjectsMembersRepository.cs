@@ -3,7 +3,9 @@ using Curso_Java_a_.net.DataAccess.DTO.DTOMapping;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
+using Dapper;
 using Microsoft.CodeAnalysis;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
@@ -50,6 +52,20 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context.ProjectsMembers.Remove(projectMembers);
             await _context.SaveChangesAsync();
             return projectMembers;
+        }
+        public async Task<List<ProjectsMembersDTO>> GetProjectsMembersAsync()
+        {
+            string connstring, sql;
+            connstring = Environment.GetEnvironmentVariable("Connection");
+            sql = $"EXEC sp_getProjectsMembers";
+            List<ProjectsMembersDTO> projectsMembersDTOs = new List<ProjectsMembersDTO>();
+
+            using (var connection = new SqlConnection(connstring))
+            {
+                connection.Open();
+                projectsMembersDTOs = (List<ProjectsMembersDTO>)connection.Query<ProjectsMembersDTO>(sql);
+            }
+            return projectsMembersDTOs;
         }
     }
 }

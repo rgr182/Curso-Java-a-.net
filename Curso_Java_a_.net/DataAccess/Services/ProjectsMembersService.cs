@@ -84,5 +84,19 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw;
             }
         }
+        public async Task<List<ProjectsMembersDTO>> GetProjectsMembersAsync()
+        {
+            try
+            {
+                var
+                 projectsMembers = await _projectsMembersRepository.GetProjectsMembersAsync();
+                return projectsMembers;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                throw ex;
+            }
+        }
     }
 }

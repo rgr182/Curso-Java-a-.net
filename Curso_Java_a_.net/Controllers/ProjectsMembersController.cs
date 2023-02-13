@@ -48,11 +48,11 @@ namespace Curso_Java_a_.net.Controllers
 
         [HttpGet]
         [Route("/ProjectsMembers")]
-        public async Task<ActionResult<List<ProjectsMembers>>> GetProjectMembersAsync()
+        public async Task<ActionResult<List<ProjectsMembersDTO>>> GetProjectMembersAsync()
         {
             try
             {
-                var projectsMembers = await _ProjectsMembersService.GetProjectMembersAsync();
+                var projectsMembers = await _ProjectsMembersService.GetProjectsMembersAsync();
                 if (projectsMembers == null)
                 {
                     return NoContent();
@@ -77,7 +77,7 @@ namespace Curso_Java_a_.net.Controllers
                 }
                 catch (Exception ex)
                 {
-                    if (ex.InnerException.Message.ToLower().Contains("duplicate"))
+                    if (ex.Message.ToLower().Contains("duplicate"))
                         return BadRequest("ProjectMember already exist");
                     else
                         return Problem("Some error happened please contact Sys Admin");
