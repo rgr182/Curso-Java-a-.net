@@ -72,19 +72,20 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
                               Tech = t.Name,
                               Seniority = s.Name
                           });
-            TechMembersDTO techMembers = new TechMembersDTO();
-            List<TechMembersDTO> memberDTOs = new List<TechMembersDTO>();
+            
+            List<TechMembersDTO> techMembersDTOs = new List<TechMembersDTO>();
             foreach (var item in result)
             {
+                TechMembersDTO techMembers = new TechMembersDTO();
                 #region ManualMapping
                 techMembers.TechMemberId = item.TechMemberId;
                 techMembers.MemberId = item.MemberId;
                 techMembers.Tech = item.Tech;
                 techMembers.Seniority = item.Seniority;
                 #endregion
-                memberDTOs.Add(techMembers);
+                techMembersDTOs.Add(techMembers);
             }
-            return memberDTOs;
+            return techMembersDTOs;
         }
     }
 }
