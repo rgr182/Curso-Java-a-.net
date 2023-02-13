@@ -3,8 +3,11 @@ using Curso_Java_a_.net.DataAccess.DTO.DTOMapping;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
+using Dapper;
 using Microsoft.CodeAnalysis;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
@@ -59,31 +62,15 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 
         public async Task<List<TechMembersDTO>> GetTechsMemberAsync(int memberId)
         {
-            var result = (from tm in _context.TechMembers
-                          join s in _context.Seniorities
-                              on tm.SeniorityId equals s.SeniorityId
-                          join t in _context.Technologies
-                              on tm.TechnologyId equals t.TechnologyId
-                          where tm.MemberId == memberId
-                          select new
-                          {
-                              TechMemberId = tm.TechMemberId,
-                              MemberId = tm.MemberId,
-                              Tech = t.Name,
-                              Seniority = s.Name
-                          });
-            
+            string connstring, sql;
+            connstring = Environment.GetEnvironmentVariable("Connection");
+            sql = $"EXEC sp_GetTechMemberByMemberId {memberId}";
             List<TechMembersDTO> techMembersDTOs = new List<TechMembersDTO>();
-            foreach (var item in result)
+
+            using (var connection = new SqlConnection(connstring))
             {
-                TechMembersDTO techMembers = new TechMembersDTO();
-                #region ManualMapping
-                techMembers.TechMemberId = item.TechMemberId;
-                techMembers.MemberId = item.MemberId;
-                techMembers.Tech = item.Tech;
-                techMembers.Seniority = item.Seniority;
-                #endregion
-                techMembersDTOs.Add(techMembers);
+                connection.Open();
+                techMembersDTOs = (List<TechMembersDTO>)connection.Query<TechMembersDTO>(sql);
             }
             return techMembersDTOs;
         }
