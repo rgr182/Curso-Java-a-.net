@@ -36,11 +36,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<Bootcamps> UpdateBootcamps(BootcampsDTO name)
         { 
             var updatedBootcamp = name.Map();
-            Bootcamps deleteBootcamp = await _context.Bootcamps.FindAsync(name.BootcampId);
-            if (deleteBootcamp == null)
-            {
-                return null;
-            }
             _context.Bootcamps.Update(updatedBootcamp);
             await _context.SaveChangesAsync();
             return updatedBootcamp;

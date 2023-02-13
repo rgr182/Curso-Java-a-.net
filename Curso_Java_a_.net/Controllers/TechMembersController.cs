@@ -65,6 +65,24 @@ namespace Curso_Java_a_.net.Controllers
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
+        [HttpGet]
+        [Route("/TechsMember")]
+        public async Task<ActionResult<List<TechMembersDTO>>> GetTechsMemberAsync(int memberId)
+        {
+            try
+            {
+                var techMembers = await _TechMembersService.GetTechsMemberAsync(memberId);
+                if (techMembers == null)
+                {
+                    return NoContent();
+                }
+                return Ok(techMembers);
+            }
+            catch (Exception)
+            {
+                return Problem("Some error happened please contact Sys Admin");
+            }
+        }
 
         [HttpPost]
         [Route("/TechMember")]
@@ -78,7 +96,7 @@ namespace Curso_Java_a_.net.Controllers
                 }
                 catch (Exception ex)
                 {
-                    if (ex.Message.ToLower().Contains("duplicate"))
+                    if (ex.InnerException.Message.ToLower().Contains("duplicate"))
                         return BadRequest("TechMember already exist");
                     else
                         return Problem("Some error happened please contact Sys Admin");

@@ -36,11 +36,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidatesDTO bootcampCandidateId)
         {
             var bootcampCandidate = bootcampCandidateId.Map();
-            var bootcampCandidateToUpdate = await _context.BootcampCandidates.FindAsync(bootcampCandidate.BootcampCandidateId);
-            if (bootcampCandidateToUpdate == null)
-            {
-                return null;
-            }
             _context.BootcampCandidates.Update(bootcampCandidate);
             await _context.SaveChangesAsync();
             return bootcampCandidate;

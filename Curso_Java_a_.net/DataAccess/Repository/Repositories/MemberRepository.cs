@@ -47,11 +47,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<Members> UpdateMember(MemberDTO member)
         {
             var memberUpdated = member.Map();
-            var memberToUpdate = await _context.Members.FindAsync(member.MemberId);
-            if (memberToUpdate == null)
-            {
-                return null;
-            }
             _context.Members.Update(memberUpdated);
             await _context.SaveChangesAsync();
             return memberUpdated;

@@ -40,14 +40,9 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         }
         public async Task<Grades> UpdateGradesAsync(Grades grade)
         {
-            Grades grades = await _context.Grades.FindAsync(grade.GradesId);
-            if (grades == null)
-            {
-                return null;
-            }
-            _context.Grades.Update(grades);
+            _context.Grades.Update(grade);
             await _context.SaveChangesAsync();
-            return grades;
+            return grade;
         }
     }
 }

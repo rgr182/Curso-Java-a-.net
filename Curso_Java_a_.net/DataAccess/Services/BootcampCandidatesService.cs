@@ -29,7 +29,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Bootcamp Candidates Service");
+                _logger.LogError(ex, ex.Message);
                 throw ex;
             }
         }
@@ -43,7 +43,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Bootcamp Candidates  Service");
+                _logger.LogError(ex, ex.Message);
                 throw ex;
             }
         }
@@ -56,7 +56,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on bootcampCandidates Service");
+                _logger.LogError(ex, ex.Message);
                 throw ex;
             }
         }
@@ -70,7 +70,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on bootcampCandidates Service");
+                _logger.LogError(ex, ex.Message);
                 throw;
             }
         }
@@ -84,7 +84,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on bootcampCandidates Service");
+                _logger.LogError(ex, ex.Message);
                 throw;
             }
         }

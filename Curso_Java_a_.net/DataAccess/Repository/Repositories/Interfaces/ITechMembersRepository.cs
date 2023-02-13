@@ -7,6 +7,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces
     {
         public Task<TechMembers> GetTechMemberAsync(int techMembersId);
         public Task<List<TechMembers>> GetTechMembersAsync();
+        public Task<List<TechMembersDTO>> GetTechsMemberAsync(int memberId);
         public Task<TechMembers> PostTechMemberAsync(TechMembers techMembersId);
         public Task<TechMembers> UpdateTechMemberAsync(TechMembers techMembersId);
         public Task<TechMembers> DeleteTechMemberById(int techMembersId);

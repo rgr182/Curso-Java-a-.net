@@ -21,7 +21,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         }
 
         public async Task<TechMembers> GetTechMemberAsync(int techMembersId) =>
-          
+
             await _context.TechMembers
            .Where(x => x.TechMemberId == techMembersId)
               .FirstOrDefaultAsync();
@@ -55,6 +55,36 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context.TechMembers.Remove(techMembers);
             await _context.SaveChangesAsync();
             return techMembers;
+        }
+
+        public async Task<List<TechMembersDTO>> GetTechsMemberAsync(int memberId)
+        {
+            var result = (from tm in _context.TechMembers
+                          join s in _context.Seniorities
+                              on tm.SeniorityId equals s.SeniorityId
+                          join t in _context.Technologies
+                              on tm.TechnologyId equals t.TechnologyId
+                          where tm.MemberId == memberId
+                          select new
+                          {
+                              TechMemberId = tm.TechMemberId,
+                              MemberId = tm.MemberId,
+                              Tech = t.Name,
+                              Seniority = s.Name
+                          });
+            TechMembersDTO techMembers = new TechMembersDTO();
+            List<TechMembersDTO> memberDTOs = new List<TechMembersDTO>();
+            foreach (var item in result)
+            {
+                #region ManualMapping
+                techMembers.TechMemberId = item.TechMemberId;
+                techMembers.MemberId = item.MemberId;
+                techMembers.Tech = item.Tech;
+                techMembers.Seniority = item.Seniority;
+                #endregion
+                memberDTOs.Add(techMembers);
+            }
+            return memberDTOs;
         }
     }
 }

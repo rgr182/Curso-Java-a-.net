@@ -6,6 +6,7 @@ using Curso_Java_a_.net.DataAccess.Repository.Repositories;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Curso_Java_a_.net.DataAccess.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Curso_Java_a_.net.DataAccess.Services
 {
@@ -31,7 +32,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Projects Service");
+                _logger.LogError(ex, ex.Message);
                 throw ex;
             }
         }
@@ -44,7 +45,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on Bootcamps Service");
+                _logger.LogError(ex, ex.Message);
                 throw ex;
             }
         }
@@ -57,7 +58,7 @@ namespace Curso_Java_a_.net.DataAccess.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Some error happened on bootcamps Service");
+                _logger.LogError(ex, ex.Message);
                 throw ex;
             }
         }
@@ -86,6 +87,20 @@ namespace Curso_Java_a_.net.DataAccess.Services
             {
                 _logger.LogError(ex, ex.Message);
                 throw;
+            }
+        }
+        public async Task<List<TechMembersDTO>> GetTechsMemberAsync(int memberId)
+        {
+            try
+            {
+                var
+                 techMembers = await _techMembersRepository.GetTechsMemberAsync(memberId);
+                return techMembers;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                throw ex;
             }
         }
     }

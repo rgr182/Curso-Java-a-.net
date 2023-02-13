@@ -80,7 +80,7 @@ namespace Curso_Java_a_.net.Controllers
                 }
                 catch (Exception ex)
                 {
-                    if (ex.Message.ToLower().Contains("duplicate"))
+                    if (ex.InnerException.Message.ToLower().Contains("duplicate"))
                         return BadRequest("Bootcamps already exist");
                     else
                         return Problem("Some error happened please contact Sys Admin");

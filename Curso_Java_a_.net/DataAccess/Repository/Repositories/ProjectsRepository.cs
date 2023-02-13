@@ -36,11 +36,6 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         public async Task<Projects> UpdateProject(ProjectsDTO project)
         { 
             var updatedProject = project.Map();
-            var projectToUpdate = await _context.Projects.FindAsync(updatedProject.ProjectId);
-            if (projectToUpdate == null)
-            {
-                return null;
-            }
             _context.Projects.Update(updatedProject);
             await _context.SaveChangesAsync();
             return updatedProject;

@@ -32,15 +32,10 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
         }
         public async Task<Technologies> UpdateTechnologiesAsync(TechnologyDTO tech)
         {
-            var techUpdated = tech.Map();
-            var techToUpdate = await _context.Technologies.FindAsync(techUpdated.TechnologyId);
-            if (techToUpdate == null)
-            {
-                return null;
-            }
-            _context.Technologies.Update(techUpdated);
+            var techToUpdate = tech.Map();
+            _context.Technologies.Update(techToUpdate);
             await _context.SaveChangesAsync();
-            return techUpdated;
+            return techToUpdate;
         }
         public async Task<Technologies> DeleteTechnologiesById(int technologyId)
         {

@@ -35,14 +35,9 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 
         public async Task<ProjectsMembers> UpdateProjectMemberAsync(ProjectsMembers projectMember)
         {
-            ProjectsMembers projectMembers = await _context.ProjectsMembers.FindAsync(projectMember.ProjectMemberId);
-            if (projectMembers == null)
-            {
-                return null;
-            }
-            _context.ProjectsMembers.Update(projectMembers);
+            _context.ProjectsMembers.Update(projectMember);
             await _context.SaveChangesAsync();
-            return projectMembers;
+            return projectMember;
         }
 
         public async Task<ProjectsMembers> DeleteProjectMemberId(int projectMemberId)

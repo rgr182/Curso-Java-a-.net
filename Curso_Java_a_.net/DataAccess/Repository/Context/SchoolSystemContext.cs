@@ -24,6 +24,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Context
         public DbSet<Projects> Projects { get; set; }
         public DbSet<TechMembers> TechMembers { get; set; }
         public DbSet<ProjectsMembers> ProjectsMembers { get; set; }
+        public DbSet<Seniorities> Seniorities { get; set; }
 
         public  static SchoolSystemContext Create()
         {
