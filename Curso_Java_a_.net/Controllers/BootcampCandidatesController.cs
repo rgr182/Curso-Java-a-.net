@@ -73,7 +73,7 @@ namespace Curso_Java_a_.net.Controllers
             {
                 try
                 {
-                    var bootcampCandidate= await _bootcampCandidatesService.PostBootcampCandidate(bootcampCandidateId);
+                    var bootcampCandidate = await _bootcampCandidatesService.PostBootcampCandidate(bootcampCandidateId);
                     return Ok(bootcampCandidate);
                 }
                 catch (Exception ex)
@@ -122,5 +122,25 @@ namespace Curso_Java_a_.net.Controllers
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
+
+        [HttpGet]
+        [Route("/BootCampersX")]
+        public async Task<ActionResult<List<BootcampCandidates>>> bootcampsCandidates()
+        {
+            try
+            {
+                var getBootcampCandidates = await _bootcampCandidatesService.bootcampsCandidates();
+                if (getBootcampCandidates == null)
+                {
+                    return NoContent();
+                }
+                return Ok(getBootcampCandidates);
+            }
+            catch (Exception)
+            {
+                return Problem("Some error happened please contact Sys Admin");
+            }
+        }
     }
 }
+

@@ -88,5 +88,11 @@ namespace Curso_Java_a_.net.DataAccess.Services
                 throw;
             }
         }
+
+        public async Task<List<BootcampCandidatesDTO>> bootcampsCandidates()
+        {
+            var bootCampCandidate = await _BootcampCandidatesRepository.bootcampsCandidates();
+            return bootCampCandidate;
+        }
     }
 }

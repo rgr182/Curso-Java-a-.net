@@ -3,7 +3,9 @@ using Curso_Java_a_.net.DataAccess.DTO.DTOMapping;
 using Curso_Java_a_.net.DataAccess.Entities;
 using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
+using Dapper;
 using Microsoft.EntityFrameworkCore;
+using System.Data.SqlClient;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
 {
@@ -51,6 +53,21 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             _context.BootcampCandidates.Remove(bootcampCandidate);
             await _context.SaveChangesAsync();
             return bootcampCandidate;
+        }
+
+        public async Task<List<BootcampCandidatesDTO>> bootcampsCandidates()
+        {
+            string connstring, sql;
+            connstring = Environment.GetEnvironmentVariable("Connection");
+            sql = $"EXEC sp_getBootcampers";
+            List<BootcampCandidatesDTO> bootcampCandidatesDTO = new List<BootcampCandidatesDTO>();
+
+            using (var connection = new SqlConnection(connstring))
+            {
+                connection.Open();
+                bootcampCandidatesDTO = (List<BootcampCandidatesDTO>)connection.Query<BootcampCandidatesDTO>(sql);
+            }
+            return bootcampCandidatesDTO;
         }
     }
 }

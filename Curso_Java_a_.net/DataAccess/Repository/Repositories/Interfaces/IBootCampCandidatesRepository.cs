@@ -7,6 +7,7 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces
     {
         public Task<BootcampCandidates> GetBootcampCandidate(int bootcampCandidateId);
         public Task<List<BootcampCandidates>> GetBootcampCandidates();
+        public Task<List<BootcampCandidatesDTO>> bootcampsCandidates();
         public Task<BootcampCandidates> PostBootcampCandidate(BootcampCandidatesDTO bootcampCandidateId);
         public Task<BootcampCandidates> UpdateBootcampCandidate(BootcampCandidatesDTO bootcampCandidateId);
         public Task<BootcampCandidates> DeleteBootcampCandidate(int bootcampCandidateId);
