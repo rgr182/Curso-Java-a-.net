@@ -141,6 +141,24 @@ namespace Curso_Java_a_.net.Controllers
                 return Problem("Some error happened please contact Sys Admin");
             }
         }
+        [HttpGet]
+        [Route("/BootCampersZ")]
+        public async Task<ActionResult<List<BootcampCandidates>>> bootcampsCandidatesByBootcampId(int bootcampId)
+        {
+            try
+            {
+                var getBootcampCandidates = await _bootcampCandidatesService.bootcampsCandidatesByBootcampId(bootcampId);
+                if (getBootcampCandidates == null)
+                {
+                    return NoContent();
+                }
+                return Ok(getBootcampCandidates);
+            }
+            catch (Exception)
+            {
+                return Problem("Some error happened please contact Sys Admin");
+            }
+        }
     }
 }
 

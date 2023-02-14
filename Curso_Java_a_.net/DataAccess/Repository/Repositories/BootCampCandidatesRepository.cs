@@ -69,5 +69,20 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             }
             return bootcampCandidatesDTO;
         }
+
+        public async Task<List<BootcampCandidatesDTO>> bootcampsCandidatesByBootcampId(int bootcampId)
+        {
+            string connstring, sql;
+            connstring = Environment.GetEnvironmentVariable("Connection");
+            sql = $"EXEC sp_getBootcampersById {bootcampId}";
+            List<BootcampCandidatesDTO> bootcampCandidatesDTO = new List<BootcampCandidatesDTO>(bootcampId);
+
+            using (var connection = new SqlConnection(connstring))
+            {
+                connection.Open();
+                bootcampCandidatesDTO = (List<BootcampCandidatesDTO>)connection.Query<BootcampCandidatesDTO>(sql);
+            }
+            return bootcampCandidatesDTO;
+        }
     }
 }
