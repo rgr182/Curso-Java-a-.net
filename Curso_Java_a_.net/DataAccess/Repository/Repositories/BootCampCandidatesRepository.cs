@@ -5,6 +5,8 @@ using Curso_Java_a_.net.DataAccess.Repository.Context;
 using Curso_Java_a_.net.DataAccess.Repository.Repositories.Interfaces;
 using Dapper;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
@@ -69,20 +71,23 @@ namespace Curso_Java_a_.net.DataAccess.Repository.Repositories
             }
             return bootcampCandidatesDTO;
         }
-
         public async Task<List<BootcampCandidatesDTO>> bootcampsCandidatesByBootcampId(int bootcampId)
         {
             string connstring, sql;
             connstring = Environment.GetEnvironmentVariable("Connection");
-            sql = $"EXEC sp_getBootcampersById {bootcampId}";
             List<BootcampCandidatesDTO> bootcampCandidatesDTO = new List<BootcampCandidatesDTO>(bootcampId);
 
             using (var connection = new SqlConnection(connstring))
             {
-                connection.Open();
-                bootcampCandidatesDTO = (List<BootcampCandidatesDTO>)connection.Query<BootcampCandidatesDTO>(sql);
+                var parameters = new { BootcampId = bootcampId };
+                var candidates = await connection.QueryAsync<BootcampCandidatesDTO>(
+                    "sp_getBootcampersById",
+                    parameters,
+                    commandType: CommandType.StoredProcedure
+                );
+
+                return candidates.ToList();
             }
-            return bootcampCandidatesDTO;
         }
     }
 }
